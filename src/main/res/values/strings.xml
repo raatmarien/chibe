@@ -18,4 +18,5 @@
 <resources>
   <string name="app_name">Buzzer</string>
   <string name="buzzer_settings_label">Buzzer</string>
+  <string name="buzzer_intro_label">Intro</string>
 </resources>

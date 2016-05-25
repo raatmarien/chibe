@@ -16,11 +16,5 @@
 <!-- You should have received a copy of the GNU General Public License -->
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <resources>
-  <!-- Themes -->
-  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"
-         />
-  <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowTranslucentStatus">true</item>
-  </style>
 
 </resources>

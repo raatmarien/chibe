@@ -37,7 +37,7 @@ public class BuzzerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedSInstanceState);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.buzzer_activity);
 
         FragmentManager fragmentManager = getFragmentManager();
