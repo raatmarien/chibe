@@ -23,10 +23,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.FragmentManager;
 import android.util.Log;
+import android.preference.PreferenceManager;
+import android.content.Intent;
 
 import com.jmstudios.buzzer.R;
 
 import com.jmstudios.buzzer.BuzzerFragment;
+import com.jmstudios.buzzer.BuzzerIntro;
 
 public class BuzzerActivity extends AppCompatActivity {
     private static final String TAG = "BuzzerActivity";
@@ -62,5 +65,18 @@ public class BuzzerActivity extends AppCompatActivity {
                 .replace(R.id.fragment_container, fragment, FRAGMENT_TAG_BUZZER)
                 .commit();
         }
+
+        // Show intro if the user hasn't seen it yet
+        boolean introShown = PreferenceManager.getDefaultSharedPreferences(this)
+            .getBoolean("pref_key_intro_shown", false);
+
+        if (!introShown) {
+            startIntro();
+        }
+    }
+
+    private void startIntro() {
+        Intent introIntent = new Intent(this, BuzzerIntro.class);
+        startActivity(introIntent);
     }
 }
