@@ -78,5 +78,11 @@ public class BuzzerActivity extends AppCompatActivity {
     private void startIntro() {
         Intent introIntent = new Intent(this, BuzzerIntro.class);
         startActivity(introIntent);
+
+        // Save that the intro has been shown
+        SharedPreferences.Editor spEditor =
+            PreferenceManager.getDefaultSharedPreferences(this).edit();
+        spEditor.putBoolean("pref_key_intro_shown", true);
+        spEditor.commit();
     }
 }
