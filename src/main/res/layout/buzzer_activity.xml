@@ -15,14 +15,30 @@
 
 <!-- You should have received a copy of the GNU General Public License -->
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+<merge>
 
   <FrameLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
       android:id="@+id/fragment_container"
       android:layout_width="match_parent"
       android:layout_height="match_parent" />
 
-</LinearLayout>
+  <!-- Margin right and end are both used to support RTL and older
+       software versions -->
+  <android.support.design.widget.FloatingActionButton
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/help_fab"
+      android:src="@drawable/ic_help_white_24dp"
+      android:onClick="startIntro"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|end"
+      android:layout_marginEnd="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginBottom="16dp"
+      app:backgroundTint="@color/fab_color"
+      app:fabSize="normal" />
+
+</merge>

@@ -24,7 +24,10 @@ import android.os.Bundle;
 import android.app.FragmentManager;
 import android.util.Log;
 import android.preference.PreferenceManager;
+import android.content.SharedPreferences;
 import android.content.Intent;
+import android.view.View;
+import android.support.design.widget.FloatingActionButton;
 
 import com.jmstudios.buzzer.R;
 
@@ -71,11 +74,15 @@ public class BuzzerActivity extends AppCompatActivity {
             .getBoolean("pref_key_intro_shown", false);
 
         if (!introShown) {
-            startIntro();
+            startIntro(null);
         }
     }
 
-    private void startIntro() {
+    // This method is also used by the floating action button, through the
+    // android:onClick attribute. This attribute requires a public method with a
+    // View as parameter. However, this method simply ignores the View
+    // parameter.
+    public void startIntro(View v) {
         Intent introIntent = new Intent(this, BuzzerIntro.class);
         startActivity(introIntent);
 
@@ -83,6 +90,6 @@ public class BuzzerActivity extends AppCompatActivity {
         SharedPreferences.Editor spEditor =
             PreferenceManager.getDefaultSharedPreferences(this).edit();
         spEditor.putBoolean("pref_key_intro_shown", true);
-        spEditor.commit();
+        spEditor.apply();
     }
 }
