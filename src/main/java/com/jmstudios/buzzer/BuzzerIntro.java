@@ -51,21 +51,23 @@ public class BuzzerIntro extends AppIntro {
 
     @Override
     public void onSkipPressed() {
-    // Do something when users tap on Skip button.
+        // Do something when users tap on Skip button.
+        finish();
     }
 
     @Override
     public void onDonePressed() {
-    // Do something when users tap on Done button.
+        // Do something when users tap on Done button.
+        finish();
     }
 
     public void onSlideChanged() {
-    // Do something when the slide changes.
+        // Do something when the slide changes.
     }
 
     @Override
     public void onNextPressed() {
-    // Do something when users tap on Next button.
+        // Do something when users tap on Next button.
     }
 
 }
