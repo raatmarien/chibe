@@ -15,28 +15,11 @@
 
 <!-- You should have received a copy of the GNU General Public License -->
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
-<resources>
-  <string name="app_name">Buzzer</string>
-  <string name="buzzer_settings_label">Buzzer</string>
-  <string name="buzzer_intro_label">Intro</string>
-
-  <!-- Preferences -->
-  <string name="buzz_time_preference_title">Buzz intervals</string>
-
-  <!-- buzz_time_preference_entries -->
-  <string name="buzz_time_entries_0">Buzz every 5 minutes</string>
-  <string name="buzz_time_entries_1">Buzz every 10 minutes</string>
-  <string name="buzz_time_entries_2">Buzz every 15 minutes</string>
-  <string name="buzz_time_entries_3">Buzz every half hour</string>
-  <string name="buzz_time_entries_4">Buzz every hour</string>
-
-  <string-array name="buzz_time_entry_values"
-                translatable="false">
-    <item>5</item>
-    <item>10</item>
-    <item>15</item>
-    <item>30</item>
-    <item>60</item>
-  </string-array>
-
-</resources>
+<android.support.v7.widget.SwitchCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buzz_switch_action_bar"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingStart="6dp"
+    android:paddingEnd="6dp"
+    android:text="" />

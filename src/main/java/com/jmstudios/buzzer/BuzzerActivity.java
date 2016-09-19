@@ -28,6 +28,8 @@ import android.content.SharedPreferences;
 import android.content.Intent;
 import android.view.View;
 import android.support.design.widget.FloatingActionButton;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import com.jmstudios.buzzer.R;
 
@@ -76,6 +78,15 @@ public class BuzzerActivity extends AppCompatActivity {
         if (!introShown) {
             startIntro(null);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // We need to inflate the menu for the app bar, to display the switch
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.buzzer_activity_menu, menu);
+
+        return true;
     }
 
     // This method is also used by the floating action button, through the

@@ -18,8 +18,11 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <Preference
-      android:key="test_preference"
-      android:title="Test preference" />
+  <ListPreference
+      android:key="pref_key_buzz_time"
+      android:defaultValue="30"
+      android:title="@string/buzz_time_preference_title"
+      android:entries="@array/buzz_time_entries"
+      android:entryValues="@array/buzz_time_entry_values" />
 
 </PreferenceScreen>

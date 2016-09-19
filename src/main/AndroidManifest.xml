@@ -37,6 +37,9 @@
                   android:label="@string/buzzer_intro_label"
                   android:theme="@style/AppThemeNoActionBar" >
         </activity>
+
+        <receiver
+            android:name="com.jmstudios.buzzer.timing.BuzzAlarmReceiver" />
     </application>
 
 </manifest>

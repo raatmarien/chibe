@@ -21,7 +21,9 @@ package com.jmstudios.buzzer;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.preference.Preference;
 import android.util.Log;
+import android.preference.ListPreference;
 
 import com.jmstudios.buzzer.R;
 
@@ -36,5 +38,33 @@ public class BuzzerFragment extends PreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
+
+        // Add a change listener to the buzz time list preference, to
+        // change the summary to the selected value
+        ListPreference buzzTime = (ListPreference)
+            findPreference("pref_key_buzz_time");
+        buzzTime.setOnPreferenceChangeListener
+            (new Preference.OnPreferenceChangeListener() {
+                    @Override
+                    public boolean onPreferenceChange
+                        (Preference pref,
+                         Object newValue) {
+                        // The value of the preference has not been
+                        // updated yet, so we need to find the entry
+                        // corresponding with the new value manually.
+                        ListPreference listPref =
+                            (ListPreference) pref;
+                        CharSequence entry = listPref.getEntries()
+                            [listPref.findIndexOfValue
+                             (newValue.toString())];
+                        pref.setSummary(entry);
+
+                        // Return true to update the value
+                        return true;
+                    }
+                });
+        // The first time we need to manually set the summary with the
+        // current entry.
+        buzzTime.setSummary(buzzTime.getEntry());
     }
 }
