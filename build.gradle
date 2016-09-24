@@ -35,3 +35,10 @@ dependencies {
     compile 'com.android.support:design:24.2.0'
     compile 'com.github.paolorotolo:appintro:3.4.0'
 }
+
+android {
+    lintOptions {
+        // Required for JUnit
+        disable 'InvalidPackage'
+    }
+}
