@@ -23,11 +23,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.preference.PreferenceManager;
+import android.annotation.SuppressLint;
 
 import java.util.Calendar;
 import java.util.TimeZone;
 
 import com.jmstudios.buzzer.timing.BuzzAlarmReceiver;
+import com.jmstudios.buzzer.SettingsModel;
 
 public class BuzzAlarmScheduler {
     private static String TAG = "BuzzAlarmScheduler";
@@ -35,16 +38,23 @@ public class BuzzAlarmScheduler {
 
     // Removes all old alarms before scheduling a new one
     public static void rescheduleAlarm(Context context) {
-        // Cancel all old alarms
-        AlarmManager alarmManager = (AlarmManager)
-            context.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.cancel(getBuzzPendingIntent(context));
+        cancelAlarms(context);
 
         scheduleAlarm(context);
     }
 
+    public static void cancelAlarms(Context context) {
+        AlarmManager alarmManager = (AlarmManager)
+            context.getSystemService(Context.ALARM_SERVICE);
+        alarmManager.cancel(getBuzzPendingIntent(context));
+    }
+
+    // This method checks what android version is used and uses
+    // methods accordingly.
+    @SuppressLint("NewApi")
     public static void scheduleAlarm(Context context) {
-        SettingsModel settingsModel = new SettingsModel(context);
+        SettingsModel settingsModel = new SettingsModel
+            (PreferenceManager.getDefaultSharedPreferences(context));
 
         Calendar alarmTime = getNextAlarmTime
             (Calendar.getInstance(),

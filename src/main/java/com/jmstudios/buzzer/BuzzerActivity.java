@@ -29,12 +29,17 @@ import android.content.Intent;
 import android.view.View;
 import android.support.design.widget.FloatingActionButton;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MenuInflater;
+import android.widget.CompoundButton;
+import android.content.Context;
+import android.support.v7.widget.SwitchCompat;
 
 import com.jmstudios.buzzer.R;
 
 import com.jmstudios.buzzer.BuzzerFragment;
 import com.jmstudios.buzzer.BuzzerIntro;
+import com.jmstudios.buzzer.timing.BuzzAlarmScheduler;
 
 public class BuzzerActivity extends AppCompatActivity {
     private static final String TAG = "BuzzerActivity";
@@ -43,10 +48,14 @@ public class BuzzerActivity extends AppCompatActivity {
     private static final String FRAGMENT_TAG_BUZZER
         = "com.jmstudios.buzzer.fragment.tag.BUZZER";
 
+    private Context mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buzzer_activity);
+
+        mContext = this;
 
         FragmentManager fragmentManager = getFragmentManager();
         BuzzerFragment fragment;
@@ -85,6 +94,20 @@ public class BuzzerActivity extends AppCompatActivity {
         // We need to inflate the menu for the app bar, to display the switch
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.buzzer_activity_menu, menu);
+
+        final MenuItem item = menu.findItem(R.id.buzz_switch);
+        SwitchCompat mainSwitch = (SwitchCompat) item.getActionView();
+        mainSwitch.setOnCheckedChangeListener
+            (new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged
+                        (CompoundButton buttonView, boolean isChecked) {
+                        if (isChecked)
+                            BuzzAlarmScheduler.rescheduleAlarm(mContext);
+                        else
+                            BuzzAlarmScheduler.cancelAlarms(mContext);
+                    }
+                });
 
         return true;
     }

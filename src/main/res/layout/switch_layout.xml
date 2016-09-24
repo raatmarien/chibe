@@ -17,9 +17,9 @@
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <android.support.v7.widget.SwitchCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/buzz_switch_action_bar"
+    android:id="@+id/buzz_switch_app_bar"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:paddingStart="6dp"
-    android:paddingEnd="6dp"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
     android:text="" />
