@@ -23,6 +23,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.os.Vibrator;
 
 import com.jmstudios.buzzer.timing.BuzzAlarmScheduler;
 
@@ -34,9 +35,19 @@ public class BuzzAlarmReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (DEBUG) Log.i(TAG, "Buzz alarm received");
 
-        // Buzz
+        buzz(context);
 
         // Schedule new alarm
         BuzzAlarmScheduler.rescheduleAlarm(context);
+    }
+
+    private void buzz(Context context) {
+        Vibrator vibrator = (Vibrator) context.
+            getSystemService(Context.VIBRATOR_SERVICE);
+
+        long[] vibrationPattern = {0, 300};
+        int noRepeat = -1;
+
+        vibrator.vibrate(vibrationPattern, noRepeat);
     }
 }
