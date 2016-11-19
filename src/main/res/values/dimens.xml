@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2016 Marien Raat <marienraat@riseup.net> -->
 
 <!-- Author: Marien Raat <marienraat@riseup.net> -->
@@ -16,12 +16,7 @@
 <!-- You should have received a copy of the GNU General Public License -->
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <resources>
-    <string-array name="buzz_pattern_entries">
-      <item>@string/buzz_pattern_entries_0</item>
-      <item>@string/buzz_pattern_entries_1</item>
-      <item>@string/buzz_pattern_entries_2</item>
-      <item>@string/buzz_pattern_entries_3</item>
-      <item>@string/buzz_pattern_entries_4</item>
-      <item>@string/buzz_pattern_entries_5</item>
-    </string-array>
+    <dimen name="seekbar_preference_min_height">54dp</dimen>
+    <dimen name="preference_padding_start">8dp</dimen>
+    <dimen name="preference_padding_end">8dp</dimen>
 </resources>

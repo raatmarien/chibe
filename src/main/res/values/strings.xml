@@ -22,7 +22,7 @@
 
   <!-- Preferences -->
   <string name="pref_category_timing">Timing</string>
-  <string name="buzz_time_preference_title">Buzz interval</string>
+  <string name="buzz_interval_preference_title">Buzz interval</string>
   <string name="sleep_start_preference_title">Start sleep at</string>
   <string name="sleep_end_preference_title">End sleep at</string>
 
@@ -52,12 +52,12 @@
   <string name="cancel_dialog">Cancel</string>
 
   <!-- buzz_time_preference_entries -->
-  <string name="buzz_time_entries_0">Buzz every minute</string>
-  <string name="buzz_time_entries_1">Buzz every 5 minutes</string>
-  <string name="buzz_time_entries_2">Buzz every 10 minutes</string>
-  <string name="buzz_time_entries_3">Buzz every 15 minutes</string>
-  <string name="buzz_time_entries_4">Buzz every half hour</string>
-  <string name="buzz_time_entries_5">Buzz every hour</string>
+  <string name="buzz_time_entries_0">every minute</string>
+  <string name="buzz_time_entries_1">every 5 minutes</string>
+  <string name="buzz_time_entries_2">every 10 minutes</string>
+  <string name="buzz_time_entries_3">every 15 minutes</string>
+  <string name="buzz_time_entries_4">every half hour</string>
+  <string name="buzz_time_entries_5">every hour</string>
 
   <!-- buzz_pattern_preference_entries -->
   <string name="buzz_pattern_entries_0">Pattern: .. _ ..</string>
@@ -67,17 +67,7 @@
   <string name="buzz_pattern_entries_4">Pattern: _</string>
   <string name="buzz_pattern_entries_5">Pattern: ..</string>
 
-  <string-array name="buzz_time_entry_values"
-                translatable="false">
-    <item>1</item>
-    <item>5</item>
-    <item>10</item>
-    <item>15</item>
-    <item>30</item>
-    <item>60</item>
-  </string-array>
-
-<string-array name="buzz_pattern_entry_values"
+  <string-array name="buzz_pattern_entry_values"
                 translatable="false">
     <item>0</item>
     <item>1</item>

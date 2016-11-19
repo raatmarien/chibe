@@ -62,8 +62,7 @@ public class SettingsModel {
     }
 
     public int getBuzzTimeInMinutes() {
-        return Integer.parseInt
-            (mSharedPrefs.getString(mBuzzTimePrefKey, "30"));
+        return mSharedPrefs.getInt(mBuzzTimePrefKey, 30);
     }
 
     public boolean isBuzzServiceOn() {

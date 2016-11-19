@@ -38,4 +38,17 @@
         name="android:windowTranslucentStatus">true</item>
   </style>
 
+    <!-- Preference TextView Style -->
+    <style name="PreferenceTextStyle">
+      <item name="android:textAppearance">@android:style/TextAppearance.Holo.Medium</item>
+      <item name="android:singleLine">true</item>
+      <item name="android:ellipsize">marquee</item>
+    </style>
+
+    <style name="PreferenceSecundaryTextStyle">
+      <item name="android:textAppearance">@android:style/TextAppearance.Holo.Small</item>
+      <item name="android:singleLine">true</item>
+      <item name="android:ellipsize">marquee</item>
+    </style>
+
 </resources>

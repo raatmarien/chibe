@@ -41,14 +41,6 @@ public class BuzzerFragment extends PreferenceFragment {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
 
-        ListPreference buzzTime = (ListPreference)
-            findPreference("pref_key_buzz_time");
-        buzzTime.setOnPreferenceChangeListener
-            (new EntryAsSummaryChangeListener());
-        // The first time we need to manually set the summary with the
-        // current entry.
-        buzzTime.setSummary(buzzTime.getEntry());
-
         ListPreference buzzPattern = (ListPreference)
             findPreference("pref_key_buzz_pattern");
         buzzPattern.setOnPreferenceChangeListener
