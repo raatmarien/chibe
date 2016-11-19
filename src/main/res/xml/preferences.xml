@@ -25,4 +25,8 @@
       android:entries="@array/buzz_time_entries"
       android:entryValues="@array/buzz_time_entry_values" />
 
+  <Preference
+      android:key="pref_key_test_buzz"
+      android:title="@string/test_buzz_preference_title" />
+
 </PreferenceScreen>

@@ -25,6 +25,8 @@ import android.preference.Preference;
 import android.util.Log;
 import android.preference.ListPreference;
 
+import com.jmstudios.buzzer.timing.BuzzAlarmReceiver;
+
 import com.jmstudios.buzzer.R;
 
 public class BuzzerFragment extends PreferenceFragment {
@@ -66,5 +68,22 @@ public class BuzzerFragment extends PreferenceFragment {
         // The first time we need to manually set the summary with the
         // current entry.
         buzzTime.setSummary(buzzTime.getEntry());
+
+        // Set the OnClickListener for the 'Test buzz' preference
+        Preference testBuzz = findPreference("pref_key_test_buzz");
+        testBuzz.setOnPreferenceClickListener
+            (new Preference.OnPreferenceClickListener() {
+                    @Override
+                    public boolean onPreferenceClick
+                        (Preference pref) {
+                        buzzOnce();
+                        return true;
+                    }
+                });
+    }
+
+    public void buzzOnce() {
+        if (DEBUG) Log.i(TAG, "Starting a test buzz");
+        BuzzAlarmReceiver.buzz(getActivity());
     }
 }

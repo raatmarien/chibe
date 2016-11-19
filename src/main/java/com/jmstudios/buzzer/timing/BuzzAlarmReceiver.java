@@ -41,7 +41,7 @@ public class BuzzAlarmReceiver extends BroadcastReceiver {
         BuzzAlarmScheduler.rescheduleAlarm(context);
     }
 
-    private void buzz(Context context) {
+    public static void buzz(Context context) {
         Vibrator vibrator = (Vibrator) context.
             getSystemService(Context.VIBRATOR_SERVICE);
 
