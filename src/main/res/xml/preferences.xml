@@ -18,15 +18,60 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <ListPreference
-      android:key="pref_key_buzz_time"
-      android:defaultValue="30"
-      android:title="@string/buzz_time_preference_title"
-      android:entries="@array/buzz_time_entries"
-      android:entryValues="@array/buzz_time_entry_values" />
+  <PreferenceCategory android:title="@string/pref_category_timing">
+    <ListPreference
+        android:key="pref_key_buzz_time"
+        android:defaultValue="30"
+        android:title="@string/buzz_time_preference_title"
+        android:entries="@array/buzz_time_entries"
+        android:entryValues="@array/buzz_time_entry_values" />
 
-  <Preference
-      android:key="pref_key_test_buzz"
-      android:title="@string/test_buzz_preference_title" />
+    <com.jmstudios.buzzer.TimePreference
+        android:key="pref_key_sleep_start"
+        android:title="@string/sleep_start_preference_title"
+        android:defaultValue="22:00" />
+
+    <com.jmstudios.buzzer.TimePreference
+        android:key="pref_key_sleep_end"
+        android:title="@string/sleep_end_preference_title"
+        android:defaultValue="09:00" />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_category_buzz">
+    <ListPreference
+        android:key="pref_key_buzz_pattern"
+        android:defaultValue="0"
+        android:title="@string/buzz_pattern_preference_title"
+        android:entries="@array/buzz_pattern_entries"
+        android:entryValues="@array/buzz_pattern_entry_values" />
+
+    <Preference
+        android:key="pref_key_test_buzz"
+        android:title="@string/test_buzz_preference_title"
+        android:summary="@string/test_buzz_preference_summary" />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_category_other">
+    <SwitchPreference
+        android:key="pref_key_dark_theme"
+        android:title="@string/dark_theme_preference_title"
+        android:defaultValue="false" />
+
+    <Preference
+        android:title="@string/project_page_preference_title"
+        android:summary="@string/project_page_preference_summary" >
+      <intent
+          android:action="android.intent.action.VIEW"
+          android:data="@string/project_page_url" />
+    </Preference>
+
+    <Preference
+        android:title="@string/email_me_preference_title"
+        android:summary="@string/email_me_preference_summary">
+      <intent
+          android:action="android.intent.action.VIEW"
+          android:data="@string/contact_email_adress" />
+    </Preference>
+  </PreferenceCategory>
 
 </PreferenceScreen>

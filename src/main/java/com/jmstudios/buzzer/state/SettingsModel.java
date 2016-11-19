@@ -34,6 +34,7 @@ public class SettingsModel {
     public static final String mBuzzTimePrefKey = "pref_key_buzz_time";
     public static final String mBuzzServiceOnPrefKey = "pref_key_buzz_service_on";
     public static final String mIntroShowPrefKey = "pref_key_intro_shown";
+    public static final String mBuzzPatternPrefKey = "pref_key_buzz_pattern";
 
     private SharedPreferences mSharedPrefs;
 
@@ -56,7 +57,7 @@ public class SettingsModel {
     }
 
     public String getSleepEnd() {
-        return mSharedPrefs.getString(mSleepEndPrefKey, "9:00");
+        return mSharedPrefs.getString(mSleepEndPrefKey, "09:00");
     }
 
     public int getBuzzTimeInMinutes() {
@@ -81,5 +82,10 @@ public class SettingsModel {
     public void setIntroShown(boolean introShown) {
         mSharedPrefs.edit()
             .putBoolean(mIntroShowPrefKey, introShown).commit();
+    }
+
+    public int getBuzzPatternIndex() {
+        return Integer.parseInt
+            (mSharedPrefs.getString(mBuzzPatternPrefKey, "0"));
     }
 }

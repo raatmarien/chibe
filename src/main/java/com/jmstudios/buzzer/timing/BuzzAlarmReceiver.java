@@ -26,6 +26,7 @@ import android.util.Log;
 import android.os.Vibrator;
 
 import com.jmstudios.buzzer.timing.BuzzAlarmScheduler;
+import com.jmstudios.buzzer.state.SettingsModel;
 
 public class BuzzAlarmReceiver extends BroadcastReceiver {
     private final static String TAG = "BuzzAlarmReceiver";
@@ -45,9 +46,25 @@ public class BuzzAlarmReceiver extends BroadcastReceiver {
         Vibrator vibrator = (Vibrator) context.
             getSystemService(Context.VIBRATOR_SERVICE);
 
-        long[] vibrationPattern = {0, 100, 50, 100, 200, 400, 200, 100, 50, 100};
-        int noRepeat = -1;
+        long[] vibrationPattern;
 
+        SettingsModel settingsModel = new SettingsModel(context);
+        switch (settingsModel.getBuzzPatternIndex()) {
+        default:
+        case 0: long[] temp0 = {0, 100, 50, 100, 200, 400, 200, 100, 50, 100};
+            vibrationPattern = temp0; break;
+        case 1: long[] temp1 = {0, 400, 200, 100, 50, 100, 200, 400};
+            vibrationPattern = temp1; break;
+        case 2: long[] temp2 = {0, 200, 400, 200};
+            vibrationPattern = temp2; break;
+        case 3: long[] temp3 = {0, 100, 50, 100, 50, 100, 50, 100};
+            vibrationPattern = temp3; break;
+        case 4: long[] temp4 = {0, 200};
+            vibrationPattern = temp4; break;
+        case 5: long[] temp5 = {0, 100, 50, 100};
+            vibrationPattern = temp5; break;
+        }
+        int noRepeat = -1;
         vibrator.vibrate(vibrationPattern, noRepeat);
     }
 }

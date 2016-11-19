@@ -21,8 +21,35 @@
   <string name="buzzer_intro_label">Intro</string>
 
   <!-- Preferences -->
-  <string name="buzz_time_preference_title">Buzz intervals</string>
-  <string name="test_buzz_preference_title">Test a buzz now</string>
+  <string name="pref_category_timing">Timing</string>
+  <string name="buzz_time_preference_title">Buzz interval</string>
+  <string name="sleep_start_preference_title">Start sleep at</string>
+  <string name="sleep_end_preference_title">End sleep at</string>
+
+  <string name="pref_category_buzz">Buzz pattern</string>
+  <string name="test_buzz_preference_title">Buzz now</string>
+  <string name="test_buzz_preference_summary">Lets your device
+  vibrate in the buzz pattern</string>
+  <string name="buzz_pattern_preference_title">Buzz pattern</string>
+
+  <string name="pref_category_other">Other</string>
+  <string name="dark_theme_preference_title">Dark theme</string>
+  <string name="project_page_preference_title">Visit the project
+  page</string>
+  <string name="project_page_preference_summary">Find more info, leave
+  feedback and contribute</string>
+  <string
+      name="project_page_url">https://notabug.org/raatmarien/buzzer</string>
+  <string name="email_me_preference_title">Email me at
+  marienraat@riseup.net</string>
+  <string name="email_me_preference_summary">Give you suggestions or
+  let me know what you think</string>
+  <string
+      name="contact_email_adress">mailto:marienraat@riseup.net</string>
+
+  <!-- Dialog -->
+  <string name="set_dialog">Set</string>
+  <string name="cancel_dialog">Cancel</string>
 
   <!-- buzz_time_preference_entries -->
   <string name="buzz_time_entries_0">Buzz every minute</string>
@@ -32,6 +59,14 @@
   <string name="buzz_time_entries_4">Buzz every half hour</string>
   <string name="buzz_time_entries_5">Buzz every hour</string>
 
+  <!-- buzz_pattern_preference_entries -->
+  <string name="buzz_pattern_entries_0">Pattern: .. _ ..</string>
+  <string name="buzz_pattern_entries_1">Pattern: _ .. _</string>
+  <string name="buzz_pattern_entries_2">Pattern: _ _</string>
+  <string name="buzz_pattern_entries_3">Pattern: ....</string>
+  <string name="buzz_pattern_entries_4">Pattern: _</string>
+  <string name="buzz_pattern_entries_5">Pattern: ..</string>
+
   <string-array name="buzz_time_entry_values"
                 translatable="false">
     <item>1</item>
@@ -40,6 +75,16 @@
     <item>15</item>
     <item>30</item>
     <item>60</item>
+  </string-array>
+
+<string-array name="buzz_pattern_entry_values"
+                translatable="false">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
   </string-array>
 
 </resources>
