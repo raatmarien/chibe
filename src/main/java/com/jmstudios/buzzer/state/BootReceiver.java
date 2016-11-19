@@ -24,7 +24,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.jmstudios.buzzer.state.SharedPreferenceHelper;
 import com.jmstudios.buzzer.timing.BuzzAlarmScheduler;
 
 public class BootReceiver extends BroadcastReceiver {
@@ -35,12 +34,6 @@ public class BootReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Boot event received");
 
-        SharedPreferenceHelper spHelper =
-            new SharedPreferenceHelper(context);
-
-        if (spHelper.isBuzzServiceOn())
-            BuzzAlarmScheduler.rescheduleAlarm(context);
-        else
-            BuzzAlarmScheduler.cancelAlarms(context);
+        BuzzAlarmScheduler.updateAlarms(context);
     }
 }

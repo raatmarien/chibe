@@ -40,7 +40,7 @@ import com.jmstudios.buzzer.R;
 import com.jmstudios.buzzer.BuzzerFragment;
 import com.jmstudios.buzzer.BuzzerIntro;
 import com.jmstudios.buzzer.timing.BuzzAlarmScheduler;
-import com.jmstudios.buzzer.state.SharedPreferenceHelper;
+import com.jmstudios.buzzer.state.SettingsModel;
 
 public class BuzzerActivity extends AppCompatActivity {
     private static final String TAG = "BuzzerActivity";
@@ -50,7 +50,7 @@ public class BuzzerActivity extends AppCompatActivity {
         = "com.jmstudios.buzzer.fragment.tag.BUZZER";
 
     private Context mContext;
-    private SharedPreferenceHelper spHelper;
+    private SettingsModel settingsModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,10 +82,10 @@ public class BuzzerActivity extends AppCompatActivity {
                 .commit();
         }
 
-        spHelper = new SharedPreferenceHelper(this);
+        settingsModel = new SettingsModel(this);
 
         // Show intro if the user hasn't seen it yet
-        if (!spHelper.isIntroShown()) {
+        if (!settingsModel.isIntroShown()) {
             startIntro(null);
         }
     }
@@ -103,16 +103,13 @@ public class BuzzerActivity extends AppCompatActivity {
                     @Override
                     public void onCheckedChanged
                         (CompoundButton buttonView, boolean isChecked) {
-                        if (isChecked)
-                            BuzzAlarmScheduler.rescheduleAlarm(mContext);
-                        else
-                            BuzzAlarmScheduler.cancelAlarms(mContext);
-                        spHelper.setBuzzServiceOn(isChecked);
+                        settingsModel.setBuzzServiceOn(isChecked);
+                        BuzzAlarmScheduler.updateAlarms(mContext);
                     }
                 });
 
         // Initialise the switch to the current buzz service state.
-        mainSwitch.setChecked(spHelper.isBuzzServiceOn());
+        mainSwitch.setChecked(settingsModel.isBuzzServiceOn());
 
         return true;
     }
@@ -126,6 +123,6 @@ public class BuzzerActivity extends AppCompatActivity {
         startActivity(introIntent);
 
         // Save that the intro has been shown
-        spHelper.setIntroShown(true);
+        settingsModel.setIntroShown(true);
     }
 }

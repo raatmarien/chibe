@@ -30,11 +30,21 @@ import java.util.Calendar;
 import java.util.TimeZone;
 
 import com.jmstudios.buzzer.timing.BuzzAlarmReceiver;
-import com.jmstudios.buzzer.SettingsModel;
+import com.jmstudios.buzzer.state.SettingsModel;
 
 public class BuzzAlarmScheduler {
     private static String TAG = "BuzzAlarmScheduler";
     private static boolean DEBUG = true;
+
+    // Cancels all alarms if the service is off, reschedules the alarm
+    // if the service is on.
+    public static void updateAlarms(Context context) {
+        SettingsModel settingsModel = new SettingsModel(context);
+        if (settingsModel.isBuzzServiceOn())
+            rescheduleAlarm(context);
+        else
+            cancelAlarms(context);
+    }
 
     // Removes all old alarms before scheduling a new one
     public static void rescheduleAlarm(Context context) {
@@ -53,8 +63,7 @@ public class BuzzAlarmScheduler {
     // methods accordingly.
     @SuppressLint("NewApi")
     public static void scheduleAlarm(Context context) {
-        SettingsModel settingsModel = new SettingsModel
-            (PreferenceManager.getDefaultSharedPreferences(context));
+        SettingsModel settingsModel = new SettingsModel(context);
 
         Calendar alarmTime = getNextAlarmTime
             (Calendar.getInstance(),
