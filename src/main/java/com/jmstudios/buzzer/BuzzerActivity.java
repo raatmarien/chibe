@@ -42,7 +42,8 @@ import com.jmstudios.buzzer.BuzzerIntro;
 import com.jmstudios.buzzer.timing.BuzzAlarmScheduler;
 import com.jmstudios.buzzer.state.SettingsModel;
 
-public class BuzzerActivity extends AppCompatActivity {
+public class BuzzerActivity extends AppCompatActivity
+    implements SharedPreferences.OnSharedPreferenceChangeListener {
     private static final String TAG = "BuzzerActivity";
     private static final boolean DEBUG = true;
 
@@ -104,14 +105,44 @@ public class BuzzerActivity extends AppCompatActivity {
                     public void onCheckedChanged
                         (CompoundButton buttonView, boolean isChecked) {
                         settingsModel.setBuzzServiceOn(isChecked);
-                        BuzzAlarmScheduler.updateAlarms(mContext);
                     }
                 });
 
         // Initialise the switch to the current buzz service state.
         mainSwitch.setChecked(settingsModel.isBuzzServiceOn());
+        BuzzAlarmScheduler.updateAlarms(this);
 
         return true;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        settingsModel.getSharedPreferences()
+            .registerOnSharedPreferenceChangeListener(this);
+    }
+
+    @Override
+    public void onStop() {
+        settingsModel.getSharedPreferences()
+            .unregisterOnSharedPreferenceChangeListener(this);
+        super.onStop();
+    }
+
+    @Override
+    public void onSharedPreferenceChanged
+        (SharedPreferences sharedPreferences, String key) {
+        if (DEBUG) Log.d(TAG, "Received preference change" +
+                         "for pref key: " + key);
+
+        switch (key) {
+        case SettingsModel.mSleepStartPrefKey:
+        case SettingsModel.mSleepEndPrefKey:
+        case SettingsModel.mBuzzTimePrefKey:
+        case SettingsModel.mBuzzServiceOnPrefKey:
+            BuzzAlarmScheduler.updateAlarms(this);
+            break;
+        }
     }
 
     // This method is also used by the floating action button, through the

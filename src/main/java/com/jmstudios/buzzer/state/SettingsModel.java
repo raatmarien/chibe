@@ -25,17 +25,15 @@ import android.preference.PreferenceManager;
 
 import android.util.Log;
 
-public class SettingsModel
-    implements SharedPreferences.OnSharedPreferenceChangeListener {
+public class SettingsModel {
     private static final String TAG = "SettingsModel";
     private static final boolean DEBUG = true;
 
-    private static final String mSleepStartPrefKey = "pref_key_sleep_start";
-    private static final String mSleepEndPrefKey = "pref_key_sleep_end";
-    private static final String mBuzzTimePrefKey = "pref_key_buzz_time";
+    public static final String mSleepStartPrefKey = "pref_key_sleep_start";
+    public static final String mSleepEndPrefKey = "pref_key_sleep_end";
+    public static final String mBuzzTimePrefKey = "pref_key_buzz_time";
     public static final String mBuzzServiceOnPrefKey = "pref_key_buzz_service_on";
     public static final String mIntroShowPrefKey = "pref_key_intro_shown";
-
 
     private SharedPreferences mSharedPrefs;
 
@@ -49,16 +47,8 @@ public class SettingsModel
         this(PreferenceManager.getDefaultSharedPreferences(context));
     }
 
-    public void openSettingsChangeListener() {
-        mSharedPreferences.registerOnSharedPreferenceChangeListener(this);
-
-        if (DEBUG) Log.d(TAG, "Opened Settings change listener");
-    }
-
-    public void closeSettingsChangeListener() {
-        mSharedPreferences.unregisterOnSharedPreferenceChangeListener(this);
-
-        if (DEBUG) Log.d(TAG, "Closed Settings change listener");
+    public SharedPreferences getSharedPreferences() {
+        return mSharedPrefs;
     }
 
     public String getSleepStart() {
@@ -91,11 +81,5 @@ public class SettingsModel
     public void setIntroShown(boolean introShown) {
         mSharedPrefs.edit()
             .putBoolean(mIntroShowPrefKey, introShown).commit();
-    }
-
-    @Override
-    public void onSharedPreferenceChanged
-        (SharedPreferences sharedPreferences, String key) {
-
     }
 }
