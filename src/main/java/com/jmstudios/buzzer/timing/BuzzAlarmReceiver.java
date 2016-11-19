@@ -45,7 +45,7 @@ public class BuzzAlarmReceiver extends BroadcastReceiver {
         Vibrator vibrator = (Vibrator) context.
             getSystemService(Context.VIBRATOR_SERVICE);
 
-        long[] vibrationPattern = {0, 300};
+        long[] vibrationPattern = {0, 100, 50, 100, 200, 400, 200, 100, 50, 100};
         int noRepeat = -1;
 
         vibrator.vibrate(vibrationPattern, noRepeat);
