@@ -68,6 +68,18 @@ public class BuzzerFragment extends PreferenceFragment {
                         return true;
                     }
                 });
+
+        Preference darkTheme = findPreference("pref_key_dark_theme");
+        // To change the theme, the activity has to be recreated
+        darkTheme.setOnPreferenceChangeListener
+            (new Preference.OnPreferenceChangeListener() {
+                    @Override
+                    public boolean onPreferenceChange
+                        (Preference pref, Object newValue) {
+                        getActivity().recreate();
+                        return true;
+                    }
+                });
     }
 
     public void buzzOnce() {

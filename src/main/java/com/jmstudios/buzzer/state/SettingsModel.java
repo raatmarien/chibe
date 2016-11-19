@@ -35,6 +35,7 @@ public class SettingsModel {
     public static final String mBuzzServiceOnPrefKey = "pref_key_buzz_service_on";
     public static final String mIntroShowPrefKey = "pref_key_intro_shown";
     public static final String mBuzzPatternPrefKey = "pref_key_buzz_pattern";
+    public static final String mDarkThemePrefKey = "pref_key_dark_theme";
 
     private SharedPreferences mSharedPrefs;
 
@@ -87,5 +88,9 @@ public class SettingsModel {
     public int getBuzzPatternIndex() {
         return Integer.parseInt
             (mSharedPrefs.getString(mBuzzPatternPrefKey, "0"));
+    }
+
+    public boolean isDarkTheme() {
+        return mSharedPrefs.getBoolean(mDarkThemePrefKey, false);
     }
 }

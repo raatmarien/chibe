@@ -55,6 +55,12 @@ public class BuzzerActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        settingsModel = new SettingsModel(this);
+
+        // Set the theme before calling super
+        if (settingsModel.isDarkTheme())
+            setTheme(R.style.AppThemeDark);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buzzer_activity);
 
@@ -82,8 +88,6 @@ public class BuzzerActivity extends AppCompatActivity
                 .replace(R.id.fragment_container, fragment, FRAGMENT_TAG_BUZZER)
                 .commit();
         }
-
-        settingsModel = new SettingsModel(this);
 
         // Show intro if the user hasn't seen it yet
         if (!settingsModel.isIntroShown()) {
