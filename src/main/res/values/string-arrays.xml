@@ -22,5 +22,6 @@
       <item>@string/buzz_time_entries_2</item>
       <item>@string/buzz_time_entries_3</item>
       <item>@string/buzz_time_entries_4</item>
+      <item>@string/buzz_time_entries_5</item>
     </string-array>
 </resources>

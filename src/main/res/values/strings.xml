@@ -24,14 +24,16 @@
   <string name="buzz_time_preference_title">Buzz intervals</string>
 
   <!-- buzz_time_preference_entries -->
-  <string name="buzz_time_entries_0">Buzz every 5 minutes</string>
-  <string name="buzz_time_entries_1">Buzz every 10 minutes</string>
-  <string name="buzz_time_entries_2">Buzz every 15 minutes</string>
-  <string name="buzz_time_entries_3">Buzz every half hour</string>
-  <string name="buzz_time_entries_4">Buzz every hour</string>
+  <string name="buzz_time_entries_0">Buzz every minute</string>
+  <string name="buzz_time_entries_1">Buzz every 5 minutes</string>
+  <string name="buzz_time_entries_2">Buzz every 10 minutes</string>
+  <string name="buzz_time_entries_3">Buzz every 15 minutes</string>
+  <string name="buzz_time_entries_4">Buzz every half hour</string>
+  <string name="buzz_time_entries_5">Buzz every hour</string>
 
   <string-array name="buzz_time_entry_values"
                 translatable="false">
+    <item>1</item>
     <item>5</item>
     <item>10</item>
     <item>15</item>
