@@ -40,6 +40,7 @@ import com.jmstudios.buzzer.R;
 import com.jmstudios.buzzer.BuzzerFragment;
 import com.jmstudios.buzzer.BuzzerIntro;
 import com.jmstudios.buzzer.timing.BuzzAlarmScheduler;
+import com.jmstudios.buzzer.state.SharedPreferenceHelper;
 
 public class BuzzerActivity extends AppCompatActivity {
     private static final String TAG = "BuzzerActivity";
@@ -49,6 +50,7 @@ public class BuzzerActivity extends AppCompatActivity {
         = "com.jmstudios.buzzer.fragment.tag.BUZZER";
 
     private Context mContext;
+    private SharedPreferenceHelper spHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,11 +82,10 @@ public class BuzzerActivity extends AppCompatActivity {
                 .commit();
         }
 
-        // Show intro if the user hasn't seen it yet
-        boolean introShown = PreferenceManager.getDefaultSharedPreferences(this)
-            .getBoolean("pref_key_intro_shown", false);
+        spHelper = new SharedPreferenceHelper(this);
 
-        if (!introShown) {
+        // Show intro if the user hasn't seen it yet
+        if (!spHelper.isIntroShown()) {
             startIntro(null);
         }
     }
@@ -106,8 +107,12 @@ public class BuzzerActivity extends AppCompatActivity {
                             BuzzAlarmScheduler.rescheduleAlarm(mContext);
                         else
                             BuzzAlarmScheduler.cancelAlarms(mContext);
+                        spHelper.setBuzzServiceOn(isChecked);
                     }
                 });
+
+        // Initialise the switch to the current buzz service state.
+        mainSwitch.setChecked(spHelper.isBuzzServiceOn());
 
         return true;
     }
@@ -121,9 +126,6 @@ public class BuzzerActivity extends AppCompatActivity {
         startActivity(introIntent);
 
         // Save that the intro has been shown
-        SharedPreferences.Editor spEditor =
-            PreferenceManager.getDefaultSharedPreferences(this).edit();
-        spEditor.putBoolean("pref_key_intro_shown", true);
-        spEditor.apply();
+        spHelper.setIntroShown(true);
     }
 }
