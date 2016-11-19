@@ -20,11 +20,13 @@
   <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
     <item name="colorPrimary">@color/color_primary</item>
     <item name="colorAccent">@color/color_accent</item>
+    <item name="colorPrimaryDark">@color/color_primary_dark</item>
   </style>
 
   <style name="AppThemeDark" parent="Theme.AppCompat">
     <item name="colorPrimary">@color/color_primary</item>
     <item name="colorAccent">@color/color_accent</item>
+    <item name="colorPrimaryDark">@color/color_primary_dark</item>
   </style>
 
   <style name="AppThemeNoActionBar"

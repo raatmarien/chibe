@@ -16,6 +16,7 @@
 <!-- You should have received a copy of the GNU General Public License -->
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <resources>
-  <color name="color_primary">#FFFF5722</color>
-  <color name="color_accent">#FF448AFF</color>
+  <color name="color_primary">#ff3f51b5</color>
+  <color name="color_accent">#ff00bfa5</color>
+  <color name="color_primary_dark">#ff303f9f</color>
 </resources>
