@@ -20,6 +20,29 @@
   <string name="buzzer_settings_label">Buzzer</string>
   <string name="buzzer_intro_label">Intro</string>
 
+  <!-- Intro -->
+  <string name="intro_slide_1_title">Welcome!</string>
+  <string name="intro_slide_1_text">Welcome to Buzzer!</string>
+
+  <string name="intro_slide_2_title">Keeping track of time</string>
+  <string name="intro_slide_2_text">Buzzer helps you keep track of
+  time by simply buzzing at set intervals. This gives you an intuitive
+  \'feel\' for what time it is.</string>
+
+  <string name="intro_slide_3_title">Sleeps when you sleep</string>
+  <string name="intro_slide_3_text">Buzzer won\'t bother you when
+  you\'re sleeping. Just adjust the sleep times and sleep without being
+  disturbed!</string>
+
+  <string name="intro_slide_4_title">Choose different buzz patterns</string>
+  <string name="intro_slide_4_text">Buzzer let\'s you choose from
+  different buzz patterns. Choose the one that fits you, so you don\'t
+  confuse Buzzer with regular notifications.</string>
+
+  <string name="intro_slide_5_title">Get started!</string>
+  <string name="intro_slide_5_text">Press the switch in the top right
+  corner to enable Buzzer and get started!</string>
+
   <!-- Preferences -->
   <string name="pref_category_timing">Timing</string>
   <string name="buzz_interval_preference_title">Buzz interval</string>

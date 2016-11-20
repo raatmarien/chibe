@@ -21,6 +21,7 @@
 package com.jmstudios.buzzer;
 
 import android.os.Bundle;
+import android.content.res.Resources;
 
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
@@ -28,25 +29,37 @@ import com.github.paolorotolo.appintro.AppIntroFragment;
 import com.jmstudios.buzzer.R;
 
 public class BuzzerIntro extends AppIntro {
+    private Resources resources;
 
     @Override
     public void init(Bundle savedInstanceState) {
+        resources = this.getResources();
+
         addSlide(AppIntroFragment.newInstance
-                 ("Hello", "Halloah",
+                 (resources.getString(R.string.intro_slide_1_title),
+                  resources.getString(R.string.intro_slide_1_text),
                   R.drawable.alarm_clock,
-                  0xFFB71C1C));
+                  0xFF3f51b5));
         addSlide(AppIntroFragment.newInstance
-                 ("Hello", "Halloah",
+                 (resources.getString(R.string.intro_slide_2_title),
+                  resources.getString(R.string.intro_slide_2_text),
                   R.drawable.alarm_clock,
-                  0xFF004D40));
+                  0xFFf44336));
         addSlide(AppIntroFragment.newInstance
-                 ("Hello", "Halloah",
+                 (resources.getString(R.string.intro_slide_3_title),
+                  resources.getString(R.string.intro_slide_3_text),
                   R.drawable.alarm_clock,
-                  0xFF3E2723));
+                  0xFF009688));
         addSlide(AppIntroFragment.newInstance
-                 ("Hello", "Halloah",
+                 (resources.getString(R.string.intro_slide_4_title),
+                  resources.getString(R.string.intro_slide_4_text),
                   R.drawable.alarm_clock,
-                  0xFF263238));
+                  0xFF9c27b0));
+        addSlide(AppIntroFragment.newInstance
+                 (resources.getString(R.string.intro_slide_5_title),
+                  resources.getString(R.string.intro_slide_5_text),
+                  R.drawable.alarm_clock,
+                  0xFFffc107));
     }
 
     @Override
