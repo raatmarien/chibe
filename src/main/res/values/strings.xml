@@ -81,8 +81,10 @@
   <string name="buzz_time_entries_1">every 5 minutes</string>
   <string name="buzz_time_entries_2">every 10 minutes</string>
   <string name="buzz_time_entries_3">every 15 minutes</string>
-  <string name="buzz_time_entries_4">every half hour</string>
-  <string name="buzz_time_entries_5">every hour</string>
+  <string name="buzz_time_entries_4">every 20 minutes</string>
+  <string name="buzz_time_entries_5">every half hour</string>
+  <string name="buzz_time_entries_6">every hour</string>
+  <string name="buzz_time_entries_7">every two hours</string>
 
   <!-- buzz_pattern_preference_entries -->
   <string name="buzz_pattern_entries_0">Pattern: .. _ ..</string>

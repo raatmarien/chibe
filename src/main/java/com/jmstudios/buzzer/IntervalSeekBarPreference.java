@@ -88,7 +88,7 @@ public class IntervalSeekBarPreference extends Preference {
         mIconView = (ImageView) view.findViewById(R.id.interval_icon);
 
         mIntervalSeekBar = (SeekBar) view.findViewById(R.id.interval_seekbar);
-        mIntervalSeekBar.setMax(5);
+        mIntervalSeekBar.setMax(7);
 
         mIntervalSeekBar.setOnSeekBarChangeListener
             (new SeekBar.OnSeekBarChangeListener() {
@@ -118,9 +118,11 @@ public class IntervalSeekBarPreference extends Preference {
         case 1: return 5;
         case 2: return 10;
         case 3: return 15;
+        case 4: return 20;
         default:
-        case 4: return 30;
-        case 5: return 60;
+        case 5: return 30;
+        case 6: return 60;
+        case 7: return 120;
         }
     }
 
@@ -138,9 +140,11 @@ public class IntervalSeekBarPreference extends Preference {
         case 5: return 1;
         case 10: return 2;
         case 15: return 3;
+        case 20: return 4;
         default:
-        case 30: return 4;
-        case 60: return 5;
+        case 30: return 5;
+        case 60: return 6;
+        case 120: return 7;
         }
     }
 
@@ -150,9 +154,11 @@ public class IntervalSeekBarPreference extends Preference {
         case 5: return R.drawable.interval_icon_5;
         case 10: return R.drawable.interval_icon_10;
         case 15: return R.drawable.interval_icon_15;
+        case 20: return R.drawable.interval_icon_20;
         default:
         case 30: return R.drawable.interval_icon_30;
         case 60: return R.drawable.interval_icon_60;
+        case 120: return R.drawable.interval_icon_120;
         }
     }
 
@@ -166,11 +172,15 @@ public class IntervalSeekBarPreference extends Preference {
                 .getString(R.string.buzz_time_entries_2);
         case 15: return mContext.getResources()
                 .getString(R.string.buzz_time_entries_3);
+        case 20: return mContext.getResources()
+                .getString(R.string.buzz_time_entries_4);
         default:
         case 30: return mContext.getResources()
-                .getString(R.string.buzz_time_entries_4);
-        case 60: return mContext.getResources()
                 .getString(R.string.buzz_time_entries_5);
+        case 60: return mContext.getResources()
+                .getString(R.string.buzz_time_entries_6);
+        case 120: return mContext.getResources()
+                .getString(R.string.buzz_time_entries_7);
         }
     }
 }
