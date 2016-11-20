@@ -21,17 +21,19 @@
   <string name="buzzer_intro_label">Intro</string>
 
   <!-- Intro -->
-  <string name="intro_slide_1_title">Welcome!</string>
-  <string name="intro_slide_1_text">Welcome to Buzzer!</string>
+  <string name="intro_slide_1_title">Welcome to Buzzer!</string>
+  <string name="intro_slide_1_text">Keeping track of time everywhere,
+  no looking required.</string>
 
-  <string name="intro_slide_2_title">Keeping track of time</string>
-  <string name="intro_slide_2_text">Buzzer helps you keep track of
-  time by simply buzzing at set intervals. This gives you an intuitive
-  \'feel\' for what time it is.</string>
+  <string name="intro_slide_2_title">Keep track of time</string>
+  <string name="intro_slide_2_text">Effortlessly keep track of the
+  time during any activity with Buzzer. A small vibration at set times
+  will subtly remind you of the time. You will be able to use your time
+  more efficiently and will be able divide your time more conciously.</string>
 
   <string name="intro_slide_3_title">Sleeps when you sleep</string>
   <string name="intro_slide_3_text">Buzzer won\'t bother you when
-  you\'re sleeping. Just adjust the sleep times and sleep without being
+  you\'re sleeping. Just adjust the sleep times and rest without being
   disturbed!</string>
 
   <string name="intro_slide_4_title">Choose different buzz patterns</string>

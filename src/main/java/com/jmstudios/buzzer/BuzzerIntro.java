@@ -43,23 +43,23 @@ public class BuzzerIntro extends AppIntro {
         addSlide(AppIntroFragment.newInstance
                  (resources.getString(R.string.intro_slide_2_title),
                   resources.getString(R.string.intro_slide_2_text),
-                  R.drawable.alarm_clock,
+                  R.drawable.intro_slide_2,
                   0xFFf44336));
         addSlide(AppIntroFragment.newInstance
                  (resources.getString(R.string.intro_slide_3_title),
                   resources.getString(R.string.intro_slide_3_text),
-                  R.drawable.alarm_clock,
-                  0xFF009688));
+                  R.drawable.intro_slide_3,
+                  0xFF263238));
         addSlide(AppIntroFragment.newInstance
                  (resources.getString(R.string.intro_slide_4_title),
                   resources.getString(R.string.intro_slide_4_text),
-                  R.drawable.alarm_clock,
+                  R.drawable.intro_slide_4,
                   0xFF9c27b0));
         addSlide(AppIntroFragment.newInstance
                  (resources.getString(R.string.intro_slide_5_title),
                   resources.getString(R.string.intro_slide_5_text),
-                  R.drawable.alarm_clock,
-                  0xFFffc107));
+                  R.drawable.intro_slide_5,
+                  0xFFffb300));
     }
 
     @Override
