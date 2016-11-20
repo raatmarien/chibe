@@ -27,6 +27,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.ImageView;
+
+import com.jmstudios.buzzer.state.SettingsModel;
 
 import com.jmstudios.buzzer.R;
 
@@ -36,7 +39,9 @@ public class IntervalSeekBarPreference extends Preference {
     public static final int DEFAULT_VALUE = 30;
 
     public SeekBar mIntervalSeekBar;
+    private SettingsModel settingsModel;
     private TextView mProgressView;
+    private ImageView mIconView;
     private int mProgress;
     private View mView;
     private Context mContext;
@@ -47,6 +52,8 @@ public class IntervalSeekBarPreference extends Preference {
 
         mContext = context;
         setLayoutResource(R.layout.preference_interval_seekbar);
+
+        settingsModel = new SettingsModel(context);
     }
 
     public void setProgress(int progress) {
@@ -78,6 +85,7 @@ public class IntervalSeekBarPreference extends Preference {
         mView = view;
 
         mProgressView = (TextView) view.findViewById(R.id.progress_text);
+        mIconView = (ImageView) view.findViewById(R.id.interval_icon);
 
         mIntervalSeekBar = (SeekBar) view.findViewById(R.id.interval_seekbar);
         mIntervalSeekBar.setMax(5);
@@ -90,7 +98,7 @@ public class IntervalSeekBarPreference extends Preference {
                         mProgress = getInterval(progress);
                         persistInt(mProgress);
 
-                        mProgressView.setText(getIntervalText());
+                        updateView();
                     }
 
                     @Override
@@ -101,7 +109,7 @@ public class IntervalSeekBarPreference extends Preference {
                 });
         mIntervalSeekBar.setProgress(getProgress(mProgress));
 
-        mProgressView.setText(getIntervalText());
+        updateView();
     }
 
     public int getInterval(int progress) {
@@ -116,6 +124,14 @@ public class IntervalSeekBarPreference extends Preference {
         }
     }
 
+    public void updateView() {
+        mProgressView.setText(getIntervalText());
+        mIconView.setImageResource(getDrawable(mProgress));
+
+        if (!settingsModel.isDarkTheme())
+            mIconView.setColorFilter(0xDE000000);
+    }
+
     public int getProgress(int interval) {
         switch (interval) {
         case 1: return 0;
@@ -125,6 +141,18 @@ public class IntervalSeekBarPreference extends Preference {
         default:
         case 30: return 4;
         case 60: return 5;
+        }
+    }
+
+    public int getDrawable(int interval) {
+        switch (interval) {
+        case 1: return R.drawable.interval_icon_1;
+        case 5: return R.drawable.interval_icon_5;
+        case 10: return R.drawable.interval_icon_10;
+        case 15: return R.drawable.interval_icon_15;
+        default:
+        case 30: return R.drawable.interval_icon_30;
+        case 60: return R.drawable.interval_icon_60;
         }
     }
 

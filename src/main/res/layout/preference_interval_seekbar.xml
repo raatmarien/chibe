@@ -65,13 +65,20 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="0dp"
-            android:paddingStart="0dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:layout_marginBottom="6dp" >
+
+            <ImageView
+                android:id="@+id/interval_icon"
+                android:layout_gravity="center_vertical|start"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/interval_icon_30" />
 
             <SeekBar
                 android:id="@+id/interval_seekbar"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
                 android:layout_gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
