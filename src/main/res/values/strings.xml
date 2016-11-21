@@ -96,15 +96,23 @@
   <string name="buzz_pattern_entries_3">Pattern: ....</string>
   <string name="buzz_pattern_entries_4">Pattern: _</string>
   <string name="buzz_pattern_entries_5">Pattern: ..</string>
+  <string name="buzz_pattern_entries_6">Pattern: . _ ...</string>
+  <string name="buzz_pattern_entries_7">Pattern: ... _ .</string>
+  <string name="buzz_pattern_entries_8">Pattern: . _ . _ .</string>
+  <string name="buzz_pattern_entries_9">Pattern: ... _</string>
 
   <string-array name="buzz_pattern_entry_values"
                 translatable="false">
-    <item>0</item>
-    <item>1</item>
-    <item>2</item>
-    <item>3</item>
-    <item>4</item>
-    <item>5</item>
+    <item>.._..</item>
+    <item>_.._</item>
+    <item>__</item>
+    <item>....</item>
+    <item>_</item>
+    <item>..</item>
+    <item>._...</item>
+    <item>..._.</item>
+    <item>._._.</item>
+    <item>..._</item>
   </string-array>
 
 </resources>

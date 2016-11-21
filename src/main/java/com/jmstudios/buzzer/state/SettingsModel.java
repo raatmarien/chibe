@@ -84,9 +84,8 @@ public class SettingsModel {
             .putBoolean(mIntroShowPrefKey, introShown).commit();
     }
 
-    public int getBuzzPatternIndex() {
-        return Integer.parseInt
-            (mSharedPrefs.getString(mBuzzPatternPrefKey, "0"));
+    public String getBuzzPattern() {
+        return mSharedPrefs.getString(mBuzzPatternPrefKey, ".._..");
     }
 
     public boolean isDarkTheme() {

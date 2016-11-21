@@ -23,5 +23,9 @@
       <item>@string/buzz_pattern_entries_3</item>
       <item>@string/buzz_pattern_entries_4</item>
       <item>@string/buzz_pattern_entries_5</item>
+      <item>@string/buzz_pattern_entries_6</item>
+      <item>@string/buzz_pattern_entries_7</item>
+      <item>@string/buzz_pattern_entries_8</item>
+      <item>@string/buzz_pattern_entries_9</item>
     </string-array>
 </resources>
