@@ -22,14 +22,17 @@
 
   <!-- Intro -->
   <string name="intro_slide_1_title">Welcome to Buzzer!</string>
-  <string name="intro_slide_1_text">Keeping track of time everywhere,
-  no looking required.</string>
+  <string name="intro_slide_1_text">In the past, many homes had a
+  standing or cuckoo\'s clock that would ring every hour or half
+  hour. However, with the current technology you don\'t need to bother
+  everyone with a loud nose, Buzzer can just vibrate your phone for
+  you!</string>
 
   <string name="intro_slide_2_title">Keep track of time</string>
   <string name="intro_slide_2_text">Effortlessly keep track of the
   time during any activity with Buzzer. A small vibration at set times
   will subtly remind you of the time. You will be able to use your time
-  more efficiently and will be able divide your time more conciously.</string>
+  more efficiently and will be able divide your time more consciously.</string>
 
   <string name="intro_slide_3_title">Sleeps when you sleep</string>
   <string name="intro_slide_3_text">Buzzer won\'t bother you when
