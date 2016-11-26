@@ -41,14 +41,6 @@ public class BuzzerFragment extends PreferenceFragment {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
 
-        ListPreference buzzPattern = (ListPreference)
-            findPreference("pref_key_buzz_pattern");
-        buzzPattern.setOnPreferenceChangeListener
-            (new EntryAsSummaryChangeListener());
-        // The first time we need to manually set the summary with the
-        // current entry.
-        buzzPattern.setSummary(buzzPattern.getEntry());
-
         // Set the OnClickListener for the 'Test buzz' preference
         Preference testBuzz = findPreference("pref_key_test_buzz");
         testBuzz.setOnPreferenceClickListener
@@ -77,28 +69,5 @@ public class BuzzerFragment extends PreferenceFragment {
     public void buzzOnce() {
         if (DEBUG) Log.i(TAG, "Starting a test buzz");
         BuzzAlarmReceiver.buzz(getActivity());
-    }
-
-    // A OnPreferenceChangeListener that updates the summary of the
-    // preference to the entry that is being selected, specifically
-    // for ListPreferences.
-    public class EntryAsSummaryChangeListener
-        implements Preference.OnPreferenceChangeListener {
-        @Override
-        public boolean onPreferenceChange(Preference pref,
-                                          Object newValue) {
-            // The value of the preference has not been
-            // updated yet, so we need to find the entry
-            // corresponding with the new value manually.
-            ListPreference listPref =
-                (ListPreference) pref;
-            CharSequence entry = listPref.getEntries()
-                [listPref.findIndexOfValue
-                 (newValue.toString())];
-            pref.setSummary(entry);
-
-            // Return true to update the value
-            return true;
-        }
     }
 }

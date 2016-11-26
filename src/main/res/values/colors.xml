@@ -19,4 +19,5 @@
   <color name="color_primary">#ff3f51b5</color>
   <color name="color_accent">#ff00bfa5</color>
   <color name="color_primary_dark">#ff303f9f</color>
+  <color name="text_color_body">#DE000000</color>
 </resources>

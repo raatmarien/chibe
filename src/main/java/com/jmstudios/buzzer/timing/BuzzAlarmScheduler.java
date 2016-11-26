@@ -71,9 +71,6 @@ public class BuzzAlarmScheduler {
              settingsModel.getSleepEnd(),
              settingsModel.getBuzzTimeInMinutes());
 
-        // The AlarmManager accepts the time in UTC
-        alarmTime.setTimeZone(TimeZone.getTimeZone("UTC"));
-
         AlarmManager alarmManager = (AlarmManager)
             context.getSystemService(Context.ALARM_SERVICE);
         PendingIntent buzzPendingIntent = getBuzzPendingIntent(context);

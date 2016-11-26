@@ -35,9 +35,9 @@
   </PreferenceCategory>
 
   <PreferenceCategory android:title="@string/pref_category_buzz">
-    <ListPreference
+    <com.jmstudios.buzzer.BuzzPatternPreference
         android:key="pref_key_buzz_pattern"
-        android:defaultValue="0"
+        android:defaultValue=".._.."
         android:title="@string/buzz_pattern_preference_title"
         android:entries="@array/buzz_pattern_entries"
         android:entryValues="@array/buzz_pattern_entry_values" />

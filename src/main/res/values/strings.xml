@@ -78,6 +78,12 @@
   <!-- Dialog -->
   <string name="set_dialog">Set</string>
   <string name="cancel_dialog">Cancel</string>
+  <string name="ok_dialog">OK</string>
+
+  <string name="short_buzz">Short</string>
+  <string name="long_buzz">Long</string>
+  <string name="delete_buzz">⌫ DEL</string>
+  <string name="custom_pattern_hint">Use the buttons to create a pattern</string>
 
   <!-- buzz_time_preference_entries -->
   <string name="buzz_time_entries_0">every minute</string>
@@ -90,29 +96,25 @@
   <string name="buzz_time_entries_7">every two hours</string>
 
   <!-- buzz_pattern_preference_entries -->
+  <string name="buzz_pattern_entries_custom">Custom</string>
   <string name="buzz_pattern_entries_0">Pattern: .. _ ..</string>
   <string name="buzz_pattern_entries_1">Pattern: _ .. _</string>
   <string name="buzz_pattern_entries_2">Pattern: _ _</string>
-  <string name="buzz_pattern_entries_3">Pattern: ....</string>
-  <string name="buzz_pattern_entries_4">Pattern: _</string>
-  <string name="buzz_pattern_entries_5">Pattern: ..</string>
-  <string name="buzz_pattern_entries_6">Pattern: . _ ...</string>
-  <string name="buzz_pattern_entries_7">Pattern: ... _ .</string>
-  <string name="buzz_pattern_entries_8">Pattern: . _ . _ .</string>
-  <string name="buzz_pattern_entries_9">Pattern: ... _</string>
+  <string name="buzz_pattern_entries_3">Pattern: _</string>
+  <string name="buzz_pattern_entries_4">Pattern: ..</string>
+  <string name="buzz_pattern_entries_5">Pattern: . _ ...</string>
+  <string name="buzz_pattern_entries_6">Pattern: . _ . _ .</string>
 
   <string-array name="buzz_pattern_entry_values"
                 translatable="false">
+    <item>custom</item>
     <item>.._..</item>
     <item>_.._</item>
     <item>__</item>
-    <item>....</item>
     <item>_</item>
     <item>..</item>
     <item>._...</item>
-    <item>..._.</item>
     <item>._._.</item>
-    <item>..._</item>
   </string-array>
 
 </resources>
