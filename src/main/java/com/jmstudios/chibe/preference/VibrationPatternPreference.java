@@ -38,6 +38,7 @@ public class VibrationPatternPreference extends ListPreference {
     private Context mContext;
     private String mCustomPattern;
     private EditText customPatternText;
+    private AlertDialog mAlertDialog;
 
     public VibrationPatternPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -55,8 +56,12 @@ public class VibrationPatternPreference extends ListPreference {
     protected void onDialogClosed(boolean positiveResult) {
         super.onDialogClosed(positiveResult);
 
+        // Marked as final so the inner classes can use it.
+        final SettingsModel settingsModel = new SettingsModel(mContext);
+
         if (positiveResult && getValue().equals("custom")) {
-            mCustomPattern = "";
+            mCustomPattern = settingsModel.getCustomVibrationPattern();
+
             LayoutInflater inflater = LayoutInflater.from(mContext);
             View customPatternView =
                 inflater.inflate(R.layout.custom_pattern_view, null);
@@ -68,6 +73,7 @@ public class VibrationPatternPreference extends ListPreference {
             customPatternText.setClickable(false);
             customPatternText.setSelected(false);
             customPatternText.setKeyListener(null);
+            updateCustomPatternText();
 
             ((Button) customPatternView.findViewById(R.id.button_short_vibration))
                 .setOnClickListener(new View.OnClickListener() {
@@ -75,6 +81,8 @@ public class VibrationPatternPreference extends ListPreference {
                         public void onClick(View v) {
                             mCustomPattern += ".";
                             updateCustomPatternText();
+                            mAlertDialog.getButton(DialogInterface.BUTTON_POSITIVE)
+                                .setEnabled(!mCustomPattern.isEmpty());
                         }
                     });
             ((Button) customPatternView.findViewById(R.id.button_long_vibration))
@@ -83,6 +91,8 @@ public class VibrationPatternPreference extends ListPreference {
                         public void onClick(View v) {
                             mCustomPattern += "_";
                             updateCustomPatternText();
+                            mAlertDialog.getButton(DialogInterface.BUTTON_POSITIVE)
+                                .setEnabled(!mCustomPattern.isEmpty());
                         }
                     });
             ((Button) customPatternView.findViewById(R.id.button_delete_vibration))
@@ -93,35 +103,35 @@ public class VibrationPatternPreference extends ListPreference {
                                 mCustomPattern =
                                     mCustomPattern.substring
                                     (0, mCustomPattern.length() - 1);
+                            mAlertDialog.getButton(DialogInterface.BUTTON_POSITIVE)
+                                .setEnabled(!mCustomPattern.isEmpty());
                             updateCustomPatternText();
                         }
                     });
-            
+
             AlertDialog.Builder builder =
                 new AlertDialog.Builder(mContext);
 
             builder.setCancelable(true);
-            builder.setNegativeButton
-                (R.string.cancel_dialog,
-                 new DialogInterface.OnClickListener() {
-                     @Override
-                     public void onClick(DialogInterface dialog, int which) {
-                         resetValue();
-                     }
-                 });
+            builder.setNegativeButton(R.string.cancel_dialog, null);
             builder.setOnCancelListener
                 (new DialogInterface.OnCancelListener() {
-                     @Override
-                     public void onCancel(DialogInterface dialog) {
-                         resetValue();
-                     }
-                 });
+                        @Override
+                        public void onCancel(DialogInterface dialog) {
+                            if (settingsModel.getCustomVibrationPattern()
+                                .isEmpty())
+                                resetValue();
+                        }
+                    });
 
             if (android.os.Build.VERSION.SDK_INT >= 17) {
                 builder.setOnDismissListener
                     (new DialogInterface.OnDismissListener() {
                             @Override
                             public void onDismiss(DialogInterface dialog) {
+                                if (settingsModel.getCustomVibrationPattern()
+                                    .isEmpty())
+                                    resetValue();
                                 updateSummary();
                             }
                         });
@@ -136,19 +146,26 @@ public class VibrationPatternPreference extends ListPreference {
                              resetValue();
                              return;
                          } else {
-                             SettingsModel settingsModel =
-                                 new SettingsModel(mContext);
                              settingsModel.setCustomVibrationPattern(mCustomPattern);
                              updateSummary();
                          }
                      }
                  });
 
+
             builder.setView(customPatternView);
 
             builder.setTitle(R.string.vibration_pattern_preference_title);
 
-            builder.create().show();
+            mAlertDialog = builder.create();
+            mAlertDialog.show();
+
+            mAlertDialog.getButton(DialogInterface.BUTTON_POSITIVE)
+                .setEnabled(!mCustomPattern.isEmpty());
+        } else if (positiveResult) {
+            // The custom vibration pattern is emptied when the user
+            // selects a standard vibration pattern
+            settingsModel.setCustomVibrationPattern("");
         }
 
         updateSummary();
@@ -159,7 +176,7 @@ public class VibrationPatternPreference extends ListPreference {
         updateSummary();
     }
 
-    private void updateSummary() { 
+    private void updateSummary() {
         SettingsModel settingsModel = new SettingsModel(mContext);
         if (getValue().equals("custom"))
             setSummary(getEntry() + ": " +

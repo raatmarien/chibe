@@ -87,11 +87,15 @@ public class SettingsModel {
         String chosenPattern =
             mSharedPrefs.getString(mVibrationPatternPrefKey, ".._..");
         if (chosenPattern.equals("custom")) {
-            return mSharedPrefs.
-                getString(mCustomVibrationPatternPrefKey, ".._..");
+            return getCustomVibrationPattern();
         } else {
             return chosenPattern;
         }
+    }
+
+    public String getCustomVibrationPattern() {
+        return mSharedPrefs.
+            getString(mCustomVibrationPatternPrefKey, "");
     }
 
     public void setCustomVibrationPattern(String vibrationPattern) {
