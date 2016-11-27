@@ -16,49 +16,49 @@
 <!-- You should have received a copy of the GNU General Public License -->
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <resources>
-  <string name="app_name">Buzzer</string>
-  <string name="buzzer_settings_label">Buzzer</string>
-  <string name="buzzer_intro_label">Intro</string>
+  <string name="app_name">Chibe</string>
+  <string name="chibe_settings_label">Chibe</string>
+  <string name="chibe_intro_label">Intro</string>
 
   <!-- Intro -->
-  <string name="intro_slide_1_title">Welcome to Buzzer!</string>
+  <string name="intro_slide_1_title">Welcome to Chibe!</string>
   <string name="intro_slide_1_text">In the past, many homes had a
-  standing or cuckoo\'s clock that would ring every hour or half
+  chiming or cuckoo\'s clock that would ring every hour or half
   hour. However, with the current technology you don\'t need to bother
-  everyone with a loud nose, Buzzer can just vibrate your phone for
+  everyone with a loud nose, Chibe can just vibrate your phone for
   you!</string>
 
   <string name="intro_slide_2_title">Keep track of time</string>
   <string name="intro_slide_2_text">Effortlessly keep track of the
-  time during any activity with Buzzer. A small vibration at set times
+  time during any activity with Chibe. A small vibration at set times
   will subtly remind you of the time. You will be able to use your time
   more efficiently and will be able divide your time more consciously.</string>
 
   <string name="intro_slide_3_title">Sleeps when you sleep</string>
-  <string name="intro_slide_3_text">Buzzer won\'t bother you when
+  <string name="intro_slide_3_text">Chibe won\'t bother you when
   you\'re sleeping. Just adjust the sleep times and rest without being
   disturbed!</string>
 
-  <string name="intro_slide_4_title">Choose different buzz patterns</string>
-  <string name="intro_slide_4_text">Buzzer let\'s you choose from
-  different buzz patterns. Choose the one that fits you, so you don\'t
-  confuse Buzzer with regular notifications.</string>
+  <string name="intro_slide_4_title">Custom vibration patterns</string>
+  <string name="intro_slide_4_text">Chibe let\'s you choose from
+  different vibration patterns. Choose the one that fits you, so you don\'t
+  confuse Chibe with regular notifications.</string>
 
   <string name="intro_slide_5_title">Get started!</string>
   <string name="intro_slide_5_text">Press the switch in the top right
-  corner to enable Buzzer and get started!</string>
+  corner to enable Chibe and get started!</string>
 
   <!-- Preferences -->
   <string name="pref_category_timing">Timing</string>
-  <string name="buzz_interval_preference_title">Buzz interval</string>
+  <string name="vibration_interval_preference_title">Vibration interval</string>
   <string name="sleep_start_preference_title">Start sleep at</string>
   <string name="sleep_end_preference_title">End sleep at</string>
 
-  <string name="pref_category_buzz">Buzz pattern</string>
-  <string name="test_buzz_preference_title">Buzz now</string>
-  <string name="test_buzz_preference_summary">Lets your device
-  vibrate in the buzz pattern</string>
-  <string name="buzz_pattern_preference_title">Buzz pattern</string>
+  <string name="pref_category_vibration">Vibration pattern</string>
+  <string name="test_vibration_preference_title">Vibrate now</string>
+  <string name="test_vibration_preference_summary">Lets your device
+  vibrate in the vibration pattern</string>
+  <string name="vibration_pattern_preference_title">Vibration pattern</string>
 
   <string name="pref_category_other">Other</string>
   <string name="dark_theme_preference_title">Dark theme</string>
@@ -67,7 +67,7 @@
   <string name="project_page_preference_summary">Find more info, leave
   feedback and contribute</string>
   <string
-      name="project_page_url">https://github.com/raatmarien/buzzer</string>
+      name="project_page_url">https://github.com/raatmarien/chibe</string>
   <string name="email_me_preference_title">Email me at
   marienraat@riseup.net</string>
   <string name="email_me_preference_summary">Give you suggestions or
@@ -80,32 +80,32 @@
   <string name="cancel_dialog">Cancel</string>
   <string name="ok_dialog">OK</string>
 
-  <string name="short_buzz">Short</string>
-  <string name="long_buzz">Long</string>
-  <string name="delete_buzz">⌫ DEL</string>
+  <string name="short_vibration">Short</string>
+  <string name="long_vibration">Long</string>
+  <string name="delete_vibration">⌫ DEL</string>
   <string name="custom_pattern_hint">Use the buttons to create a pattern</string>
 
-  <!-- buzz_time_preference_entries -->
-  <string name="buzz_time_entries_0">every minute</string>
-  <string name="buzz_time_entries_1">every 5 minutes</string>
-  <string name="buzz_time_entries_2">every 10 minutes</string>
-  <string name="buzz_time_entries_3">every 15 minutes</string>
-  <string name="buzz_time_entries_4">every 20 minutes</string>
-  <string name="buzz_time_entries_5">every half hour</string>
-  <string name="buzz_time_entries_6">every hour</string>
-  <string name="buzz_time_entries_7">every two hours</string>
+  <!-- vibration_time_preference_entries -->
+  <string name="vibration_time_entries_0">every minute</string>
+  <string name="vibration_time_entries_1">every 5 minutes</string>
+  <string name="vibration_time_entries_2">every 10 minutes</string>
+  <string name="vibration_time_entries_3">every 15 minutes</string>
+  <string name="vibration_time_entries_4">every 20 minutes</string>
+  <string name="vibration_time_entries_5">every half hour</string>
+  <string name="vibration_time_entries_6">every hour</string>
+  <string name="vibration_time_entries_7">every two hours</string>
 
-  <!-- buzz_pattern_preference_entries -->
-  <string name="buzz_pattern_entries_custom">Custom</string>
-  <string name="buzz_pattern_entries_0">Pattern: .. _ ..</string>
-  <string name="buzz_pattern_entries_1">Pattern: _ .. _</string>
-  <string name="buzz_pattern_entries_2">Pattern: _ _</string>
-  <string name="buzz_pattern_entries_3">Pattern: _</string>
-  <string name="buzz_pattern_entries_4">Pattern: ..</string>
-  <string name="buzz_pattern_entries_5">Pattern: . _ ...</string>
-  <string name="buzz_pattern_entries_6">Pattern: . _ . _ .</string>
+  <!-- chibe_pattern_preference_entries -->
+  <string name="chibe_pattern_entries_custom">Custom</string>
+  <string name="chibe_pattern_entries_0">Pattern: .. _ ..</string>
+  <string name="chibe_pattern_entries_1">Pattern: _ .. _</string>
+  <string name="chibe_pattern_entries_2">Pattern: _ _</string>
+  <string name="chibe_pattern_entries_3">Pattern: _</string>
+  <string name="chibe_pattern_entries_4">Pattern: ..</string>
+  <string name="chibe_pattern_entries_5">Pattern: . _ ...</string>
+  <string name="chibe_pattern_entries_6">Pattern: . _ . _ .</string>
 
-  <string-array name="buzz_pattern_entry_values"
+  <string-array name="vibration_pattern_entry_values"
                 translatable="false">
     <item>custom</item>
     <item>.._..</item>

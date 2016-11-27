@@ -1,5 +1,5 @@
 // SettingsModel.java --- Helper class to manage the SharedPreferences
-// of Buzzer
+// of Chibe
 
 // Copyright (C) 2016 Marien Raat <marienraat@riseup.net>
 
@@ -17,13 +17,11 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
-package com.jmstudios.buzzer.state;
+package com.jmstudios.chibe.state;
 
 import android.content.SharedPreferences;
 import android.content.Context;
 import android.preference.PreferenceManager;
-
-import android.util.Log;
 
 public class SettingsModel {
     private static final String TAG = "SettingsModel";
@@ -31,11 +29,11 @@ public class SettingsModel {
 
     public static final String mSleepStartPrefKey = "pref_key_sleep_start";
     public static final String mSleepEndPrefKey = "pref_key_sleep_end";
-    public static final String mBuzzTimePrefKey = "pref_key_buzz_time";
-    public static final String mBuzzServiceOnPrefKey = "pref_key_buzz_service_on";
-    public static final String mIntroShowPrefKey = "pref_key_intro_shown";
-    public static final String mBuzzPatternPrefKey = "pref_key_buzz_pattern";
-    public static final String mCustomBuzzPatternPrefKey = "pref_key_custom_buzz_pattern";
+    public static final String mVibrationTimePrefKey = "pref_key_vibration_time";
+    public static final String mVibrationServiceOnPrefKey = "pref_key_vibration_service_on";
+    public static final String mIntroShownPrefKey = "pref_key_intro_shown";
+    public static final String mVibrationPatternPrefKey = "pref_key_vibration_pattern";
+    public static final String mCustomVibrationPatternPrefKey = "pref_key_custom_vibration_pattern";
     public static final String mDarkThemePrefKey = "pref_key_dark_theme";
 
     private SharedPreferences mSharedPrefs;
@@ -62,43 +60,43 @@ public class SettingsModel {
         return mSharedPrefs.getString(mSleepEndPrefKey, "09:00");
     }
 
-    public int getBuzzTimeInMinutes() {
-        return mSharedPrefs.getInt(mBuzzTimePrefKey, 30);
+    public int getVibrationTimeInMinutes() {
+        return mSharedPrefs.getInt(mVibrationTimePrefKey, 30);
     }
 
-    public boolean isBuzzServiceOn() {
+    public boolean isVibrationServiceOn() {
         return mSharedPrefs.getBoolean
-            (mBuzzServiceOnPrefKey, false);
+            (mVibrationServiceOnPrefKey, false);
     }
 
-    public void setBuzzServiceOn(boolean serviceOn) {
+    public void setVibrationServiceOn(boolean serviceOn) {
         mSharedPrefs.edit()
-            .putBoolean(mBuzzServiceOnPrefKey, serviceOn).commit();
+            .putBoolean(mVibrationServiceOnPrefKey, serviceOn).commit();
     }
 
     public boolean isIntroShown() {
-        return mSharedPrefs.getBoolean(mIntroShowPrefKey, false);
+        return mSharedPrefs.getBoolean(mIntroShownPrefKey, false);
     }
 
     public void setIntroShown(boolean introShown) {
         mSharedPrefs.edit()
-            .putBoolean(mIntroShowPrefKey, introShown).commit();
+            .putBoolean(mIntroShownPrefKey, introShown).commit();
     }
 
-    public String getBuzzPattern() {
+    public String getVibrationPattern() {
         String chosenPattern =
-            mSharedPrefs.getString(mBuzzPatternPrefKey, ".._..");
+            mSharedPrefs.getString(mVibrationPatternPrefKey, ".._..");
         if (chosenPattern.equals("custom")) {
             return mSharedPrefs.
-                getString(mCustomBuzzPatternPrefKey, ".._..");
+                getString(mCustomVibrationPatternPrefKey, ".._..");
         } else {
             return chosenPattern;
         }
     }
 
-    public void setCustomBuzzPattern(String buzzPattern) {
+    public void setCustomVibrationPattern(String vibrationPattern) {
         mSharedPrefs.edit()
-            .putString(mCustomBuzzPatternPrefKey, buzzPattern).commit();
+            .putString(mCustomVibrationPatternPrefKey, vibrationPattern).commit();
     }
 
     public boolean isDarkTheme() {

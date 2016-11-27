@@ -17,21 +17,18 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
-package com.jmstudios.buzzer;
+package com.jmstudios.chibe;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.preference.Preference;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.ImageView;
 
-import com.jmstudios.buzzer.state.SettingsModel;
-
-import com.jmstudios.buzzer.R;
+import com.jmstudios.chibe.state.SettingsModel;
 
 public class IntervalSeekBarPreference extends Preference {
     private static final String TAG = "IntervalSeekBarPreference";
@@ -165,22 +162,22 @@ public class IntervalSeekBarPreference extends Preference {
     public String getIntervalText() {
         switch (mProgress) {
         case 1: return mContext.getResources()
-                .getString(R.string.buzz_time_entries_0);
+                .getString(R.string.vibration_time_entries_0);
         case 5: return mContext.getResources()
-                .getString(R.string.buzz_time_entries_1);
+                .getString(R.string.vibration_time_entries_1);
         case 10: return mContext.getResources()
-                .getString(R.string.buzz_time_entries_2);
+                .getString(R.string.vibration_time_entries_2);
         case 15: return mContext.getResources()
-                .getString(R.string.buzz_time_entries_3);
+                .getString(R.string.vibration_time_entries_3);
         case 20: return mContext.getResources()
-                .getString(R.string.buzz_time_entries_4);
+                .getString(R.string.vibration_time_entries_4);
         default:
         case 30: return mContext.getResources()
-                .getString(R.string.buzz_time_entries_5);
+                .getString(R.string.vibration_time_entries_5);
         case 60: return mContext.getResources()
-                .getString(R.string.buzz_time_entries_6);
+                .getString(R.string.vibration_time_entries_6);
         case 120: return mContext.getResources()
-                .getString(R.string.buzz_time_entries_7);
+                .getString(R.string.vibration_time_entries_7);
         }
     }
 }

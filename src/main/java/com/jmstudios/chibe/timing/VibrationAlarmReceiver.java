@@ -1,5 +1,5 @@
-// BuzzAlarmReceiver.java --- Receives alarms from the Android alarm
-// manager to buzz when needed
+// VibrationAlarmReceiver.java --- Receives alarms from the Android alarm
+// manager to vibrate when needed
 
 // Copyright (C) 2016 Marien Raat <marienraat@riseup.net>
 
@@ -17,7 +17,7 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
-package com.jmstudios.buzzer.timing;
+package com.jmstudios.chibe.timing;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,30 +25,29 @@ import android.content.Intent;
 import android.util.Log;
 import android.os.Vibrator;
 
-import com.jmstudios.buzzer.timing.BuzzAlarmScheduler;
-import com.jmstudios.buzzer.state.SettingsModel;
+import com.jmstudios.chibe.state.SettingsModel;
 
-public class BuzzAlarmReceiver extends BroadcastReceiver {
-    private final static String TAG = "BuzzAlarmReceiver";
+public class VibrationAlarmReceiver extends BroadcastReceiver {
+    private final static String TAG = "VibrationAlarmReceiver";
     private final static boolean DEBUG = true;
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (DEBUG) Log.i(TAG, "Buzz alarm received");
+        if (DEBUG) Log.i(TAG, "Vibration alarm received");
 
-        buzz(context);
+        vibrate(context);
 
         // Schedule new alarm
-        BuzzAlarmScheduler.rescheduleAlarm(context);
+        VibrationAlarmScheduler.rescheduleAlarm(context);
     }
 
-    public static void buzz(Context context) {
+    public static void vibrate(Context context) {
         Vibrator vibrator = (Vibrator) context.
             getSystemService(Context.VIBRATOR_SERVICE);
 
         SettingsModel settingsModel = new SettingsModel(context);
 
-        String p = settingsModel.getBuzzPattern();
+        String p = settingsModel.getVibrationPattern();
         long[] vibrationPattern = new long[2 * p.length()];
 
         vibrationPattern[0] = 0;

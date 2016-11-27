@@ -1,6 +1,6 @@
-// BuzzPatternPreference.java --- A subclass of ListPreference that
-// allows the user to set a custom buzz pattern or one of the
-// preselected buzz patterns.
+// VibrationPatternPreference.java --- A subclass of ListPreference that
+// allows the user to set a custom vibrate pattern or one of the
+// preselected vibrate patterns.
 
 // Copyright (C) 2016 Marien Raat <marienraat@riseup.net>
 
@@ -19,7 +19,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-package com.jmstudios.buzzer;
+package com.jmstudios.chibe;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -31,16 +31,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.jmstudios.buzzer.state.SettingsModel;
+import com.jmstudios.chibe.state.SettingsModel;
 
-import com.jmstudios.buzzer.R;
-
-public class BuzzPatternPreference extends ListPreference {
+public class VibrationPatternPreference extends ListPreference {
     private Context mContext;
     private String mCustomPattern;
     private EditText customPatternText;
 
-    public BuzzPatternPreference(Context context, AttributeSet attrs) {
+    public VibrationPatternPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
     }
@@ -70,7 +68,7 @@ public class BuzzPatternPreference extends ListPreference {
             customPatternText.setSelected(false);
             customPatternText.setKeyListener(null);
 
-            ((Button) customPatternView.findViewById(R.id.button_short_buzz))
+            ((Button) customPatternView.findViewById(R.id.button_short_vibration))
                 .setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -78,7 +76,7 @@ public class BuzzPatternPreference extends ListPreference {
                             updateCustomPatternText();
                         }
                     });
-            ((Button) customPatternView.findViewById(R.id.button_long_buzz))
+            ((Button) customPatternView.findViewById(R.id.button_long_vibration))
                 .setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -86,7 +84,7 @@ public class BuzzPatternPreference extends ListPreference {
                             updateCustomPatternText();
                         }
                     });
-            ((Button) customPatternView.findViewById(R.id.button_delete_buzz))
+            ((Button) customPatternView.findViewById(R.id.button_delete_vibration))
                 .setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -139,7 +137,7 @@ public class BuzzPatternPreference extends ListPreference {
                          } else {
                              SettingsModel settingsModel =
                                  new SettingsModel(mContext);
-                             settingsModel.setCustomBuzzPattern(mCustomPattern);
+                             settingsModel.setCustomVibrationPattern(mCustomPattern);
                              updateSummary();
                          }
                      }
@@ -147,7 +145,7 @@ public class BuzzPatternPreference extends ListPreference {
 
             builder.setView(customPatternView);
 
-            builder.setTitle(R.string.buzz_pattern_preference_title);
+            builder.setTitle(R.string.vibration_pattern_preference_title);
 
             builder.create().show();
         }
@@ -164,7 +162,7 @@ public class BuzzPatternPreference extends ListPreference {
         SettingsModel settingsModel = new SettingsModel(mContext);
         if (getValue().equals("custom"))
             setSummary(getEntry() + ": " +
-                       getFormattedPattern(settingsModel.getBuzzPattern()));
+                       getFormattedPattern(settingsModel.getVibrationPattern()));
         else
             setSummary(getEntry());
     }

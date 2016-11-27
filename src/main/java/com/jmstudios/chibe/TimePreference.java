@@ -17,7 +17,7 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
-package com.jmstudios.buzzer;
+package com.jmstudios.chibe;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -25,9 +25,7 @@ import android.preference.DialogPreference;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TimePicker;
-import android.util.Log;
 import android.support.annotation.NonNull;
-import android.os.Build.VERSION;
 import android.text.format.DateFormat;
 import android.annotation.SuppressLint;
 

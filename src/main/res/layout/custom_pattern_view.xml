@@ -43,24 +43,24 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start|left"
         android:layout_weight="1"
-        android:id="@+id/button_short_buzz"
-        android:text="@string/short_buzz" />
+        android:id="@+id/button_short_vibration"
+        android:text="@string/short_vibration" />
 
     <Button
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
-        android:id="@+id/button_long_buzz"
-        android:text="@string/long_buzz" />
+        android:id="@+id/button_long_vibration"
+        android:text="@string/long_vibration" />
 
     <Button
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="end|right"
         android:layout_weight="1"
-        android:id="@+id/button_delete_buzz"
-        android:text="@string/delete_buzz" />
+        android:id="@+id/button_delete_vibration"
+        android:text="@string/delete_vibration" />
 
   </LinearLayout>
 

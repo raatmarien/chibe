@@ -1,42 +1,43 @@
 <img align="right" height="256" src="https://lut.im/tNbz3Ikh4g/DsCpp6RmK1kFJ0LS.png">
-# Buzzer
+# Chibe
 
-Buzzer is an application for Android that vibrates your phone at set
-times. This helps you to effortlessly keep track of the time. Buzzer
-acts like a modern replacement of a standing or cuckoo's clock, it's
+Chibe is an application for Android that vibrates your phone at set
+times. This helps you to effortlessly keep track of the time. Chibe
+acts like a modern replacement of a chiming or cuckoo's clock, it's
 customizable and it only affects you.
 
 ## Features
 
 * Choose at what time you would like your phone to vibrate
-* Choose between multiple vibration patterns, so won't confuse Buzzer
+* Choose between multiple vibration patterns, so won't confuse Chibe
 with normal notifications
-* Configure times at which Buzzer should be silent, so you won't be
+* Configure times at which Chibe should be silent, so you won't be
 annoyed at night
 
 ## Screenshots
 
-<img src="https://lut.im/1YjnNj9gqa/3qv0o27M5YngDrhr.png" width="180" height="320" />
-<img src="https://lut.im/3sj7HkHJhC/AgCWRsrVFllzpFsx.png" width="180" height="320" />
-<img src="https://lut.im/diQsJ82O2e/SL9v54dvXtA3wH2T.png" width="180" height="320" />
-<img src="https://lut.im/R1Qwedlz2q/pwewhgohRICchurR.png" width="180" height="320" />
-<img src="https://lut.im/L4C3N4zcav/Yi6OVY3480utBwDY.png" width="180" height="320" />
-<img src="https://lut.im/W4coWmR0Ln/rksGylyywQNyUrRG.png" width="180" height="320" />
-<img src="https://lut.im/Sh7HMiwYAF/wpLnk7ZYbOlTdQ4h.png" width="180" height="320" />
+<img src="https://lut.im/wob981GO9a/jREpyj9xWil7L3X0.png" width="180" height="320" />
+<img src="https://lut.im/zsXW5Bcj0R/xpPm7zpx2d5k1FNo.png" width="180" height="320" />
+<img src="https://lut.im/tDAYjyGhuZ/27UG7QV8c3mIBEMG.png" width="180" height="320" />
+<img src="https://lut.im/dUnQkcXr0a/s2als7MEAaCwcwID.png" width="180" height="320" />
+<img src="https://lut.im/KB7LxvYtZY/VtgyGRmk2SgBW0qb.png" width="180" height="320" />
+<img src="https://lut.im/5TusJYncQZ/hF7kUmxJBPt0sim9.png" width="180" height="320" />
+<img src="https://lut.im/fRB85GqM3U/Q3ucNHmLRqP7zNdN.png" width="180" height="320" />
+<img src="https://lut.im/qZj6q6yeua/i1cSTzmpwURtGz6p.png" width="180" height="320" />
 
 ## License
 
-Buzzer is licensed under the
+Chibe is licensed under the
 [GNU General Public License version 3](https://www.gnu.org/licenses/gpl-3.0.html),
 or (at your option) any later version.
 
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)
 
-All graphics, except the icon of Buzzer are released in the public
-domain. The icon of Buzzer itself can only be used to signify this
+All graphics, except the icon of Chibe are released in the public
+domain. The icon of Chibe itself can only be used to signify this
 specific app.
 
-Some of the graphics included in Buzzer, build upon or use art from
+Some of the graphics included in Chibe, build upon or use art from
 [openclipart.org](https://openclipart.org/), which are all released in
 the public domain, namely:
 
@@ -59,12 +60,12 @@ https://design.google.com/icons/index.html#ic_help under the
 
 To build the app, install Gradle, and run
 
-``` gradle build ```
+``` ./gradlew build ```
 
 in the root directory.
 
 Use
 
-``` gradle installDebug ```
+``` ./gradlew installDebug ```
 
 to install the app directly on a connected device.

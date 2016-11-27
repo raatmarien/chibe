@@ -1,4 +1,4 @@
-// BuzzerIntro.java --- Intro/help activity using the AppIntro
+// ChibeIntro.java --- Intro/help activity using the AppIntro
 // library: https://github.com/PaoloRotolo/AppIntro
 
 // Copyright (C) 2016 Marien Raat <marienraat@riseup.net>
@@ -18,7 +18,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-package com.jmstudios.buzzer;
+package com.jmstudios.chibe;
 
 import android.os.Bundle;
 import android.content.res.Resources;
@@ -26,9 +26,7 @@ import android.content.res.Resources;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 
-import com.jmstudios.buzzer.R;
-
-public class BuzzerIntro extends AppIntro {
+public class ChibeIntro extends AppIntro {
     private Resources resources;
 
     @Override

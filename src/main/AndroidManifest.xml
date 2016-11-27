@@ -17,7 +17,7 @@
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.jmstudios.buzzer" >
+          package="com.jmstudios.chibe" >
 
   <uses-permission android:name="android.permission.VIBRATE" />
   <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -29,24 +29,24 @@
       android:label="@string/app_name"
       android:theme="@style/AppTheme" >
         <activity
-            android:name="com.jmstudios.buzzer.BuzzerActivity"
-            android:label="@string/buzzer_settings_label" >
+            android:name="com.jmstudios.chibe.ChibeActivity"
+            android:label="@string/chibe_settings_label" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name="com.jmstudios.buzzer.BuzzerIntro"
-                  android:label="@string/buzzer_intro_label"
+        <activity android:name="com.jmstudios.chibe.ChibeIntro"
+                  android:label="@string/chibe_intro_label"
                   android:theme="@style/AppThemeNoActionBar" >
         </activity>
 
         <receiver
-            android:name="com.jmstudios.buzzer.timing.BuzzAlarmReceiver" />
+            android:name="com.jmstudios.chibe.timing.VibrationAlarmReceiver" />
 
         <receiver
-            android:name="com.jmstudios.buzzer.state.BootReceiver">
+            android:name="com.jmstudios.chibe.state.BootReceiver">
           <intent-filter>
             <action
                 android:name="android.intent.action.BOOT_COMPLETED" />

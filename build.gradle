@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:2.2.2'
     }
 }
 
@@ -15,7 +15,7 @@ android {
     buildToolsVersion "25"
 
     defaultConfig {
-        applicationId "com.jmstudios.buzzer"
+        applicationId "com.jmstudios.chibe"
         minSdkVersion 13
         targetSdkVersion 24
         versionCode 1

@@ -1,4 +1,4 @@
-// BuzzerFragment.java --- PreferenceFragment for BuzzerActivity
+// ChibeFragment.java --- PreferenceFragment for ChibeActivity
 
 // Copyright (C) 2016 Marien Raat <marienraat@riseup.net>
 
@@ -17,38 +17,35 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-package com.jmstudios.buzzer;
+package com.jmstudios.chibe;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.preference.Preference;
 import android.util.Log;
-import android.preference.ListPreference;
 
-import com.jmstudios.buzzer.timing.BuzzAlarmReceiver;
+import com.jmstudios.chibe.timing.VibrationAlarmReceiver;
 
-import com.jmstudios.buzzer.R;
-
-public class BuzzerFragment extends PreferenceFragment {
-    private static final String TAG = "BuzzerFragment";
+public class ChibeFragment extends PreferenceFragment {
+    private static final String TAG = "ChibeFragment";
     private static final boolean DEBUG = true;
 
     // Required for recreation
-    public BuzzerFragment() { }
+    public ChibeFragment() { }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
 
-        // Set the OnClickListener for the 'Test buzz' preference
-        Preference testBuzz = findPreference("pref_key_test_buzz");
-        testBuzz.setOnPreferenceClickListener
+        // Set the OnClickListener for the 'Test vibrate' preference
+        Preference testVibration = findPreference("pref_key_test_vibration");
+        testVibration.setOnPreferenceClickListener
             (new Preference.OnPreferenceClickListener() {
                     @Override
                     public boolean onPreferenceClick
                         (Preference pref) {
-                        buzzOnce();
+                        vibrateOnce();
                         return true;
                     }
                 });
@@ -66,8 +63,8 @@ public class BuzzerFragment extends PreferenceFragment {
                 });
     }
 
-    public void buzzOnce() {
-        if (DEBUG) Log.i(TAG, "Starting a test buzz");
-        BuzzAlarmReceiver.buzz(getActivity());
+    public void vibrateOnce() {
+        if (DEBUG) Log.i(TAG, "Starting a test vibrate");
+        VibrationAlarmReceiver.vibrate(getActivity());
     }
 }

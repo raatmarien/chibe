@@ -1,5 +1,5 @@
-// BuzzAlarmScheduler.java --- Determines the next buzz time and
-// schedules new buzz alarms using the Android alarm manager.
+// VibrationAlarmScheduler.java --- Determines the next vibration time and
+// schedules new vibrate alarms using the Android alarm manager.
 
 // Copyright (C) 2016 Marien Raat <marienraat@riseup.net>
 
@@ -17,30 +17,27 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
-package com.jmstudios.buzzer.timing;
+package com.jmstudios.chibe.timing;
 
 import android.content.Context;
 import android.content.Intent;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.preference.PreferenceManager;
 import android.annotation.SuppressLint;
 
 import java.util.Calendar;
-import java.util.TimeZone;
 
-import com.jmstudios.buzzer.timing.BuzzAlarmReceiver;
-import com.jmstudios.buzzer.state.SettingsModel;
+import com.jmstudios.chibe.state.SettingsModel;
 
-public class BuzzAlarmScheduler {
-    private static String TAG = "BuzzAlarmScheduler";
+public class VibrationAlarmScheduler {
+    private static String TAG = "VibrationAlarmScheduler";
     private static boolean DEBUG = true;
 
     // Cancels all alarms if the service is off, reschedules the alarm
     // if the service is on.
     public static void updateAlarms(Context context) {
         SettingsModel settingsModel = new SettingsModel(context);
-        if (settingsModel.isBuzzServiceOn())
+        if (settingsModel.isVibrationServiceOn())
             rescheduleAlarm(context);
         else
             cancelAlarms(context);
@@ -56,7 +53,7 @@ public class BuzzAlarmScheduler {
     public static void cancelAlarms(Context context) {
         AlarmManager alarmManager = (AlarmManager)
             context.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.cancel(getBuzzPendingIntent(context));
+        alarmManager.cancel(getVibrationPendingIntent(context));
     }
 
     // This method checks what android version is used and uses
@@ -69,43 +66,43 @@ public class BuzzAlarmScheduler {
             (Calendar.getInstance(),
              settingsModel.getSleepStart(),
              settingsModel.getSleepEnd(),
-             settingsModel.getBuzzTimeInMinutes());
+             settingsModel.getVibrationTimeInMinutes());
 
         AlarmManager alarmManager = (AlarmManager)
             context.getSystemService(Context.ALARM_SERVICE);
-        PendingIntent buzzPendingIntent = getBuzzPendingIntent(context);
+        PendingIntent vibrationPendingIntent = getVibrationPendingIntent(context);
 
         // In API 19 AlarmManager::set was made inexact and
         // AlarmManager::setExact was introduced, since we always want
-        // to buzz at exactly the right time, we use setExact on API
+        // to vibrate at exactly the right time, we use setExact on API
         // 19+.
         if (android.os.Build.VERSION.SDK_INT >= 19) {
             alarmManager.setExact(AlarmManager.RTC,
                                   alarmTime.getTimeInMillis(),
-                                  buzzPendingIntent);
+                                  vibrationPendingIntent);
         } else {
             alarmManager.set(AlarmManager.RTC, alarmTime.getTimeInMillis(),
-                             buzzPendingIntent);
+                             vibrationPendingIntent);
         }
     }
 
-    public static PendingIntent getBuzzPendingIntent(Context context) {
-        Intent buzzIntent = new Intent(context, BuzzAlarmReceiver.class);
+    public static PendingIntent getVibrationPendingIntent(Context context) {
+        Intent vibrationIntent = new Intent(context, VibrationAlarmReceiver.class);
 
         // We don't need a specific requestcode or any flags.
         int requestCode = 0, flag = 0;
         return PendingIntent.getBroadcast
-            (context, requestCode, buzzIntent, flag);
+            (context, requestCode, vibrationIntent, flag);
     }
 
-    // Buzzer won't schedules buzzes during sleep (between sleepStart
+    // Chibe won't schedules vibrations during sleep (between sleepStart
     // and sleepEnd).
-    // Buzz times can be any whole number of minutes, however, if the
-    // buzz time is longer than the time from sleepEnd to sleepStart,
+    // Vibration times can be any whole number of minutes, however, if the
+    // vibrate time is longer than the time from sleepEnd to sleepStart,
     // it will just be called once every day, at sleepEnd.
     public static Calendar getNextAlarmTime
         (Calendar now, String sleepStart, String sleepEnd,
-         int buzzTimeMinutes) {
+         int vibrationTimeMinutes) {
         // First we define the last sleepEnd and the next sleepStart
         // and the next sleepEnd.
         Calendar lastSleepStart = getCalendarFromTimeString(sleepStart, now);
@@ -123,7 +120,7 @@ public class BuzzAlarmScheduler {
         // We start off with the last sleepEnd
         Calendar nextAlarm = (Calendar) lastSleepEnd.clone();
 
-        // Then we add the buzz time to the nextAlarm Calendar, until
+        // Then we add the vibrate time to the nextAlarm Calendar, until
         // nextAlarm is after now. If no time is found after now and
         // before sleepStart, we schedule the next alarm for the next
         // sleepEnd.
@@ -131,18 +128,19 @@ public class BuzzAlarmScheduler {
             if (nextAlarm.after(nextSleepStart) ||
                 // If the last sleepEnd is before the lastSleepStart,
                 // that means that we are in the sleep period and we
-                // should retun the nextSleepStart.
+                // should return the nextSleepStart.
                 lastSleepEnd.before(lastSleepStart))
                 return nextSleepEnd;
 
-            nextAlarm.add(Calendar.MINUTE, buzzTimeMinutes);
+            nextAlarm.add(Calendar.MINUTE, vibrationTimeMinutes);
         }
 
         return nextAlarm;
     }
 
-    /* time     should be a 24-hour formatted string of the form "HH:MM"
-     * day      should be a Calendar with the day that will be
+    /**
+     * @param time     should be a 24-hour formatted string of the form "HH:MM"
+     * @param day      should be a Calendar with the day that will be
      * on the returned calendar, the hour, minute, second and
      * millisecond field of this calendar is irrelevant for this
      * function.

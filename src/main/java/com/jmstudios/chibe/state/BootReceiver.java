@@ -17,14 +17,14 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
-package com.jmstudios.buzzer.state;
+package com.jmstudios.chibe.state;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.jmstudios.buzzer.timing.BuzzAlarmScheduler;
+import com.jmstudios.chibe.timing.VibrationAlarmScheduler;
 
 public class BootReceiver extends BroadcastReceiver {
     private static final String TAG = "BootReceiver";
@@ -34,6 +34,6 @@ public class BootReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Boot event received");
 
-        BuzzAlarmScheduler.updateAlarms(context);
+        VibrationAlarmScheduler.updateAlarms(context);
     }
 }
