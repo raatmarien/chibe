@@ -18,8 +18,7 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
-
-package com.jmstudios.chibe;
+package com.jmstudios.chibe.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -32,6 +31,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.jmstudios.chibe.state.SettingsModel;
+
+import com.jmstudios.chibe.R;
 
 public class VibrationPatternPreference extends ListPreference {
     private Context mContext;

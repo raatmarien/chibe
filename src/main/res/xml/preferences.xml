@@ -19,23 +19,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
   <PreferenceCategory android:title="@string/pref_category_timing">
-    <com.jmstudios.chibe.IntervalSeekBarPreference
+    <com.jmstudios.chibe.preference.IntervalSeekBarPreference
         android:key="pref_key_vibration_time"
         android:defaultValue="30" />
 
-    <com.jmstudios.chibe.TimePreference
+    <com.jmstudios.chibe.preference.TimePreference
         android:key="pref_key_sleep_start"
         android:title="@string/sleep_start_preference_title"
         android:defaultValue="22:00" />
 
-    <com.jmstudios.chibe.TimePreference
+    <com.jmstudios.chibe.preference.TimePreference
         android:key="pref_key_sleep_end"
         android:title="@string/sleep_end_preference_title"
         android:defaultValue="09:00" />
   </PreferenceCategory>
 
   <PreferenceCategory android:title="@string/pref_category_vibration">
-    <com.jmstudios.chibe.VibrationPatternPreference
+    <com.jmstudios.chibe.preference.VibrationPatternPreference
         android:key="pref_key_vibration_pattern"
         android:defaultValue=".._.."
         android:title="@string/vibration_pattern_preference_title"

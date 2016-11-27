@@ -17,7 +17,7 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
-package com.jmstudios.chibe;
+package com.jmstudios.chibe.preference;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -29,6 +29,8 @@ import android.widget.TextView;
 import android.widget.ImageView;
 
 import com.jmstudios.chibe.state.SettingsModel;
+
+import com.jmstudios.chibe.R;
 
 public class IntervalSeekBarPreference extends Preference {
     private static final String TAG = "IntervalSeekBarPreference";

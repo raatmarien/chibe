@@ -17,7 +17,7 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
-package com.jmstudios.chibe;
+package com.jmstudios.chibe.preference;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -28,6 +28,8 @@ import android.widget.TimePicker;
 import android.support.annotation.NonNull;
 import android.text.format.DateFormat;
 import android.annotation.SuppressLint;
+
+import com.jmstudios.chibe.R;
 
 public class TimePreference extends DialogPreference {
     public static final String DEFAULT_VALUE = "00:00";
