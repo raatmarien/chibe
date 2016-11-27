@@ -53,7 +53,7 @@ the public domain, namely:
 * https://openclipart.org/detail/3578/clock  
 
 The help icon was taken from
-https://design.google.com/icons/index.html#ic_help under the
+https://material.io/icons/#ic_help under the
 [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## Building
