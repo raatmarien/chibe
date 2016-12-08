@@ -56,11 +56,8 @@ public class VibrationPatternPreference extends ListPreference {
     protected void onDialogClosed(boolean positiveResult) {
         super.onDialogClosed(positiveResult);
 
-        // Marked as final so the inner classes can use it.
-        final SettingsModel settingsModel = new SettingsModel(mContext);
-
         if (positiveResult && getValue().equals("custom")) {
-            mCustomPattern = settingsModel.getCustomVibrationPattern();
+            mCustomPattern = getCustomVibrationPattern();
 
             LayoutInflater inflater = LayoutInflater.from(mContext);
             View customPatternView =
@@ -118,7 +115,7 @@ public class VibrationPatternPreference extends ListPreference {
                 (new DialogInterface.OnCancelListener() {
                         @Override
                         public void onCancel(DialogInterface dialog) {
-                            if (settingsModel.getCustomVibrationPattern()
+                            if (getCustomVibrationPattern()
                                 .isEmpty())
                                 resetValue();
                         }
@@ -129,7 +126,7 @@ public class VibrationPatternPreference extends ListPreference {
                     (new DialogInterface.OnDismissListener() {
                             @Override
                             public void onDismiss(DialogInterface dialog) {
-                                if (settingsModel.getCustomVibrationPattern()
+                                if (getCustomVibrationPattern()
                                     .isEmpty())
                                     resetValue();
                                 updateSummary();
@@ -146,7 +143,7 @@ public class VibrationPatternPreference extends ListPreference {
                              resetValue();
                              return;
                          } else {
-                             settingsModel.setCustomVibrationPattern(mCustomPattern);
+                             setCustomVibrationPattern(mCustomPattern);
                              updateSummary();
                          }
                      }
@@ -165,10 +162,27 @@ public class VibrationPatternPreference extends ListPreference {
         } else if (positiveResult) {
             // The custom vibration pattern is emptied when the user
             // selects a standard vibration pattern
-            settingsModel.setCustomVibrationPattern("");
+            setCustomVibrationPattern("");
         }
 
         updateSummary();
+    }
+
+    // We override these methods in the subclass to create a
+    // preference for another vibration pattern.
+    protected void setCustomVibrationPattern(String pattern) {
+        SettingsModel settingsModel = new SettingsModel(mContext);
+        settingsModel.setCustomVibrationPattern(pattern);
+    }
+
+    protected String getCustomVibrationPattern() {
+        SettingsModel settingsModel = new SettingsModel(mContext);
+        return settingsModel.getCustomVibrationPattern();
+    }
+
+    protected String getVibrationPattern() {
+        SettingsModel settingsModel = new SettingsModel(mContext);
+        return settingsModel.getVibrationPattern();
     }
 
     private void resetValue() {
@@ -180,7 +194,7 @@ public class VibrationPatternPreference extends ListPreference {
         SettingsModel settingsModel = new SettingsModel(mContext);
         if (getValue().equals("custom"))
             setSummary(getEntry() + ": " +
-                       getFormattedPattern(settingsModel.getVibrationPattern()));
+                       getFormattedPattern(getVibrationPattern()));
         else
             setSummary(getEntry());
     }
