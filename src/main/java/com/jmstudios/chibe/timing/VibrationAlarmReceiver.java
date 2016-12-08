@@ -31,6 +31,9 @@ public class VibrationAlarmReceiver extends BroadcastReceiver {
     private final static String TAG = "VibrationAlarmReceiver";
     private final static boolean DEBUG = true;
 
+    public final static String HOUR_REPEAT_COUNT_EXTRA
+        = "com.jmstudios.chibe.timing.hour_repeat_count";
+
     @Override
     public void onReceive(Context context, Intent intent) {
         if (DEBUG) Log.i(TAG, "Vibration alarm received");

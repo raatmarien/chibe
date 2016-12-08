@@ -27,6 +27,7 @@ import android.annotation.SuppressLint;
 
 import java.util.Calendar;
 
+import com.jmstudios.chibe.timing.VibrationAlarmReceiver;
 import com.jmstudios.chibe.state.SettingsModel;
 
 public class VibrationAlarmScheduler {
@@ -53,7 +54,13 @@ public class VibrationAlarmScheduler {
     public static void cancelAlarms(Context context) {
         AlarmManager alarmManager = (AlarmManager)
             context.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.cancel(getVibrationPendingIntent(context));
+
+        // It doesn't matter what time we pass to
+        // getVibrationPendingIntent, since the extras aren't
+        // compared. See:
+        // https://developer.android.com/reference/android/app/AlarmManager.html#cancel(android.app.PendingIntent)
+        alarmManager.cancel(getVibrationPendingIntent
+                            (context, Calendar.getInstance()));
     }
 
     // This method checks what android version is used and uses
@@ -70,7 +77,8 @@ public class VibrationAlarmScheduler {
 
         AlarmManager alarmManager = (AlarmManager)
             context.getSystemService(Context.ALARM_SERVICE);
-        PendingIntent vibrationPendingIntent = getVibrationPendingIntent(context);
+        PendingIntent vibrationPendingIntent =
+            getVibrationPendingIntent(context, alarmTime);
 
         // In API 19 AlarmManager::set was made inexact and
         // AlarmManager::setExact was introduced, since we always want
@@ -86,8 +94,20 @@ public class VibrationAlarmScheduler {
         }
     }
 
-    public static PendingIntent getVibrationPendingIntent(Context context) {
+    public static PendingIntent getVibrationPendingIntent
+        (Context context, Calendar time) {
         Intent vibrationIntent = new Intent(context, VibrationAlarmReceiver.class);
+
+        // Save in the intent how many times the 'hour repeat pattern'
+        // should be repeated, if it should be repeated at all.
+        if (time.get(Calendar.MINUTE) == 0) {
+            int hour = time.get(Calendar.HOUR);
+            vibrationIntent.putExtra
+                (VibrationAlarmReceiver.HOUR_REPEAT_COUNT_EXTRA,
+                 // The hour field of the Calendar is 0 for 12:00 and
+                 // 24:00, but we wan't to repeat 12 times for those.
+                 hour == 0 ? 12 : hour);
+        }
 
         // We don't need a specific requestcode or any flags.
         int requestCode = 0, flag = 0;
