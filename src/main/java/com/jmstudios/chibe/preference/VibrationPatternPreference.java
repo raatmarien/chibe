@@ -35,7 +35,7 @@ import com.jmstudios.chibe.state.SettingsModel;
 import com.jmstudios.chibe.R;
 
 public class VibrationPatternPreference extends ListPreference {
-    private Context mContext;
+    protected Context mContext;
     private String mCustomPattern;
     private EditText customPatternText;
     private AlertDialog mAlertDialog;
@@ -152,7 +152,7 @@ public class VibrationPatternPreference extends ListPreference {
 
             builder.setView(customPatternView);
 
-            builder.setTitle(R.string.vibration_pattern_preference_title);
+            builder.setTitle(R.string.custom_pattern_dialog);
 
             mAlertDialog = builder.create();
             mAlertDialog.show();
