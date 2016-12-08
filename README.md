@@ -6,6 +6,10 @@ times. This helps you to effortlessly keep track of the time. Chibe
 acts like a modern replacement of a chiming or cuckoo's clock, it's
 customizable and it only affects you.
 
+[![F-Droid](https://f-droid.org/wiki/images/0/06/F-Droid-button_get-it-on.png)](https://f-droid.org/repository/browse/?fdid=com.jmstudios.chibe)
+
+[Direct download](https://github.com/raatmarien/chibe/releases/download/v1.0.0/chibe-v1.0.0.apk)
+
 ## Features
 
 * Choose at what time you would like your phone to vibrate
