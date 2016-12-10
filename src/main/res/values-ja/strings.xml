@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- Copyright (C) 2016 Marien Raat <marienraat@riseup.net> -->
-
 <!-- Author: Marien Raat <marienraat@riseup.net> -->
-
 <!-- This program is free software; you can redistribute it and/or -->
 <!-- modify it under the terms of the GNU General Public License -->
 <!-- as published by the Free Software Foundation; either version 3 -->
 <!-- of the License, or (at your option) any later version. -->
-
 <!-- This program is distributed in the hope that it will be useful, -->
 <!-- but WITHOUT ANY WARRANTY; without even the implied warranty of -->
 <!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the -->
 <!-- GNU General Public License for more details. -->
-
 <!-- You should have received a copy of the GNU General Public License -->
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <resources>
@@ -64,14 +60,12 @@
   訪問</string>
   <string name="project_page_preference_summary">さらに情報を参照して、
   フィードバックを残したり貢献してください</string>
-  <string
-      name="project_page_url">https://github.com/raatmarien/chibe</string>
+  <string name="project_page_url">https://github.com/raatmarien/chibe</string>
   <string name="email_me_preference_title">メールは
   marienraat@riseup.net</string>
   <string name="email_me_preference_summary">提案やアイデアを
   お知らせください</string>
-  <string
-      name="contact_email_adress">mailto:marienraat@riseup.net</string>
+  <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
 
   <!-- Dialog -->
   <string name="set_dialog">セット</string>
@@ -95,12 +89,12 @@
 
   <!-- chibe_pattern_preference_entries -->
   <string name="chibe_pattern_entries_custom">カスタム</string>
-  <string name="chibe_pattern_entries_0">Pattern: .. _ ..</string>
-  <string name="chibe_pattern_entries_1">Pattern: _ .. _</string>
-  <string name="chibe_pattern_entries_2">Pattern: _ _</string>
-  <string name="chibe_pattern_entries_3">Pattern: _</string>
-  <string name="chibe_pattern_entries_4">Pattern: ..</string>
-  <string name="chibe_pattern_entries_5">Pattern: . _ ...</string>
-  <string name="chibe_pattern_entries_6">Pattern: . _ . _ .</string>
+  <string name="chibe_pattern_entries_0">パターン: .. _ ..</string>
+  <string name="chibe_pattern_entries_1">パターン: _ .. _</string>
+  <string name="chibe_pattern_entries_2">パターン: _ _</string>
+  <string name="chibe_pattern_entries_3">パターン: _</string>
+  <string name="chibe_pattern_entries_4">パターン: ..</string>
+  <string name="chibe_pattern_entries_5">パターン: . _ ...</string>
+  <string name="chibe_pattern_entries_6">パターン: . _ . _ .</string>
 
 </resources>
