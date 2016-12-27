@@ -34,36 +34,82 @@ public class VibrationAlarmReceiver extends BroadcastReceiver {
     public final static String HOUR_REPEAT_COUNT_EXTRA
         = "com.jmstudios.chibe.timing.hour_repeat_count";
 
+    private final static int SHORT_BUZZ = 100,
+        LONG_BUZZ = 400,
+        SHORT_PAUSE = 50,
+        LONG_PAUSE = 200;
+
     @Override
     public void onReceive(Context context, Intent intent) {
         if (DEBUG) Log.i(TAG, "Vibration alarm received");
 
-        vibrate(context);
+        int ammHourPattern =
+            (new SettingsModel(context)).isHourRepeatEnabled() ?
+            intent.getIntExtra(HOUR_REPEAT_COUNT_EXTRA, 0) : 0;
+
+        vibrate(context, 1, ammHourPattern);
 
         // Schedule new alarm
         VibrationAlarmScheduler.rescheduleAlarm(context);
     }
 
-    public static void vibrate(Context context) {
+    // Vibrates the normal pattern `ammNormalPattern` times and the
+    // hour pattern `ammHourPattern` times.
+    public static void vibrate
+        (Context context, int ammNormalPattern, int ammHourPattern) {
         Vibrator vibrator = (Vibrator) context.
             getSystemService(Context.VIBRATOR_SERVICE);
 
-        SettingsModel settingsModel = new SettingsModel(context);
-
-        String p = settingsModel.getVibrationPattern();
-        long[] vibrationPattern = new long[2 * p.length()];
-
-        vibrationPattern[0] = 0;
-        vibrationPattern[1] = p.charAt(0) == '.' ? 100 : 400;
-        for (int i = 1; i < p.length(); i++) {
-            vibrationPattern[2 * i] =
-                p.charAt(i - 1) == '_' || p.charAt(i) == '_' ?
-                200 : 50;
-            vibrationPattern[2 * i + 1] = p.charAt(i) == '.' ?
-                100 : 400;
-        }
+        long[] vibrationPattern = getVibrationPattern
+            (context, ammNormalPattern, ammHourPattern);
 
         int noRepeat = -1;
         vibrator.vibrate(vibrationPattern, noRepeat);
+    }
+
+    private static long[] getVibrationPattern
+        (Context context, int ammNormalPattern, int ammHourPattern) {
+        SettingsModel settingsModel = new SettingsModel(context);
+
+        String normal = settingsModel.getVibrationPattern(),
+            hour = settingsModel.getHourVibrationPattern();
+
+        long[] normalPattern = getPatternFromString(normal),
+            hourPattern = getPatternFromString(hour);
+
+        long[] vibrationPattern = new long
+            [2 * (normal.length() + hour.length())];
+
+        for (int i = 0; i < ammNormalPattern; i++) {
+            int base = 2 * i * normal.length();
+            for (int j = 0; j < 2 * normal.length(); j++)
+                vibrationPattern[base + j] = normalPattern[j];
+        }
+
+        for (int i = 0; i < ammHourPattern; i++) {
+            int base = 2 * ammNormalPattern * normal.length() +
+                2 * i * hour.length();
+            for (int j = 0; j < 2 * hour.length(); j++)
+                vibrationPattern[base + j] = hourPattern[j];
+        }
+
+        return vibrationPattern;
+    }
+
+    private static long[] getPatternFromString(String pattern) {
+        long[] vibrationPattern = new long[2 * pattern.length()];
+
+        vibrationPattern[0] = 0;
+        vibrationPattern[1] = pattern.charAt(0) == '.' ?
+            SHORT_BUZZ : LONG_BUZZ;
+        for (int i = 1; i < pattern.length(); i++) {
+            vibrationPattern[2 * i] =
+                pattern.charAt(i - 1) == '_' || pattern.charAt(i) == '_' ?
+                LONG_PAUSE : SHORT_PAUSE;
+            vibrationPattern[2 * i + 1] = pattern.charAt(i) == '.' ?
+                SHORT_BUZZ : LONG_BUZZ;
+        }
+
+        return vibrationPattern;
     }
 }

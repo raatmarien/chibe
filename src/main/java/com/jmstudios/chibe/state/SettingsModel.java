@@ -34,6 +34,7 @@ public class SettingsModel {
     public static final String mIntroShownPrefKey = "pref_key_intro_shown";
     public static final String mVibrationPatternPrefKey = "pref_key_vibration_pattern";
     public static final String mCustomVibrationPatternPrefKey = "pref_key_custom_vibration_pattern";
+    public static final String mHourRepeatPrefKey = "pref_key_hour_repeat";
     public static final String mHourVibrationPatternPrefKey = "pref_key_hour_vibration_pattern";
     public static final String mCustomHourVibrationPatternPrefKey = "pref_key_custom_hour_vibration_pattern";
     public static final String mDarkThemePrefKey = "pref_key_dark_theme";
@@ -103,6 +104,10 @@ public class SettingsModel {
     public void setCustomVibrationPattern(String vibrationPattern) {
         mSharedPrefs.edit()
             .putString(mCustomVibrationPatternPrefKey, vibrationPattern).commit();
+    }
+
+    public boolean isHourRepeatEnabled() {
+        return mSharedPrefs.getBoolean(mHourRepeatPrefKey, false);
     }
 
     public String getHourVibrationPattern() {

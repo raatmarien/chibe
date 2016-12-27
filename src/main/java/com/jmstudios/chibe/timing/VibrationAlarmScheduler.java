@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.annotation.SuppressLint;
+import android.util.Log;
 
 import java.util.Calendar;
 
@@ -102,11 +103,17 @@ public class VibrationAlarmScheduler {
         // should be repeated, if it should be repeated at all.
         if (time.get(Calendar.MINUTE) == 0) {
             int hour = time.get(Calendar.HOUR);
+            // The hour field of the Calendar is 0 for 12:00 and
+            // 24:00, but we wan't to repeat 12 times for those.
+            int hourRepeatCount = hour == 0 ? 12 : hour;
+
             vibrationIntent.putExtra
                 (VibrationAlarmReceiver.HOUR_REPEAT_COUNT_EXTRA,
-                 // The hour field of the Calendar is 0 for 12:00 and
-                 // 24:00, but we wan't to repeat 12 times for those.
-                 hour == 0 ? 12 : hour);
+                 hour);
+
+            if (DEBUG) Log.i(TAG, String.format
+                             ("Added an hour repeat extra of %d to an PendingIntent",
+                              hourRepeatCount));
         }
 
         // We don't need a specific requestcode or any flags.
