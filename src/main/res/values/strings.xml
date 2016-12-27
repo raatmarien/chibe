@@ -15,7 +15,7 @@
 
 <!-- You should have received a copy of the GNU General Public License -->
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <string name="app_name">Chibe</string>
   <string name="chibe_settings_label">Chibe</string>
   <string name="chibe_intro_label">Intro</string>
@@ -55,9 +55,14 @@
   <string name="sleep_end_preference_title">End sleep at</string>
 
   <string name="pref_category_vibration">Vibration patterns</string>
-  <string name="test_vibration_preference_title">Vibrate now</string>
-  <string name="test_vibration_preference_summary">Lets your device
-  vibrate in the vibration pattern</string>
+  <string name="test_normal_vibration_preference_title">Test base
+  vibration pattern</string>
+  <string name="test_normal_vibration_preference_summary">Lets your device
+  vibrate in the base vibration pattern now</string>
+  <string name="test_hour_vibration_preference_title">Test hour
+  vibration pattern</string>
+  <string name="test_hour_vibration_preference_summary">Lets your device
+  vibrate in the hour vibration pattern now</string>
   <string name="base_vibration_pattern_preference_title">Base vibration pattern</string>
   <string name="hour_repeat_preference_title">Repeat a special
   vibration for the hours</string>
