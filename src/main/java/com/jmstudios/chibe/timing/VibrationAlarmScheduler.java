@@ -116,10 +116,12 @@ public class VibrationAlarmScheduler {
                               hourRepeatCount));
         }
 
-        // We don't need a specific requestcode or any flags.
-        int requestCode = 0, flag = 0;
+        // We don't need a specific requestcode
+        int requestCode = 0;
         return PendingIntent.getBroadcast
-            (context, requestCode, vibrationIntent, flag);
+            (context, requestCode, vibrationIntent,
+             // This flag is needed to correctly pass the extra's.
+             PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
     // Chibe won't schedules vibrations during sleep (between sleepStart
