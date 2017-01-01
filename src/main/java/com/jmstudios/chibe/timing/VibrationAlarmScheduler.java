@@ -109,7 +109,7 @@ public class VibrationAlarmScheduler {
 
             vibrationIntent.putExtra
                 (VibrationAlarmReceiver.HOUR_REPEAT_COUNT_EXTRA,
-                 hour);
+                 hourRepeatCount);
 
             if (DEBUG) Log.i(TAG, String.format
                              ("Added an hour repeat extra of %d to an PendingIntent",
