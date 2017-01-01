@@ -37,11 +37,18 @@ public class VibrationAlarmReceiver extends BroadcastReceiver {
     private final static int SHORT_BUZZ = 100,
         LONG_BUZZ = 400,
         SHORT_PAUSE = 50,
-        LONG_PAUSE = 200;
+        LONG_PAUSE = 200,
+        PATTERN_PAUSE = 800;
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (DEBUG) Log.i(TAG, "Vibration alarm received");
+        if (DEBUG) {
+            Log.i(TAG, "Vibration alarm received");
+            Log.i(TAG, String.format
+                  ("Ammount (-1 is no extra): %d | Repeat enabled: %b",
+                   intent.getIntExtra(HOUR_REPEAT_COUNT_EXTRA, -1),
+                   (new SettingsModel(context)).isHourRepeatEnabled()));
+        }
 
         int ammHourPattern =
             (new SettingsModel(context)).isHourRepeatEnabled() ?
@@ -78,19 +85,33 @@ public class VibrationAlarmReceiver extends BroadcastReceiver {
             hourPattern = getPatternFromString(hour);
 
         long[] vibrationPattern = new long
-            [2 * (normal.length() + hour.length())];
+            [2 * (ammNormalPattern * normal.length()
+                  + ammHourPattern * hour.length()
+                  // For the pauses between the patterns
+                  + ammNormalPattern + ammHourPattern)];
 
         for (int i = 0; i < ammNormalPattern; i++) {
-            int base = 2 * i * normal.length();
+            int base = 2 * i * normal.length() + 2 * i;
             for (int j = 0; j < 2 * normal.length(); j++)
                 vibrationPattern[base + j] = normalPattern[j];
+
+            // Add a pause between the patterns
+            vibrationPattern[base + 2 * normal.length() + 0]
+                = PATTERN_PAUSE;
+            vibrationPattern[base + 2 * normal.length() + 1]= 0;
         }
 
         for (int i = 0; i < ammHourPattern; i++) {
             int base = 2 * ammNormalPattern * normal.length() +
-                2 * i * hour.length();
+                2 * ammNormalPattern +
+                2 * i * hour.length() + 2 * i;
             for (int j = 0; j < 2 * hour.length(); j++)
                 vibrationPattern[base + j] = hourPattern[j];
+
+            // Add a pause between the patterns
+            vibrationPattern[base + 2 * hour.length() + 0]
+                = PATTERN_PAUSE;
+            vibrationPattern[base + 2 * hour.length() + 1] = 0;
         }
 
         return vibrationPattern;

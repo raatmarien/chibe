@@ -101,7 +101,7 @@ public class VibrationAlarmScheduler {
 
         // Save in the intent how many times the 'hour repeat pattern'
         // should be repeated, if it should be repeated at all.
-        if (time.get(Calendar.MINUTE) == 0) {
+        if (time.get(Calendar.MINUTE) == 0 || true) {
             int hour = time.get(Calendar.HOUR);
             // The hour field of the Calendar is 0 for 12:00 and
             // 24:00, but we wan't to repeat 12 times for those.
