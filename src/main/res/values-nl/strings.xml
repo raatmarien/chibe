@@ -36,10 +36,6 @@
   <string name="sleep_end_preference_title">Beëindig het slapen om</string>
 
   <string name="pref_category_vibration">Trillingspatroon</string>
-  <string name="test_vibration_preference_title">Nu trillen</string>
-  <string name="test_vibration_preference_summary">Laat uw apparaat
- trillen in het trillingspatroon</string>
-  <string name="vibration_pattern_preference_title">Trillingspatroon</string>
 
   <string name="pref_category_other">Overig</string>
   <string name="dark_theme_preference_title">Donker thema</string>
