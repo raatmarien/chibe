@@ -101,7 +101,7 @@ public class VibrationAlarmScheduler {
 
         // Save in the intent how many times the 'hour repeat pattern'
         // should be repeated, if it should be repeated at all.
-        if (time.get(Calendar.MINUTE) == 0 || true) {
+        if (time.get(Calendar.MINUTE) == 0) {
             int hour = time.get(Calendar.HOUR);
             // The hour field of the Calendar is 0 for 12:00 and
             // 24:00, but we wan't to repeat 12 times for those.
@@ -112,8 +112,9 @@ public class VibrationAlarmScheduler {
                  hourRepeatCount);
 
             if (DEBUG) Log.i(TAG, String.format
-                             ("Added an hour repeat extra of %d to an PendingIntent",
-                              hourRepeatCount));
+                             ("Added an hour repeat extra of %d to an PendingIntent," +
+                              " the hour is %d.",
+                              hourRepeatCount, hour));
         }
 
         // We don't need a specific requestcode
