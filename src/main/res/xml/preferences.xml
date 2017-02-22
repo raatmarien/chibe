@@ -38,14 +38,33 @@
     <com.jmstudios.chibe.preference.VibrationPatternPreference
         android:key="pref_key_vibration_pattern"
         android:defaultValue=".._.."
-        android:title="@string/vibration_pattern_preference_title"
+        android:title="@string/base_vibration_pattern_preference_title"
         android:entries="@array/vibration_pattern_entries"
         android:entryValues="@array/vibration_pattern_entry_values" />
 
     <Preference
-        android:key="pref_key_test_vibration"
-        android:title="@string/test_vibration_preference_title"
-        android:summary="@string/test_vibration_preference_summary" />
+        android:key="pref_key_test_normal_vibration"
+        android:title="@string/test_normal_vibration_preference_title"
+        android:summary="@string/test_normal_vibration_preference_summary" />
+
+    <SwitchPreference
+        android:key="pref_key_hour_repeat"
+        android:title="@string/hour_repeat_preference_title"
+        android:summary="@string/hour_repeat_preference_summary" />
+
+    <com.jmstudios.chibe.preference.HourVibrationPatternPreference
+        android:key="pref_key_hour_vibration_pattern"
+        android:defaultValue=".."
+        android:title="@string/hour_vibration_pattern_preference_title"
+        android:entries="@array/vibration_pattern_entries"
+        android:entryValues="@array/vibration_pattern_entry_values"
+        android:dependency="pref_key_hour_repeat" />
+
+    <Preference
+        android:key="pref_key_test_hour_vibration"
+        android:title="@string/test_hour_vibration_preference_title"
+        android:summary="@string/test_hour_vibration_preference_summary"
+        android:dependency="pref_key_hour_repeat" />
   </PreferenceCategory>
 
   <PreferenceCategory android:title="@string/pref_category_other">

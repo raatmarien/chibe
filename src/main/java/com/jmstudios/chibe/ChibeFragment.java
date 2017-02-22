@@ -38,14 +38,26 @@ public class ChibeFragment extends PreferenceFragment {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
 
-        // Set the OnClickListener for the 'Test vibrate' preference
-        Preference testVibration = findPreference("pref_key_test_vibration");
-        testVibration.setOnPreferenceClickListener
+        // Set the OnClickListener for the 'Test normal vibration' preference
+        Preference normalTestVibration = findPreference("pref_key_test_normal_vibration");
+        normalTestVibration.setOnPreferenceClickListener
             (new Preference.OnPreferenceClickListener() {
                     @Override
                     public boolean onPreferenceClick
                         (Preference pref) {
-                        vibrateOnce();
+                        VibrationAlarmReceiver.vibrate(getActivity(), 1, 0);
+                        return true;
+                    }
+                });
+
+        // Set the OnClickListener for the 'Test hour vibration' preference
+        Preference hourTestVibration = findPreference("pref_key_test_hour_vibration");
+        hourTestVibration.setOnPreferenceClickListener
+            (new Preference.OnPreferenceClickListener() {
+                    @Override
+                    public boolean onPreferenceClick
+                        (Preference pref) {
+                        VibrationAlarmReceiver.vibrate(getActivity(), 0, 1);
                         return true;
                     }
                 });
@@ -61,10 +73,5 @@ public class ChibeFragment extends PreferenceFragment {
                         return true;
                     }
                 });
-    }
-
-    public void vibrateOnce() {
-        if (DEBUG) Log.i(TAG, "Starting a test vibrate");
-        VibrationAlarmReceiver.vibrate(getActivity());
     }
 }
