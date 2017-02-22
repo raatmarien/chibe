@@ -54,6 +54,7 @@
 
     <com.jmstudios.chibe.preference.HourVibrationPatternPreference
         android:key="pref_key_hour_vibration_pattern"
+        android:defaultValue=".."
         android:title="@string/hour_vibration_pattern_preference_title"
         android:entries="@array/vibration_pattern_entries"
         android:entryValues="@array/vibration_pattern_entry_values"
