@@ -35,7 +35,7 @@
   <string name="sleep_start_preference_title">Begin met slapen om</string>
   <string name="sleep_end_preference_title">Beëindig het slapen om</string>
 
-  <string name="pref_category_vibration">Trillingspatroon</string>
+  <string name="pref_category_vibration">Trillingspatronen</string>
 
   <string name="pref_category_other">Overig</string>
   <string name="dark_theme_preference_title">Donker thema</string>
@@ -76,5 +76,16 @@
   <string name="chibe_pattern_entries_4">Patroon: ..</string>
   <string name="chibe_pattern_entries_5">Patroon: . _ ...</string>
   <string name="chibe_pattern_entries_6">Patroon: . _ . _ .</string>
+
+  <string name="test_normal_vibration_preference_title">Probeer het basis vibratie patroon</string>
+  <string name="test_normal_vibration_preference_summary">Laat uw apparaat nu trillen in het basis vibratie patroon</string>
+  <string name="test_hour_vibration_preference_title">Probeer het uur vibratie patroon</string>
+  <string name="test_hour_vibration_preference_summary">Laat uw toestel nu trillen in het uur vibratie patroon</string>
+  <string name="base_vibration_pattern_preference_title">Basis vibratie patroon</string>
+  <string name="hour_repeat_preference_title">Herhaal een speciale vibratie voor de uren</string>
+  <string name="hour_repeat_preference_summary">Vibreer meerdere keren in het uur vibratie patroon om te laten zien hoe laat het is. Bijvoorbeeld om 14:00 zal Chibe dan eerst vibreren in het basis patroon en daarna twee keer in het uur vibratie patroon.</string>
+  <string name="hour_vibration_pattern_preference_title">Uur vibratie patroon</string>
+
+  <string name="custom_pattern_dialog">Aangepast patroon</string>
 
   </resources>
