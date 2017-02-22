@@ -10,6 +10,10 @@ customizable and it only affects you.
 
 [Direct download](https://github.com/raatmarien/chibe/releases/download/v1.1.0/chibe-v1.1.0.apk)
 
+<a href="https://hosted.weblate.org/engage/chibe/?utm_source=widget">
+<img src="https://hosted.weblate.org/widgets/chibe/-/287x66-grey.png" alt="Translation status" />
+</a>
+
 ## Features
 
 * Choose at what time you would like your phone to vibrate
