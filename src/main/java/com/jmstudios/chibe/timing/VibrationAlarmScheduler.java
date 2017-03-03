@@ -83,9 +83,15 @@ public class VibrationAlarmScheduler {
 
         // In API 19 AlarmManager::set was made inexact and
         // AlarmManager::setExact was introduced, since we always want
-        // to vibrate at exactly the right time, we use setExact on API
-        // 19+.
-        if (android.os.Build.VERSION.SDK_INT >= 19) {
+        // to vibrate at exactly the right time, we use setExact on
+        // API 19+.  From API 23 AlarmManager::setExact aren't
+        // actually exact when the device is in a low power state, so
+        // we have to use AlarmManager::setExactAndAllowWhileIdle.
+        if (android.os.Build.VERSION.SDK_INT >= 23) {
+            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC,
+                                                   alarmTime.getTimeInMillis(),
+                                                   vibrationPendingIntent);
+        } else if (android.os.Build.VERSION.SDK_INT >= 19) {
             alarmManager.setExact(AlarmManager.RTC,
                                   alarmTime.getTimeInMillis(),
                                   vibrationPendingIntent);
