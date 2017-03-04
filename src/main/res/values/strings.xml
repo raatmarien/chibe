@@ -23,10 +23,9 @@
   <!-- Intro -->
   <string name="intro_slide_1_title">Welcome to Chibe!</string>
   <string name="intro_slide_1_text">In the past, many homes had a
-  chiming or cuckoo\'s clock that would ring every hour or half
-  hour. However, with the current technology you don\'t need to bother
-  everyone with a loud nose, Chibe can just vibrate your phone for
-  you!</string>
+  chiming or cuckoo\'s clock that would ring every hour. But with
+  the current technology you don\'t need to bother everyone with a
+  loud nose, Chibe can just vibrate your phone for you!</string>
 
   <string name="intro_slide_2_title">Keep track of time</string>
   <string name="intro_slide_2_text">Effortlessly keep track of the
