@@ -22,6 +22,8 @@ package com.jmstudios.chibe;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.preference.Preference;
+import android.preference.SwitchPreference;
+import android.preference.PreferenceCategory;
 import android.util.Log;
 
 import com.jmstudios.chibe.timing.VibrationAlarmReceiver;
@@ -38,8 +40,11 @@ public class ChibeFragment extends PreferenceFragment {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
 
+        addAPISpecificPreferences();
+
         // Set the OnClickListener for the 'Test normal vibration' preference
-        Preference normalTestVibration = findPreference("pref_key_test_normal_vibration");
+        Preference normalTestVibration =
+            findPreference("pref_key_test_normal_vibration");
         normalTestVibration.setOnPreferenceClickListener
             (new Preference.OnPreferenceClickListener() {
                     @Override
@@ -73,5 +78,31 @@ public class ChibeFragment extends PreferenceFragment {
                         return true;
                     }
                 });
+    }
+
+    private void addAPISpecificPreferences() {
+        if (android.os.Build.VERSION.SDK_INT >= 23) {
+            // Do not disturb mode was added in API 23
+            addVibrateDuringDndPreference();
+        }
+    }
+
+    private void addVibrateDuringDndPreference() {
+        PreferenceCategory timingCategory =
+            (PreferenceCategory) findPreference("pref_key_category_timing");
+        timingCategory.addPreference(getVibrateDuringDndPreference());
+    }
+
+    private SwitchPreference getVibrateDuringDndPreference() {
+        SwitchPreference vibrateDuringDnd = new SwitchPreference(getActivity());
+        vibrateDuringDnd.setKey("pref_key_vibrate_during_dnd");
+        vibrateDuringDnd
+            .setTitle(getActivity().getString
+                      (R.string.vibrate_during_dnd_preference_title));
+        vibrateDuringDnd
+            .setSummary(getActivity().getString
+                      (R.string.vibrate_during_dnd_preference_summary));
+        vibrateDuringDnd.setDefaultValue(true);
+        return vibrateDuringDnd;
     }
 }

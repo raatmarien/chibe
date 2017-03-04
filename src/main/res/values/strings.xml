@@ -52,6 +52,11 @@
   <string name="vibration_interval_preference_title">Vibration interval</string>
   <string name="sleep_start_preference_title">Start sleep at</string>
   <string name="sleep_end_preference_title">End sleep at</string>
+  <string name="vibrate_during_dnd_preference_title">Vibrate during Do
+  Not Disturb</string>
+  <string name="vibrate_during_dnd_preference_summary">Lets Chibe
+  vibrate even if your phone\'s Do Not Disturb mode is
+  enabled.</string>
 
   <string name="pref_category_vibration">Vibration patterns</string>
   <string name="test_normal_vibration_preference_title">Test base
