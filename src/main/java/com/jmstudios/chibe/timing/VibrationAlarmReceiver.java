@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.os.Vibrator;
+import android.app.NotificationManager;
 
 import com.jmstudios.chibe.state.SettingsModel;
 
@@ -50,14 +51,51 @@ public class VibrationAlarmReceiver extends BroadcastReceiver {
                    (new SettingsModel(context)).isHourRepeatEnabled()));
         }
 
+        SettingsModel settingsModel = new SettingsModel(context);
+
         int ammHourPattern =
-            (new SettingsModel(context)).isHourRepeatEnabled() ?
+            settingsModel.isHourRepeatEnabled() ?
             intent.getIntExtra(HOUR_REPEAT_COUNT_EXTRA, 0) : 0;
 
-        vibrate(context, 1, ammHourPattern);
+        if (shouldVibrate(settingsModel, context)) {
+            vibrate(context, 1, ammHourPattern);
+        }
 
         // Schedule new alarm
         VibrationAlarmScheduler.rescheduleAlarm(context);
+    }
+
+    private boolean shouldVibrate(SettingsModel settingsModel,
+                                  Context context) {
+        boolean dndIsSupported = android.os.Build.VERSION.SDK_INT >= 23;
+        if (dndIsSupported && isDndEnabled(context)) {
+            return settingsModel.shouldVibrateDuringDnd();
+        } else {
+            return true;
+        }
+    }
+
+    private boolean isDndEnabled(Context context) {
+        NotificationManager notificationManager = (NotificationManager)
+            context.getSystemService(Context.NOTIFICATION_SERVICE);
+        if (notificationManager == null) return false;
+
+        int currentFilter =
+            notificationManager.getCurrentInterruptionFilter();
+
+        // All other values indicate an active Dnd filter. See:
+        // https://developer.android.com/reference/android/app/NotificationManager.html#INTERRUPTION_FILTER_ALARMS
+        boolean dndIsEnabled = currentFilter !=
+            NotificationManager.INTERRUPTION_FILTER_ALL &&
+            currentFilter !=
+            NotificationManager.INTERRUPTION_FILTER_UNKNOWN;
+
+        if (DEBUG) Log.i(TAG, "Dnd is " +
+                         (dndIsEnabled ? "enabled" : "disabled"));
+        if (DEBUG) Log.i(TAG, String.format
+                         ("Filter number is %d.", currentFilter));
+
+        return dndIsEnabled;
     }
 
     // Vibrates the normal pattern `ammNormalPattern` times and the
