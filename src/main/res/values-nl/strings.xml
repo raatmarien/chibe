@@ -5,8 +5,8 @@
 
   <string name="intro_slide_1_title">Welkom bij Chibe!</string>
   <string name="intro_slide_1_text">Vroeger hadden veel huizen een
- klokkenspel of koekoeksklok, die elk halfuur of uur geluid
- maakte. Met de huidige technologie hoeft u niemand te storen
+ klokkenspel of koekoeksklok, die elk uur een geluid
+ maakte. Maar met de huidige technologie hoeft u niemand te storen
  met een hard geluid. Chibe laat simpelweg uw telefoon trillen, geheel
  automatisch!</string>
 
@@ -87,5 +87,11 @@
   <string name="hour_vibration_pattern_preference_title">Uur vibratie patroon</string>
 
   <string name="custom_pattern_dialog">Aangepast patroon</string>
+
+  <string name="vibrate_during_dnd_preference_title">Trillen in de
+ Niet storen-modus</string>
+  <string name="vibrate_during_dnd_preference_summary">Zorgt ervoor dat Chibe
+ uw telefoon laat trillen, zelfs als deze zich bevindt in de
+ Niet storen-modus.</string>
 
   </resources>
