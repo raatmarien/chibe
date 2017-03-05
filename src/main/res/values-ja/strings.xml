@@ -19,9 +19,9 @@
   <!-- Intro -->
   <string name="intro_slide_1_title">Chibe にようこそ!</string>
   <string name="intro_slide_1_text">かつては、多くの家庭に 1 時間ごとに
-  音が鳴るチャイムや鳩の時計がありました。
-  しかし、現在の技術では、大きな音で他の人を気にする必要はありません。
-  Chibe でお使いの携帯電話を振動させることができます!</string>
+ 音が鳴るチャイムやカッコウの時計がありました。
+ しかし、現在の技術では、大きな音で他の人を気にする必要はありません。
+ Chibe でお使いの携帯電話だけを振動させることができます!</string>
 
   <string name="intro_slide_2_title">時間を管理する</string>
   <string name="intro_slide_2_text">Chibe で活動中の時間を簡単に管理できます。
@@ -110,5 +110,10 @@
   <string name="hour_vibration_pattern_preference_title">時間振動パターン</string>
 
   <string name="custom_pattern_dialog">カスタム パターン</string>
+
+  <string name="vibrate_during_dnd_preference_title">お休み中
+は振動</string>
+  <string name="vibrate_during_dnd_preference_summary">お休みモード
+が有効な場合でも Chibe は電話を振動することができます。</string>
 
   </resources>
