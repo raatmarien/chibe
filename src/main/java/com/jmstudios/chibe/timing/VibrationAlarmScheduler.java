@@ -88,11 +88,11 @@ public class VibrationAlarmScheduler {
         // actually exact when the device is in a low power state, so
         // we have to use AlarmManager::setExactAndAllowWhileIdle.
         if (android.os.Build.VERSION.SDK_INT >= 23) {
-            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC,
+            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,
                                                    alarmTime.getTimeInMillis(),
                                                    vibrationPendingIntent);
         } else if (android.os.Build.VERSION.SDK_INT >= 19) {
-            alarmManager.setExact(AlarmManager.RTC,
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP,
                                   alarmTime.getTimeInMillis(),
                                   vibrationPendingIntent);
         } else {
