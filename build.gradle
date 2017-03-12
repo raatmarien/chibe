@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         applicationId "com.jmstudios.chibe"
-        minSdkVersion 13
+        minSdkVersion 14
         targetSdkVersion 24
         versionCode 3
         versionName "1.2.0"
