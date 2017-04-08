@@ -1,2 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">Chibe</string>
+  <string name="intro_slide_1_title">Καλώς ήρθατε στο Chibe!</string>
+  <string name="intro_slide_1_text">Στο παρελθόν, πολλά σπίτια είχαν ένα ρολόι με κούκο, το οποίο 
+χτυπούσε κάθε ώρα. Με τη σημερινή τεχνολογία όμως δεν 
+χρειάζεται να ενοχλείτε τους γύρω σας, το Chibe μπορεί να 
+κάνει το κινητό σας να δονείται μόνο για εσάς!</string>
+
+  <string name="intro_slide_2_text">Παρακολουθείστε χωρίς κόπο τον χρόνο σας κατά τη διάρκεια 
+οποιασδήποτε δραστηριότητας με το Chibe. Μια μικρή δόνηση 
+ανά προκαθορισμένα χρονικά διαστήματα θα σας θυμίσει
+ευγενικά την ώρα. Θα μπορείτε να χρησιμοποιείτε τον χρόνο σας 
+πιο αποδοτικά και να οργανώνετε το χρόνο σας πιο συνειδητά.</string>
+
+  <string name="pref_category_vibration">Μοτίβο δόνησης</string>
+  <string name="test_normal_vibration_preference_title">Δοκιμή βασικού
+μοτίβου δόνησης</string>
+  <string name="test_hour_vibration_preference_title">Δοκιμή ωριαίου
+μοτίβου δόνησης</string>
+  <string name="base_vibration_pattern_preference_title">Βασικό μοτίβο δόνησης</string>
+  <string name="chibe_intro_label">Εισαγωγή</string>
+
+  <string name="intro_slide_3_title">Κοιμάται όταν κοιμάστε κι εσείς</string>
+  <string name="intro_slide_3_text">Το Chibe δεν θα σας ενοχλήσει
+όσο κοιμάστε. Απλώς ρυθμίστε τις ώρες ύπνου
+και ξεκουραστείτε χωρίς καμία ενόχληση!</string>
+
+  <string name="intro_slide_4_text">Το Chibe σας επιτρέπει να διαλέξετε από διάφορα
+μοτίβα δόνησης. Διαλέξτε αυτό που σας ταιριάζει ώστε να μην
+μπερδέψετε το Chibe με τις υπόλοιπες ειδοποιήσεις σας.</string>
+
+  <string name="intro_slide_5_text">Πατήστε το διακόπτη στην πάνω δεξιά γωνία
+για να ενεργοποιήσετε το Chibe και να ξεκινήσετε!</string>
+
+  <string name="intro_slide_2_title">Παρακολουθείστε το χρόνο σας</string>
+  <string name="chibe_settings_label">Chibe</string>
+  <string name="vibrate_during_dnd_preference_title">Δόνηση κατά τη διάρκεια της
+λειτουργίας \"Μην ενοχλείτε\"</string>
+  <string name="vibrate_during_dnd_preference_summary">Επιτρέπει στο Chibe να δονείται κατά τη διάρκεια της
+λειτουργίας \"Μην ενοχλείτε\".</string>
+
+  <string name="hour_vibration_pattern_preference_title">Ωριαίο μοτίβο
+δόνησης</string>
+
+  <string name="pref_category_other">Άλλο</string>
+  <string name="dark_theme_preference_title">Σκοτεινό θέμα</string>
+  <string name="set_dialog">Ορισμός</string>
+  <string name="cancel_dialog">Ακύρωση</string>
+  <string name="ok_dialog">ΟΚ</string>
+  <string name="delete_vibration">⌫ DEL</string>
+  <string name="custom_pattern_hint">Χρησιμοποιήστε τα κουμπιά για να δημιουργήσετε ένα μοτίβο</string>
+
+  <string name="vibration_time_entries_0">κάθε λεπτό</string>
+  <string name="vibration_time_entries_1">κάθε 5 λεπτά</string>
+  <string name="vibration_time_entries_2">κάθε 10 λεπτά</string>
+  <string name="vibration_time_entries_3">κάθε 15 λεπτά</string>
+  <string name="vibration_time_entries_4">κάθε 20 λεπτά</string>
+  <string name="vibration_time_entries_5">κάθε μισή ώρα</string>
+  <string name="vibration_time_entries_6">κάθε ώρα</string>
+  <string name="vibration_time_entries_7">κάθε δύο ώρες</string>
+
+  <string name="chibe_pattern_entries_0">Μοτίβο: .. _ ..</string>
+  <string name="chibe_pattern_entries_1">Μοτίβο: _ .. _</string>
+  <string name="chibe_pattern_entries_2">Μοτίβο: _ _</string>
+  <string name="chibe_pattern_entries_3">Μοτίβο: _</string>
+  <string name="chibe_pattern_entries_4">Μοτίβο: ..</string>
+  <string name="chibe_pattern_entries_5">Μοτίβο: . _ ...</string>
+  <string name="chibe_pattern_entries_6">Μοτίβο: . _ . _ .</string>
+
+  </resources>
