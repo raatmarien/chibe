@@ -68,34 +68,40 @@ public class VibrationAlarmReceiver extends BroadcastReceiver {
 
     private boolean shouldVibrate(SettingsModel settingsModel,
                                   Context context) {
-        boolean dndIsSupported = android.os.Build.VERSION.SDK_INT >= 23;
-        if (dndIsSupported && isDndEnabled(context)) {
-            return settingsModel.shouldVibrateDuringDnd();
-        } else {
-            return true;
+        boolean vibrate = true;
+
+        if (!settingsModel.shouldVibrateDuringDnd() && isDndEnabled(context)){
+            vibrate = false;
         }
+
+        return vibrate;
     }
 
     @TargetApi(23)
     private boolean isDndEnabled(Context context) {
-        NotificationManager notificationManager = (NotificationManager)
-            context.getSystemService(Context.NOTIFICATION_SERVICE);
-        if (notificationManager == null) return false;
+        boolean dndIsEnabled = false;
+        boolean dndIsSupported = android.os.Build.VERSION.SDK_INT >= 23;
 
-        int currentFilter =
-            notificationManager.getCurrentInterruptionFilter();
+        if(dndIsSupported){
+            NotificationManager notificationManager = (NotificationManager)
+                context.getSystemService(Context.NOTIFICATION_SERVICE);
+            if (notificationManager == null) return false;
 
-        // All other values indicate an active Dnd filter. See:
-        // https://developer.android.com/reference/android/app/NotificationManager.html#INTERRUPTION_FILTER_ALARMS
-        boolean dndIsEnabled = currentFilter !=
-            NotificationManager.INTERRUPTION_FILTER_ALL &&
-            currentFilter !=
-            NotificationManager.INTERRUPTION_FILTER_UNKNOWN;
+            int currentFilter =
+                notificationManager.getCurrentInterruptionFilter();
 
-        if (DEBUG) Log.i(TAG, "Dnd is " +
-                         (dndIsEnabled ? "enabled" : "disabled"));
-        if (DEBUG) Log.i(TAG, String.format
-                         ("Filter number is %d.", currentFilter));
+            // All other values indicate an active Dnd filter. See:
+            // https://developer.android.com/reference/android/app/NotificationManager.html#INTERRUPTION_FILTER_ALARMS
+            dndIsEnabled = currentFilter !=
+                NotificationManager.INTERRUPTION_FILTER_ALL &&
+                currentFilter !=
+                NotificationManager.INTERRUPTION_FILTER_UNKNOWN;
+
+            if (DEBUG) Log.i(TAG, "Dnd is " +
+                             (dndIsEnabled ? "enabled" : "disabled"));
+            if (DEBUG) Log.i(TAG, String.format
+                             ("Filter number is %d.", currentFilter));
+        }
 
         return dndIsEnabled;
     }
