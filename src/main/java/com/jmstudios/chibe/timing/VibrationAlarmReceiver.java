@@ -26,6 +26,7 @@ import android.util.Log;
 import android.os.Vibrator;
 import android.app.NotificationManager;
 import android.annotation.TargetApi;
+import android.telephony.TelephonyManager;
 
 import com.jmstudios.chibe.state.SettingsModel;
 
@@ -70,7 +71,8 @@ public class VibrationAlarmReceiver extends BroadcastReceiver {
                                   Context context) {
         boolean vibrate = true;
 
-        if (!settingsModel.shouldVibrateDuringDnd() && isDndEnabled(context)){
+        if ( (!settingsModel.shouldVibrateDuringDnd() && isDndEnabled(context)) ||
+             (!settingsModel.shouldVibrateDuringCalls() && isCallActive(context))){
             vibrate = false;
         }
 
@@ -104,6 +106,18 @@ public class VibrationAlarmReceiver extends BroadcastReceiver {
         }
 
         return dndIsEnabled;
+    }
+
+    private boolean isCallActive(Context context){
+        boolean activeCall = true;
+        TelephonyManager telephonyManager = (TelephonyManager)
+            context.getSystemService(Context.TELEPHONY_SERVICE);
+
+        if(telephonyManager.getCallState() == telephonyManager.CALL_STATE_IDLE){
+            activeCall = false;
+        }
+
+        return activeCall;
     }
 
     // Vibrates the normal pattern `ammNormalPattern` times and the

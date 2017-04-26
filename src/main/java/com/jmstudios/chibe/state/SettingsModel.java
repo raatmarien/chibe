@@ -39,6 +39,7 @@ public class SettingsModel {
     public static final String mCustomHourVibrationPatternPrefKey = "pref_key_custom_hour_vibration_pattern";
     public static final String mDarkThemePrefKey = "pref_key_dark_theme";
     public static final String mVibrateDuringDndPrefKey = "pref_key_vibrate_during_dnd";
+    public static final String mVibrateDuringCallsPrefKey = "pref_key_vibrate_during_calls";
 
     private SharedPreferences mSharedPrefs;
 
@@ -81,6 +82,11 @@ public class SettingsModel {
     public boolean shouldVibrateDuringDnd() {
         return mSharedPrefs.getBoolean
             (mVibrateDuringDndPrefKey, true);
+    }
+
+    public boolean shouldVibrateDuringCalls() {
+        return mSharedPrefs.getBoolean
+            (mVibrateDuringCallsPrefKey, true);
     }
 
     public boolean isIntroShown() {

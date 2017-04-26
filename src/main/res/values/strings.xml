@@ -57,6 +57,9 @@
   <string name="vibrate_during_dnd_preference_summary">Lets Chibe
   vibrate even if your phone\'s Do Not Disturb mode is
   enabled.</string>
+  <string name="vibrate_during_calls_preference_title">Vibrate during calls</string>
+  <string name="vibrate_during_calls_preference_summary">Lets Chibe vibrate
+  while making a call</string>
 
   <string name="pref_category_vibration">Vibration patterns</string>
   <string name="test_normal_vibration_preference_title">Test base
