@@ -33,6 +33,13 @@
         android:key="pref_key_sleep_end"
         android:title="@string/sleep_end_preference_title"
         android:defaultValue="09:00" />
+
+    <SwitchPreference
+        android:key="pref_key_vibrate_during_calls"
+        android:title="@string/vibrate_during_calls_preference_title"
+        android:summary="@string/vibrate_during_calls_preference_summary"
+        android:defaultValue="false" />
+
   </PreferenceCategory>
 
   <PreferenceCategory android:title="@string/pref_category_vibration">
