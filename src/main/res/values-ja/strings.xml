@@ -116,4 +116,7 @@
   <string name="vibrate_during_dnd_preference_summary">お休みモード
 が有効な場合でも Chibe は電話を振動することができます。</string>
 
+  <string name="vibrate_during_calls_preference_title">通話中に振動</string>
+  <string name="vibrate_during_calls_preference_summary">通話している間 Chibe に振動させます</string>
+
   </resources>
