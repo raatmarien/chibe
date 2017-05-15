@@ -99,4 +99,7 @@
   <string name="chibe_pattern_entries_5">Pola: . _ ...</string>
   <string name="chibe_pattern_entries_6">Pola: . _ . _ .</string>
 
+  <string name="vibrate_during_calls_preference_title">Bergetar ketika menelepon</string>
+  <string name="vibrate_during_calls_preference_summary">Biarkan Chibe bergetar ketika sedang menelepon</string>
+
   </resources>
