@@ -1,2 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">Chibe</string>
+  <string name="chibe_settings_label">Chibe</string>
+  <string name="intro_slide_1_title">Добро пожаловать в Chibe!</string>
+  <string name="vibrate_during_calls_preference_title">Вибрация во время звонков</string>
+  <string name="dark_theme_preference_title">Тёмная тема</string>
+  <string name="project_page_preference_title">Посетить страницу проекта</string>
+  <string name="project_page_url">https://github.com/raatmarien/chibe</string>
+  <string name="cancel_dialog">Отмена</string>
+  <string name="ok_dialog">OK</string>
+  <string name="vibration_time_entries_0">каждую минуту</string>
+  <string name="vibration_time_entries_1">каждые 5 минут</string>
+  <string name="vibration_time_entries_2">каждые 10 минут</string>
+  <string name="vibration_time_entries_3">каждые 15 минут</string>
+  <string name="vibration_time_entries_4">каждые 20 минут</string>
+  <string name="vibration_time_entries_5">каждые полчаса</string>
+  <string name="vibration_time_entries_6">каждый час</string>
+  <string name="vibration_time_entries_7">каждые два часа</string>
+
+  <string name="chibe_intro_label">Введение</string>
+
+  <string name="intro_slide_1_text">В прошлом, во многих домах были часы с боем или с кукушкой, которые отсчитывали каждый час. Но с современными технологиями никого отвлекать громкими звуками не нужно, Chibe может просто вибрировать вашим телефоном!</string>
+
+  <string name="intro_slide_2_title">Следите за временем</string>
+  <string name="intro_slide_3_title">Спит, когда вы спите</string>
+  <string name="intro_slide_3_text">Chibe не будет беспокоить, когда вы спите. Просто настройте время сна и отдыхайте без помех!</string>
+
+  <string name="intro_slide_5_title">Начинаем!</string>
+  <string name="intro_slide_5_text">Нажмите на выключатель в правом верхнем углу, чтобы включить Chibe и начать!</string>
+
+  <string name="pref_category_timing">Время</string>
+  <string name="vibration_interval_preference_title">Интервал вибрации</string>
+  <string name="sleep_start_preference_title">Начало сна</string>
+  <string name="sleep_end_preference_title">Конец сна</string>
+  <string name="vibrate_during_dnd_preference_title">Вибрация в режиме «Не беспокоить»</string>
+  <string name="vibrate_during_calls_preference_summary">Разрешить Chibe вибрировать во время звонков</string>
+
+  <string name="vibrate_during_dnd_preference_summary">Разрешить Chibe вибрировать, когда включён режим «Не беспокоить».</string>
+  <string name="pref_category_other">Другое</string>
+  <string name="intro_slide_4_title">Свои шаблоны вибрации</string>
+  <string name="intro_slide_4_text">Chibe позволяет выбрать один из нескольких шаблонов вибрации. Выберите подходящий, чтобы не путать Chibe с обычными уведомлениями.</string>
+
+  <string name="pref_category_vibration">Шаблоны вибрации</string>
+  <string name="test_normal_vibration_preference_title">Проверить базовый шаблон вибрации</string>
+  <string name="test_hour_vibration_preference_title">Проверить часовой шаблон вибрации</string>
+  <string name="base_vibration_pattern_preference_title">Базовый шаблон вибрации</string>
+  <string name="hour_vibration_pattern_preference_title">Часовой шаблон вибрации</string>
+
+  <string name="project_page_preference_summary">Найти больше информации, оставить отзыв и внести свой вклад</string>
+  <string name="email_me_preference_title">Написать мне на marienraat@riseup.net</string>
+  <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
+
+  <string name="set_dialog">Установить</string>
+  <string name="custom_pattern_dialog">Свой шаблон</string>
+
+  <string name="short_vibration">Короткий</string>
+  <string name="long_vibration">Длинный</string>
+  <string name="delete_vibration">⌫ DEL</string>
+  <string name="custom_pattern_hint">Используйте кнопки, чтобы создать шаблон</string>
+
+  <string name="chibe_pattern_entries_custom">Свой</string>
+  <string name="chibe_pattern_entries_0">Шаблон: .. _ ..</string>
+  <string name="chibe_pattern_entries_1">Шаблон: _ .. _</string>
+  <string name="chibe_pattern_entries_2">Шаблон: _ _</string>
+  <string name="chibe_pattern_entries_3">Шаблон: _</string>
+  <string name="chibe_pattern_entries_4">Шаблон: ..</string>
+  <string name="chibe_pattern_entries_5">Шаблон: . _ ...</string>
+  <string name="chibe_pattern_entries_6">Шаблон: . _ . _ .</string>
+
+  <string name="intro_slide_2_text">Следите за временем без усилий с Chibe, что бы вы ни делали. Небольшая вибрация в определённые часы напомнит вам о времени. Это позволит вам использовать время более эффективно и распоряжаться им более сознательно.</string>
+
+  <string name="hour_repeat_preference_title">Вибрировать часы</string>
+  <string name="hour_repeat_preference_summary">Вибрировать часовым шаблоном столько раз, сколько сейчас часов. Например, в 14:00 Chibe будет вибрировать один раз базовым шаблоном и два раза часовым шаблоном.</string>
+  <string name="email_me_preference_summary">Отправьте свои предложения или дайте мне знать, что вы думаете</string>
+  <string name="test_normal_vibration_preference_summary">Вибрирует устройством с использованием базового шаблона вибрации</string>
+  <string name="test_hour_vibration_preference_summary">Вибрирует устройством с использованием часового шаблона вибрации</string>
+  </resources>
