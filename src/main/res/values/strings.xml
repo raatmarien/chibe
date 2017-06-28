@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- Copyright (C) 2016 Marien Raat <marienraat@riseup.net> -->
-
 <!-- Author: Marien Raat <marienraat@riseup.net> -->
-
 <!-- This program is free software; you can redistribute it and/or -->
 <!-- modify it under the terms of the GNU General Public License -->
 <!-- as published by the Free Software Foundation; either version 3 -->
 <!-- of the License, or (at your option) any later version. -->
-
 <!-- This program is distributed in the hope that it will be useful, -->
 <!-- but WITHOUT ANY WARRANTY; without even the implied warranty of -->
 <!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the -->
 <!-- GNU General Public License for more details. -->
-
 <!-- You should have received a copy of the GNU General Public License -->
 <!-- along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
@@ -22,10 +18,7 @@
 
   <!-- Intro -->
   <string name="intro_slide_1_title">Welcome to Chibe!</string>
-  <string name="intro_slide_1_text">In the past, many homes had a
-  chiming or cuckoo\'s clock that would ring every hour. But with
-  the current technology you don\'t need to bother everyone with a
-  loud nose, Chibe can just vibrate your phone for you!</string>
+  <string name="intro_slide_1_text">In the past, many homes had a chiming or cuckoo\'s clock that would ring every hour. But with the current technology you don\'t need to bother everyone with a loud noise, Chibe can just vibrate your phone for you!</string>
 
   <string name="intro_slide_2_title">Keep track of time</string>
   <string name="intro_slide_2_text">Effortlessly keep track of the
@@ -39,9 +32,7 @@
   disturbed!</string>
 
   <string name="intro_slide_4_title">Custom vibration patterns</string>
-  <string name="intro_slide_4_text">Chibe let\'s you choose from
-  different vibration patterns. Choose the one that fits you, so you don\'t
-  confuse Chibe with regular notifications.</string>
+  <string name="intro_slide_4_text">Chibe lets you choose from different vibration patterns. Choose the one that fits you, so you don\'t confuse Chibe with regular notifications.</string>
 
   <string name="intro_slide_5_title">Get started!</string>
   <string name="intro_slide_5_text">Press the switch in the top right
@@ -86,14 +77,12 @@
   page</string>
   <string name="project_page_preference_summary">Find more info, leave
   feedback and contribute</string>
-  <string
-      name="project_page_url">https://github.com/raatmarien/chibe</string>
+  <string name="project_page_url">https://github.com/raatmarien/chibe</string>
   <string name="email_me_preference_title">Email me at
   marienraat@riseup.net</string>
   <string name="email_me_preference_summary">Give you suggestions or
   let me know what you think</string>
-  <string
-      name="contact_email_adress">mailto:marienraat@riseup.net</string>
+  <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
 
   <!-- Dialog -->
   <string name="set_dialog">Set</string>
@@ -126,8 +115,7 @@
   <string name="chibe_pattern_entries_5">Pattern: . _ ...</string>
   <string name="chibe_pattern_entries_6">Pattern: . _ . _ .</string>
 
-  <string-array name="vibration_pattern_entry_values"
-                translatable="false">
+  <string-array name="vibration_pattern_entry_values" translatable="false">
     <item>custom</item>
     <item>.._..</item>
     <item>_.._</item>
