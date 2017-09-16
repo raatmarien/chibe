@@ -1,2 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name"></string>
+  <string name="chibe_intro_label">Einführung</string>
+
+  <string name="intro_slide_1_title">Willkommen zu Chibe!</string>
+  </resources>
