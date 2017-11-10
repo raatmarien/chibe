@@ -52,4 +52,26 @@
 
   <string name="intro_slide_3_title">Ad yeṭṭes ticki yeṭṭes</string>
   <string name="sleep_start_preference_title">Ad yebdu taguni di</string>
+  <string name="intro_slide_3_text">Chibe ur k-ittcebbil ara ticki teṭṭṣeḍ. Seggem kan akud n tguni sakin steɛfu war ma tettwacebbleḍ!</string>
+
+  <string name="intro_slide_4_text">Chibe ad k-yeǧǧ ad tferneḍ seg ddeqs n tineɣrufin n usenhez. Fren win i k-ilaqen, akken ur tsexlaḍeḍ ara gar yilɣa nniḍen.</string>
+
+  <string name="intro_slide_5_text">Senneḍ ɣef tqeffalt n ubeddel s afella ayeffus akken ad tremdeḍ Chibe sakin ad tebduḍ!</string>
+
+  <string name="sleep_end_preference_title">Tagara n tguni di</string>
+  <string name="vibrate_during_dnd_preference_title">Nhez deg uskar Ur Ttcebbil Ara.</string>
+  <string name="vibrate_during_dnd_preference_summary">Ad yeǧǧ Chibe ad yenhez ɣas yermed uskar Ur Ttcebbil Ara di tiliɣri-ik.</string>
+  <string name="vibrate_during_calls_preference_summary">Ad yeǧǧ Chibe ad yenhez deg usiwel</string>
+
+  <string name="test_normal_vibration_preference_title">Sekyed taneɣruft n unhaz adasil</string>
+  <string name="test_normal_vibration_preference_summary">Ad yeǧǧ Chibe ad yenhez di tneɣruft n unhaz n udasil tura</string>
+  <string name="test_hour_vibration_preference_title">Sekyed taneɣruft n unhaz n usrag</string>
+  <string name="test_hour_vibration_preference_summary">"Ad yeǧǧ Chibe ad yenhez di tneɣruft n unhaz n usrag  tura"</string>
+  <string name="hour_repeat_preference_title">Ales asenhez udmawan i yisragen</string>
+  <string name="hour_repeat_preference_summary">Ad yenhez di tneɣruft n usenhez n usrag ddeqs n tikal, akken ad d-yesken anwa akud anida yella. Amedya ɣef 14:00, Chibe ad yenhez s tneɣruft tadasilt sakin snat n tikal di tneɣruft n usrag.</string>
+  <string name="project_page_preference_summary">Ugar n telɣut, tikti neɣ attekki</string>
+  <string name="email_me_preference_title">Azen-d imayl ar marienraat@riseup.net</string>
+  <string name="email_me_preference_summary">Mudd-d asumer neɣ €ǧǧ-aɣ ad nẓer ayen tettxemmimeḍ</string>
+  <string name="custom_pattern_hint">Seqdec tiqeffalin akken ad ternuḍ taneɣruft</string>
+
   </resources>
