@@ -13,4 +13,11 @@
   <string name="dark_theme_preference_title">Темна тема</string>
   <string name="chibe_pattern_entries_6">Шаблон:. _ . _ .</string>
 
+  <string name="vibration_interval_preference_title">Інтервал вібрації</string>
+  <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
+
+  <string name="set_dialog">Встановити</string>
+  <string name="cancel_dialog">Скасувати</string>
+  <string name="ok_dialog">Гаразд</string>
+  <string name="chibe_pattern_entries_5">Шаблон: . _ ...</string>
   </resources>
