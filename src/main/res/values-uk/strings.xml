@@ -7,7 +7,7 @@
   <string name="intro_slide_2_title">Стежити за часом</string>
   <string name="intro_slide_5_title">Почати!</string>
   <string name="pref_category_timing">Час</string>
-  <string name="sleep_end_preference_title">Кінець сну в</string>
+  <string name="sleep_end_preference_title">Кінець сну о</string>
   <string name="vibrate_during_calls_preference_title">Вібрувати під час дзвінків</string>
   <string name="pref_category_other">Інше</string>
   <string name="dark_theme_preference_title">Темна тема</string>
@@ -20,4 +20,42 @@
   <string name="cancel_dialog">Скасувати</string>
   <string name="ok_dialog">Гаразд</string>
   <string name="chibe_pattern_entries_5">Шаблон: . _ ...</string>
+  <string name="intro_slide_3_title">Спить, коли ви спите</string>
+  <string name="intro_slide_4_title">Власні шаблони вібрації</string>
+  <string name="sleep_start_preference_title">Почати спати о</string>
+  <string name="vibrate_during_calls_preference_summary">Дозволяє Chibe вібрувати під час викликів</string>
+
+  <string name="pref_category_vibration">Шаблони вібрації</string>
+  <string name="test_normal_vibration_preference_title">Протестувати базовий шаблон вібрації</string>
+  <string name="test_hour_vibration_preference_title">Протестувати годинний шаблон вібрації</string>
+  <string name="base_vibration_pattern_preference_title">Базовий шаблон вібрації</string>
+  <string name="hour_vibration_pattern_preference_title">"Годинний шаблон вібрації "</string>
+
+  <string name="project_page_preference_title">Відвідати сторінку проекту</string>
+  <string name="project_page_preference_summary">Знайти більше інформації, залишити відгук і зробити свій внесок</string>
+  <string name="project_page_url">https://github.com/raatmarien/chibe</string>
+  <string name="email_me_preference_title">Напишіть мені на marienraat@riseup.net</string>
+  <string name="email_me_preference_summary">Відправте свої пропозиції, або дайте мені знати, що ви думаєте</string>
+  <string name="custom_pattern_dialog">Власний шаблон</string>
+
+  <string name="short_vibration">Коротка</string>
+  <string name="long_vibration">Тривала</string>
+  <string name="delete_vibration">⌫ Вид</string>
+  <string name="custom_pattern_hint">Використовуйте кнопки, щоб створити шаблон</string>
+
+  <string name="vibration_time_entries_0">щохвилини</string>
+  <string name="vibration_time_entries_1">ко́жних 5 хвилин</string>
+  <string name="vibration_time_entries_2">ко́жних 10 хвилин</string>
+  <string name="vibration_time_entries_3">ко́жних 15 хвилин</string>
+  <string name="vibration_time_entries_4">ко́жних 20 хвилин</string>
+  <string name="vibration_time_entries_5">ко́жних півгодини</string>
+  <string name="vibration_time_entries_6">щогодини</string>
+  <string name="vibration_time_entries_7">кожні дві години</string>
+
+  <string name="chibe_pattern_entries_custom">Власний</string>
+  <string name="chibe_pattern_entries_0">Шаблон: .. _ ..</string>
+  <string name="chibe_pattern_entries_1">Шаблон: _ .. _</string>
+  <string name="chibe_pattern_entries_2">Шаблон: _ _</string>
+  <string name="chibe_pattern_entries_3">Шаблон: _</string>
+  <string name="chibe_pattern_entries_4">Шаблон: ..</string>
   </resources>
