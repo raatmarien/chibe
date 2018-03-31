@@ -4,10 +4,7 @@
   <string name="chibe_intro_label">Perkenalan</string>
 
   <string name="intro_slide_1_title">Selamat datang di Chibe!</string>
-  <string name="intro_slide_1_text">"Dulu, banyak rumah mempunyai
-\n  jam pandul atau jam denting yang berbunyi setiap jam. Tapi dengan
-\n  teknologi saat ini kamu tidak perlu mengganggu orang lain dengan
-\n  suara yang keras, Chibe akan menggetarkan hape kamu untuk kamu!"</string>
+  <string name="intro_slide_1_text">Dulu, banyak rumah mempunyai jam pandul atau jam denting yang berbunyi setiap jam. Tapi dengan teknologi saat ini kamu tidak perlu mengganggu orang lain dengan suara yang keras, Chibe akan menggetarkan hape kamu untuk kamu!</string>
 
   <string name="intro_slide_2_title">Simpan jalur waktu</string>
   <string name="intro_slide_2_text">"Secara mudah tetap ketahui
@@ -21,9 +18,7 @@
 \n  terganggu!"</string>
 
   <string name="intro_slide_4_title">Pola getaran kustom</string>
-  <string name="intro_slide_4_text">"Chibe memberi kamu pilihan dari
-\n  pola getaran yang berbeda. Pilih satu yang sesuai dengan kamu, jadi kamu tidak
-\n  bingung antara Chibe dengan notifikasi normal."</string>
+  <string name="intro_slide_4_text">Chibe memberi kamu pilihan dari pola getaran yang berbeda. Pilih satu yang sesuai dengan kamu, jadi kamu tidak bingung antara Chibe dengan notifikasi normal.</string>
 
   <string name="intro_slide_5_title">Mari mulai!</string>
   <string name="intro_slide_5_text">"Ketuk tombol dipojok kanan
