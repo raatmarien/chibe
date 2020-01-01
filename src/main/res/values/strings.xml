@@ -18,7 +18,7 @@
 
   <!-- Intro -->
   <string name="intro_slide_1_title">Welcome to Chibe!</string>
-  <string name="intro_slide_1_text">In the past, many homes had a chiming or cuckoo\'s clock that would ring every hour. But with the current technology you don\'t need to bother everyone with a loud noise, Chibe can just vibrate your phone for you!</string>
+  <string name="intro_slide_1_text">In the past, many homes had a chiming or cuckoo\'s clock that would ring every hour. But with the current technology you don\'t need to bother everyone with a loud noise, Chibe can just vibrate your device for you!</string>
 
   <string name="intro_slide_2_title">Keep track of time</string>
   <string name="intro_slide_2_text">Effortlessly keep track of the
@@ -36,18 +36,17 @@
 
   <string name="intro_slide_5_title">Get started!</string>
   <string name="intro_slide_5_text">Press the switch in the top right
-  corner to enable Chibe and get started!</string>
+  corner to turn on Chibe and get started!</string>
 
   <!-- Preferences -->
   <string name="pref_category_timing">Timing</string>
   <string name="vibration_interval_preference_title">Vibration interval</string>
   <string name="sleep_start_preference_title">Start sleep at</string>
   <string name="sleep_end_preference_title">End sleep at</string>
-  <string name="vibrate_during_dnd_preference_title">Vibrate during Do
-  Not Disturb</string>
+  <string name="vibrate_during_dnd_preference_title">Vibrate during \"Do
+  not disturb\"</string>
   <string name="vibrate_during_dnd_preference_summary">Lets Chibe
-  vibrate even if your phone\'s Do Not Disturb mode is
-  enabled.</string>
+  vibrate even if your device has \"Do not disturb\" turned on.</string>
   <string name="vibrate_during_calls_preference_title">Vibrate during calls</string>
   <string name="vibrate_during_calls_preference_summary">Lets Chibe vibrate
   while making a call</string>
@@ -78,9 +77,9 @@
   <string name="project_page_preference_summary">Find more info, leave
   feedback and contribute</string>
   <string name="project_page_url">https://github.com/raatmarien/chibe</string>
-  <string name="email_me_preference_title">Email me at
+  <string name="email_me_preference_title">E-mail me at
   marienraat@riseup.net</string>
-  <string name="email_me_preference_summary">Give you suggestions or
+  <string name="email_me_preference_summary">Give your suggestions or
   let me know what you think</string>
   <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
 
