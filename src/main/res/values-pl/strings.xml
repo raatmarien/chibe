@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Chibe</string>
+    <string name="intro_slide_1_title">Witaj w Chibe!</string>
+    <string name="intro_slide_2_title">Śledź czas</string>
+    <string name="intro_slide_5_title">Zacznij!</string>
+    <string name="chibe_pattern_entries_6">Wzór: . _ . _ .</string>
+</resources>
