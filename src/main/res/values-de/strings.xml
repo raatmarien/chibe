@@ -1,77 +1,65 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Chibe</string>
-  <string name="chibe_intro_label">Einführung</string>
-
-  <string name="intro_slide_1_title">Willkommen zu Chibe!</string>
-  <string name="chibe_settings_label">Chibe</string>
-  <string name="intro_slide_1_text">Früher hatten die meisten Häuser Stand- oder Kuckucksuhren, die jede Stunde läuteten. Dank moderner Technik muss aber nicht mehr jeder mit deinen lauten Tönen gestört werden. Stattdessen lässt Chibe dein Smartphone einfach vibrieren!</string>
-
-  <string name="intro_slide_2_title">Behalte die Zeit im Auge</string>
-  <string name="intro_slide_2_text">Mit Chibe kannst du einfach die Zeit während verschiedenen Aktivitäten im Auge behalten. Kurze Vibrationen zu einstellbaren Zeiten erinnern dich an die Zeit. Dadurch bist du in der Lage deine Zeit effizienter zu nutzen und besser einzuteilen.</string>
-
-  <string name="intro_slide_3_title">Schläft wenn du schläfst</string>
-  <string name="intro_slide_3_text">Chibe wird dich nicht stören, während du schläfst. Ändere einfach die Ruhezeiten und schlafe ohne gestört zu werden!</string>
-
-  <string name="intro_slide_4_title">Eigenes Vibrationsmuster</string>
-  <string name="intro_slide_4_text">Du kannst in Chibe zwischen verschiedenen Vibrationsmustern wählen. Wähle ein für dich passendes, damit du Chibe nicht mit deinen normalen Benachrichtigungen verwechselst.</string>
-
-  <string name="intro_slide_5_title">Fang an!</string>
-  <string name="intro_slide_5_text">Aktiviere den Schalter in der oberen rechten Ecke um Chibe zu aktivieren und anzufangen!</string>
-
-  <string name="pref_category_timing">Timing</string>
-  <string name="vibration_interval_preference_title">Vibrationsintervall</string>
-  <string name="sleep_start_preference_title">Anfang Schlafzeit</string>
-  <string name="sleep_end_preference_title">Ende Schlafzeit</string>
-  <string name="vibrate_during_dnd_preference_title">Vibrieren während \"Bitte nicht stören\"</string>
-  <string name="vibrate_during_dnd_preference_summary">Lässt Chibe vibrieren, auch wenn der \"Bitte nicht stören\"-Modus aktiviert ist.</string>
-  <string name="vibrate_during_calls_preference_title">Vibriere während eines Anrufs</string>
-  <string name="vibrate_during_calls_preference_summary">Lässt Chibe während eines Anrufs vibrieren</string>
-
-  <string name="pref_category_vibration">Vibrationsmuster</string>
-  <string name="test_normal_vibration_preference_title">Test: Standardvibrationsmuster</string>
-  <string name="test_normal_vibration_preference_summary">Lässt dein Gerät mit dem Standardvibrationsmuster vibrieren</string>
-  <string name="test_hour_vibration_preference_title">Teste das Stundenvibrationsmuster</string>
-  <string name="test_hour_vibration_preference_summary">Lässt dein Gerät mit dem Stundenvibrationsmuster vibrieren</string>
-  <string name="base_vibration_pattern_preference_title">Standardvibrationsmuster</string>
-  <string name="hour_repeat_preference_title">Wiederhole eine spezielle Vibration für das eingestellte Timing</string>
-  <string name="hour_repeat_preference_summary">Vibriere mehrfach im Stundenmuster, um die aktuelle Zeit anzuzeigen. Zum Beispiel wird Chibe um 14:00 Uhr einmal mit dem Standardmuster und dann zwei mal mit dem Stundenmuster vibrieren.</string>
-  <string name="hour_vibration_pattern_preference_title">Stundenvibrationsmuster</string>
-
-  <string name="pref_category_other">Sonstiges</string>
-  <string name="dark_theme_preference_title">Dunkles Theme</string>
-  <string name="project_page_preference_title">Besuche die Projektseite</string>
-  <string name="project_page_preference_summary">Erhalte mehr Infos, hinterlasse Feedback und wirke mit</string>
-  <string name="project_page_url">https://github.com/raatmarien/chibe</string>
-  <string name="email_me_preference_title">Schreib mir eine E-Mail an marienraat@riseup.net</string>
-  <string name="email_me_preference_summary">Schicke Vorschläge oder schreib mir was du denkst</string>
-  <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
-
-  <string name="cancel_dialog">Abbrechen</string>
-  <string name="ok_dialog">OK</string>
-  <string name="custom_pattern_dialog">Eigenes Vibrationsmuster</string>
-
-  <string name="short_vibration">Kurz</string>
-  <string name="long_vibration">Lang</string>
-  <string name="delete_vibration">⌫ Löschen</string>
-  <string name="custom_pattern_hint">Nutze die Knöpfe um ein Muster zu erstellen</string>
-
-  <string name="vibration_time_entries_0">jede Minute</string>
-  <string name="vibration_time_entries_1">alle 5 Minuten</string>
-  <string name="vibration_time_entries_2">alle 10 Minuten</string>
-  <string name="vibration_time_entries_3">alle 15 Minuten</string>
-  <string name="vibration_time_entries_4">alle 20 Minuten</string>
-  <string name="vibration_time_entries_5">jede halbe Stunde</string>
-  <string name="vibration_time_entries_6">jede Stunde</string>
-  <string name="vibration_time_entries_7">alle zwei Stunden</string>
-
-  <string name="chibe_pattern_entries_custom">Selbstdefiniert</string>
-  <string name="chibe_pattern_entries_0">Muster: .. _ ..</string>
-  <string name="chibe_pattern_entries_1">Muster: _ .. _</string>
-  <string name="chibe_pattern_entries_2">Muster: _ _</string>
-  <string name="chibe_pattern_entries_3">Muster: _</string>
-  <string name="chibe_pattern_entries_4">Muster: ..</string>
-  <string name="chibe_pattern_entries_5">Muster: . _ ...</string>
-  <string name="chibe_pattern_entries_6">Muster: . _ . _ .</string>
-
-  <string name="set_dialog">Festlegen</string>
-  </resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chibe</string>
+    <string name="chibe_intro_label">Einführung</string>
+    <string name="intro_slide_1_title">Willkommen zu Chibe!</string>
+    <string name="chibe_settings_label">Chibe</string>
+    <string name="intro_slide_1_text">Früher hatten die meisten Häuser Stand- oder Kuckucksuhren, die jede Stunde läuteten. Dank moderner Technik muss aber nicht mehr jeder mit deinen lauten Tönen gestört werden. Stattdessen lässt Chibe dein Smartphone einfach vibrieren!</string>
+    <string name="intro_slide_2_title">Behalte die Zeit im Auge</string>
+    <string name="intro_slide_2_text">Mit Chibe kannst du einfach die Zeit während verschiedenen Aktivitäten im Auge behalten. Kurze Vibrationen zu einstellbaren Zeiten erinnern dich an die Zeit. Dadurch bist du in der Lage deine Zeit effizienter zu nutzen und besser einzuteilen.</string>
+    <string name="intro_slide_3_title">Schläft wenn du schläfst</string>
+    <string name="intro_slide_3_text">Chibe wird dich nicht stören, während du schläfst. Ändere einfach die Ruhezeiten und schlafe ohne gestört zu werden!</string>
+    <string name="intro_slide_4_title">Eigenes Vibrationsmuster</string>
+    <string name="intro_slide_4_text">Du kannst in Chibe zwischen verschiedenen Vibrationsmustern wählen. Wähle ein für dich passendes, damit du Chibe nicht mit deinen normalen Benachrichtigungen verwechselst.</string>
+    <string name="intro_slide_5_title">Fang an!</string>
+    <string name="intro_slide_5_text">Aktiviere den Schalter in der oberen rechten Ecke um Chibe zu aktivieren und anzufangen!</string>
+    <string name="pref_category_timing">Timing</string>
+    <string name="vibration_interval_preference_title">Vibrationsintervall</string>
+    <string name="sleep_start_preference_title">Anfang Schlafzeit</string>
+    <string name="sleep_end_preference_title">Ende Schlafzeit</string>
+    <string name="vibrate_during_dnd_preference_title">Vibrieren während „Bitte nicht stören“</string>
+    <string name="vibrate_during_dnd_preference_summary">Lässt Chibe vibrieren, auch wenn der „Bitte nicht stören“-Modus aktiviert ist.</string>
+    <string name="vibrate_during_calls_preference_title">Vibriere während eines Anrufs</string>
+    <string name="vibrate_during_calls_preference_summary">Lässt Chibe während eines Anrufs vibrieren</string>
+    <string name="pref_category_vibration">Vibrationsmuster</string>
+    <string name="test_normal_vibration_preference_title">Test: Standardvibrationsmuster</string>
+    <string name="test_normal_vibration_preference_summary">Lässt dein Gerät mit dem Standardvibrationsmuster vibrieren</string>
+    <string name="test_hour_vibration_preference_title">Teste das Stundenvibrationsmuster</string>
+    <string name="test_hour_vibration_preference_summary">Lässt dein Gerät mit dem Stundenvibrationsmuster vibrieren</string>
+    <string name="base_vibration_pattern_preference_title">Standardvibrationsmuster</string>
+    <string name="hour_repeat_preference_title">Wiederhole eine spezielle Vibration für das eingestellte Timing</string>
+    <string name="hour_repeat_preference_summary">Vibriere mehrfach im Stundenmuster, um die aktuelle Zeit anzuzeigen. Zum Beispiel wird Chibe um 14:00 Uhr einmal mit dem Standardmuster und dann zwei mal mit dem Stundenmuster vibrieren.</string>
+    <string name="hour_vibration_pattern_preference_title">Stundenvibrationsmuster</string>
+    <string name="pref_category_other">Sonstiges</string>
+    <string name="dark_theme_preference_title">Dunkles Theme</string>
+    <string name="project_page_preference_title">Besuche die Projektseite</string>
+    <string name="project_page_preference_summary">Erhalte mehr Infos, hinterlasse Feedback und wirke mit</string>
+    <string name="project_page_url">https://github.com/raatmarien/chibe</string>
+    <string name="email_me_preference_title">Schreib mir eine E-Mail an marienraat@riseup.net</string>
+    <string name="email_me_preference_summary">Schicke Vorschläge oder schreib mir was du denkst</string>
+    <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
+    <string name="cancel_dialog">Abbrechen</string>
+    <string name="ok_dialog">OK</string>
+    <string name="custom_pattern_dialog">Eigenes Vibrationsmuster</string>
+    <string name="short_vibration">Kurz</string>
+    <string name="long_vibration">Lang</string>
+    <string name="delete_vibration">⌫ Löschen</string>
+    <string name="custom_pattern_hint">Nutze die Knöpfe um ein Muster zu erstellen</string>
+    <string name="vibration_time_entries_0">jede Minute</string>
+    <string name="vibration_time_entries_1">alle 5 Minuten</string>
+    <string name="vibration_time_entries_2">alle 10 Minuten</string>
+    <string name="vibration_time_entries_3">alle 15 Minuten</string>
+    <string name="vibration_time_entries_4">alle 20 Minuten</string>
+    <string name="vibration_time_entries_5">jede halbe Stunde</string>
+    <string name="vibration_time_entries_6">jede Stunde</string>
+    <string name="vibration_time_entries_7">alle zwei Stunden</string>
+    <string name="chibe_pattern_entries_custom">Selbstdefiniert</string>
+    <string name="chibe_pattern_entries_0">Muster: .. _ ..</string>
+    <string name="chibe_pattern_entries_1">Muster: _ .. _</string>
+    <string name="chibe_pattern_entries_2">Muster: _ _</string>
+    <string name="chibe_pattern_entries_3">Muster: _</string>
+    <string name="chibe_pattern_entries_4">Muster: ..</string>
+    <string name="chibe_pattern_entries_5">Muster: . _ ...</string>
+    <string name="chibe_pattern_entries_6">Muster: . _ . _ .</string>
+    <string name="set_dialog">Festlegen</string>
+</resources>
