@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="intro_slide_2_text">Mit Chibe behalten Sie die Zeit bei jeder Aktivität mühelos im Auge. Zu festgelegten Zeiten erinnert Sie eine kurze Vibration an die Uhrzeit. Sie können so Ihre Zeit effektiver nutzen und bewusster einteilen.</string>
+    <string name="intro_slide_1_title">Willkommen bei Chibe!</string>
+</resources>
