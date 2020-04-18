@@ -5,4 +5,5 @@
     <string name="intro_slide_2_title">Śledź czas</string>
     <string name="intro_slide_5_title">Zacznij!</string>
     <string name="chibe_pattern_entries_6">Wzór: . _ . _ .</string>
+    <string name="chibe_settings_label">Chibe</string>
 </resources>
