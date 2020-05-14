@@ -6,4 +6,5 @@
     <string name="intro_slide_5_title">Zacznij!</string>
     <string name="chibe_pattern_entries_6">Wzór: . _ . _ .</string>
     <string name="chibe_settings_label">Chibe</string>
+    <string name="chibe_intro_label">Intro</string>
 </resources>
