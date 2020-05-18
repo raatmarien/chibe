@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="intro_slide_1_title">Bonvenon en Chibe!</string>
+    <string name="chibe_intro_label">Enkonduko</string>
+    <string name="chibe_settings_label">Chibe</string>
+    <string name="app_name">Chibe</string>
+    <string name="intro_slide_1_text">Pasintece, en multe da domoj estis kariljono aŭ kukolo-horgolĝo, kiu sonas ĉiun horon. Sed danke al la nuntempa teĥnologio ne necesas ĝeni ĉiun per laŭta sono: Chibe povas simple vibri por vi en la telefono!</string>
+</resources>
