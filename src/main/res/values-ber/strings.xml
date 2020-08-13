@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="intro_slide_1_title">ⴰⵣⵓⵍ ⵉ Chibe!</string>
+    <string name="chibe_intro_label">ⵜⴰⵣⵡⴰⵔⵜ</string>
+    <string name="chibe_settings_label">Chibe</string>
+    <string name="app_name">Chibe</string>
+</resources>
