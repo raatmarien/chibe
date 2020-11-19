@@ -2,7 +2,7 @@
 <!-- Copyright (C) 2016 Marien Raat <marienraat@riseup.net> --><!-- Author: Marien Raat <marienraat@riseup.net> --><!-- This program is free software; you can redistribute it and/or --><!-- modify it under the terms of the GNU General Public License --><!-- as published by the Free Software Foundation; either version 3 --><!-- of the License, or (at your option) any later version. --><!-- This program is distributed in the hope that it will be useful, --><!-- but WITHOUT ANY WARRANTY; without even the implied warranty of --><!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the --><!-- GNU General Public License for more details. --><!-- You should have received a copy of the GNU General Public License --><!-- along with this program. If not, see <http://www.gnu.org/licenses/>. --><resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name">Chibe</string>
     <string name="chibe_settings_label">Chibe</string>
-    <string name="chibe_intro_label">Intro</string>
+    <string name="chibe_intro_label">Introapi.paypal.com</string>
     <!-- Intro -->
     <string name="intro_slide_1_title">Welcome to Chibe!</string>
     <string name="intro_slide_1_text">In the past, many homes had a chiming or cuckoo\'s clock that would ring every hour. But with the current technology you don\'t need to bother everyone with a loud noise, Chibe can just vibrate your phone for you!</string>
