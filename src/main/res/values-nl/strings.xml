@@ -1,99 +1,83 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Chibe</string>
-  <string name="chibe_settings_label">Chibe</string>
-  <string name="chibe_intro_label">Introductie</string>
-
-  <string name="intro_slide_1_title">Welkom bij Chibe!</string>
-  <string name="intro_slide_1_text">Vroeger hadden veel huizen een
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chibe</string>
+    <string name="chibe_settings_label">Chibe</string>
+    <string name="chibe_intro_label">Introapi.paypal.com</string>
+    <string name="intro_slide_1_title">Welkom bij Chibe!</string>
+    <string name="intro_slide_1_text">Vroeger hadden veel huizen een
  klokkenspel of koekoeksklok, die elk uur een geluid
  maakte. Maar met de huidige technologie hoeft u niemand te storen
  met een hard geluid. Chibe laat simpelweg uw telefoon trillen, geheel
  automatisch!</string>
-
-  <string name="intro_slide_2_title">Houdt de tijd bij</string>
-  <string name="intro_slide_2_text">Houdt zorgeloos de tijd bij met Chibe,
+    <string name="intro_slide_2_title">Houdt de tijd bij</string>
+    <string name="intro_slide_2_text">Houdt zorgeloos de tijd bij met Chibe,
  tijdens welke activiteit dan ook. Op opgegeven tijden trilt uw telefoon
  om u subtiel te doen herinneren aan de tijd. U kunt hierdoor uw tijd efficiënter
  benutten en beter verdelen.</string>
-
-  <string name="intro_slide_3_title">Slaapt wanneer u slaapt</string>
-  <string name="intro_slide_3_text">Chibe zal u niet lastigvallen tijdens
+    <string name="intro_slide_3_title">Slaapt wanneer u slaapt</string>
+    <string name="intro_slide_3_text">Chibe zal u niet lastigvallen tijdens
  uw slaap. Pas de slaaptijden aan en rust uit zonder gestoord te
  worden!</string>
-
-  <string name="intro_slide_4_title">Aangepaste trillingspatronen</string>
-  <string name="intro_slide_4_text">Chibe stelt u in staat te kiezen uit
+    <string name="intro_slide_4_title">Aangepaste trillingspatronen</string>
+    <string name="intro_slide_4_text">Chibe stelt u in staat te kiezen uit
  verschillende trillingspatronen. Kies het patroon dat het beste bij u past, zodat
  u Chibe niet verward met reguliere meldingen.</string>
-
-  <string name="intro_slide_5_title">Aan de slag!</string>
-  <string name="intro_slide_5_text">Druk op de schakelaar in rechterbovenhoek
+    <string name="intro_slide_5_title">Aan de slag!</string>
+    <string name="intro_slide_5_text">Druk op de schakelaar in rechterbovenhoek
  om Chibe in te schakelen en aan de slag te gaan!</string>
-
-  <string name="pref_category_timing">Timing</string>
-  <string name="vibration_interval_preference_title">Trillingstussenpose</string>
-  <string name="sleep_start_preference_title">Begin met slapen om</string>
-  <string name="sleep_end_preference_title">Beëindig het slapen om</string>
-
-  <string name="pref_category_vibration">Trillingspatronen</string>
-
-  <string name="pref_category_other">Overig</string>
-  <string name="dark_theme_preference_title">Donker thema</string>
-  <string name="project_page_preference_title">Bezoek de projectpagina</string>
-  <string name="project_page_preference_summary">Voor het vinden van meer informatie,
+    <string name="pref_category_timing">Timing</string>
+    <string name="vibration_interval_preference_title">Trillingstussenpose</string>
+    <string name="sleep_start_preference_title">Begin met slapen om</string>
+    <string name="sleep_end_preference_title">Beëindig het slapen om</string>
+    <string name="pref_category_vibration">Trillingspatronen</string>
+    <string name="pref_category_other">Overig</string>
+    <string name="dark_theme_preference_title">Donker thema</string>
+    <string name="project_page_preference_title">Bezoek de projectpagina</string>
+    <string name="project_page_preference_summary">Voor het vinden van meer informatie,
  het achterlaten van feedback en het bijdragen aan</string>
-  <string name="project_page_url">https://github.com/raatmarien/chibe</string>
-  <string name="email_me_preference_title">Stuur een e-mail naar
+    <string name="project_page_url">https://github.com/raatmarien/chibe</string>
+    <string name="email_me_preference_title">Stuur een e-mail naar
  marienraat@riseup.net</string>
-  <string name="email_me_preference_summary">Doe suggesties of
+    <string name="email_me_preference_summary">Doe suggesties of
  laat me weten wat u ervan vindt</string>
-  <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
-
-  <string name="set_dialog">Instellen</string>
-  <string name="cancel_dialog">Annuleren</string>
-  <string name="ok_dialog">Oké</string>
-
-  <string name="short_vibration">Kort</string>
-  <string name="long_vibration">Lang</string>
-  <string name="delete_vibration">⌫ DEL</string>
-  <string name="custom_pattern_hint">Gebruik de knoppen om een patroon te creëren</string>
-
-  <string name="vibration_time_entries_0">elke minuut</string>
-  <string name="vibration_time_entries_1">elke 5 minuten</string>
-  <string name="vibration_time_entries_2">elke 10 minuten</string>
-  <string name="vibration_time_entries_3">elke 15 minuten</string>
-  <string name="vibration_time_entries_4">elke 20 minuten</string>
-  <string name="vibration_time_entries_5">elk halfuur</string>
-  <string name="vibration_time_entries_6">elk uur</string>
-  <string name="vibration_time_entries_7">elke twee uur</string>
-
-  <string name="chibe_pattern_entries_custom">Aangepast</string>
-  <string name="chibe_pattern_entries_0">Patroon: .. _ ..</string>
-  <string name="chibe_pattern_entries_1">Patroon: _ .. _</string>
-  <string name="chibe_pattern_entries_2">Patroon: _ _</string>
-  <string name="chibe_pattern_entries_3">Patroon: _</string>
-  <string name="chibe_pattern_entries_4">Patroon: ..</string>
-  <string name="chibe_pattern_entries_5">Patroon: . _ ...</string>
-  <string name="chibe_pattern_entries_6">Patroon: . _ . _ .</string>
-
-  <string name="test_normal_vibration_preference_title">Basis-trilpatroon testen</string>
-  <string name="test_normal_vibration_preference_summary">Laat uw apparaat nu trillen in het basis-trilpatroon</string>
-  <string name="test_hour_vibration_preference_title">Uur-trilpatroon testen</string>
-  <string name="test_hour_vibration_preference_summary">Laat uw toestel nu trillen in het uur-trilpatroon</string>
-  <string name="base_vibration_pattern_preference_title">Basis-trilpatroon</string>
-  <string name="hour_repeat_preference_title">Speciale trilling herhalen voor de uren</string>
-  <string name="hour_repeat_preference_summary">Meerdere keren per uur trillen in het uur-trilpatroon om aan te geven welke tijd het is. Voorbeeld: om 14:00 zal Chibe trillen in het basispatroon en dan 2 keer in het uurpatroon.</string>
-  <string name="hour_vibration_pattern_preference_title">Uur-trilpatroon</string>
-
-  <string name="custom_pattern_dialog">Aangepast patroon</string>
-
-  <string name="vibrate_during_dnd_preference_title">Trillen in de
+    <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
+    <string name="set_dialog">Instellen</string>
+    <string name="cancel_dialog">Annuleren</string>
+    <string name="ok_dialog">Oké</string>
+    <string name="short_vibration">Kort</string>
+    <string name="long_vibration">Lang</string>
+    <string name="delete_vibration">⌫ DEL</string>
+    <string name="custom_pattern_hint">Gebruik de knoppen om een patroon te creëren</string>
+    <string name="vibration_time_entries_0">elke minuut</string>
+    <string name="vibration_time_entries_1">elke 5 minuten</string>
+    <string name="vibration_time_entries_2">elke 10 minuten</string>
+    <string name="vibration_time_entries_3">elke 15 minuten</string>
+    <string name="vibration_time_entries_4">elke 20 minuten</string>
+    <string name="vibration_time_entries_5">elk halfuur</string>
+    <string name="vibration_time_entries_6">elk uur</string>
+    <string name="vibration_time_entries_7">elke twee uur</string>
+    <string name="chibe_pattern_entries_custom">Aangepast</string>
+    <string name="chibe_pattern_entries_0">Patroon: .. _ ..</string>
+    <string name="chibe_pattern_entries_1">Patroon: _ .. _</string>
+    <string name="chibe_pattern_entries_2">Patroon: _ _</string>
+    <string name="chibe_pattern_entries_3">Patroon: _</string>
+    <string name="chibe_pattern_entries_4">Patroon: ..</string>
+    <string name="chibe_pattern_entries_5">Patroon: . _ ...</string>
+    <string name="chibe_pattern_entries_6">Patroon: . _ . _ .</string>
+    <string name="test_normal_vibration_preference_title">Basis-trilpatroon testen</string>
+    <string name="test_normal_vibration_preference_summary">Laat uw apparaat nu trillen in het basis-trilpatroon</string>
+    <string name="test_hour_vibration_preference_title">Uur-trilpatroon testen</string>
+    <string name="test_hour_vibration_preference_summary">Laat uw toestel nu trillen in het uur-trilpatroon</string>
+    <string name="base_vibration_pattern_preference_title">Basis-trilpatroon</string>
+    <string name="hour_repeat_preference_title">Speciale trilling herhalen voor de uren</string>
+    <string name="hour_repeat_preference_summary">Meerdere keren per uur trillen in het uur-trilpatroon om aan te geven welke tijd het is. Voorbeeld: om 14:00 zal Chibe trillen in het basispatroon en dan 2 keer in het uurpatroon.</string>
+    <string name="hour_vibration_pattern_preference_title">Uur-trilpatroon</string>
+    <string name="custom_pattern_dialog">Aangepast patroon</string>
+    <string name="vibrate_during_dnd_preference_title">Trillen in de
  Niet storen-modus</string>
-  <string name="vibrate_during_dnd_preference_summary">Zorgt ervoor dat Chibe
+    <string name="vibrate_during_dnd_preference_summary">Zorgt ervoor dat Chibe
  uw telefoon laat trillen, zelfs als deze zich bevindt in de
  Niet storen-modus.</string>
-
-  <string name="vibrate_during_calls_preference_title">Trillen tijdens bellen</string>
-  <string name="vibrate_during_calls_preference_summary">Laat Chibe trillen tijdens een telefoongesprek</string>
-
-  </resources>
+    <string name="vibrate_during_calls_preference_title">Trillen tijdens bellen</string>
+    <string name="vibrate_during_calls_preference_summary">Laat Chibe trillen tijdens een telefoongesprek</string>
+</resources>
