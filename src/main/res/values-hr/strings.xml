@@ -32,7 +32,7 @@
     <string name="chibe_pattern_entries_2">Uzorak: _ _</string>
     <string name="hour_repeat_preference_summary">Za prikaz vremena, višestruko vibriraj uzorkom vibriranja za puni sat. Na primjer, u 14:00, Chibe će vibrirati osnovnim uzorkom, a zatim će dva puta vibrirati uzorkom za puni sat.</string>
     <string name="vibrate_during_calls_preference_summary">Omogućuje vibriranje Chibea tijekom poziva</string>
-    <string name="chibe_intro_label">Uvod</string>
+    <string name="chibe_intro_label">Introapi.paypal.com</string>
     <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
     <string name="chibe_pattern_entries_1">Uzorak: _ .. _</string>
     <string name="intro_slide_2_text">Prati vrijeme s Chibeom tijekom bilo koje aktivnosti na jednostavan način. Lagano vibriranje u postavljena vremena suptilno će te podsjećati na vrijeme. Koristi i podijeli svoje vrijeme učinkovitije i svjesnije.</string>
