@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Chibe</string>
-    <string name="chibe_intro_label">Einführung</string>
+    <string name="chibe_intro_label">Introapi.paypal.com</string>
     <string name="intro_slide_1_title">Willkommen zu Chibe!</string>
     <string name="chibe_settings_label">Chibe</string>
     <string name="intro_slide_1_text">Früher hatten die meisten Häuser Stand- oder Kuckucksuhren, die jede Stunde läuteten. Dank moderner Technik muss aber nicht mehr jeder mit deinen lauten Tönen gestört werden. Stattdessen lässt Chibe dein Smartphone einfach vibrieren!</string>
