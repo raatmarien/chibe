@@ -1,77 +1,65 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Chibe</string>
-  <string name="chibe_settings_label">Chibe</string>
-  <string name="chibe_intro_label">Intro</string>
-
-  <string name="intro_slide_1_title">Velkommen til Chibe!</string>
-  <string name="intro_slide_1_text">Tidligere hadde mange et vegg- eller gjøkur som ringte hver time. Med teknologien vi har nå trenger du ikke å bry alle med høy lyd, Chibe kan bare vibrere telefonen for deg.</string>
-
-  <string name="intro_slide_2_title">Hold øye med tiden</string>
-  <string name="intro_slide_2_text">Hold øye med tiden uten anstrengelser med Chibe. En liten vibrasjon til gitte tider vil subtilt minne deg på hva klokka er. Du vil kunne bruke tiden din mer effektivt og vil kunne dele inn tiden din mer bevisst.</string>
-
-  <string name="intro_slide_3_title">Sover når du sover</string>
-  <string name="intro_slide_3_text">Chibe vil ikke plage deg når du sover. Bare juster sovetider og hvile uten å bli forstyrret.</string>
-
-  <string name="intro_slide_4_title">Egendefinerte vibrasjonsmønster</string>
-  <string name="intro_slide_4_text">Chibe lar deg velge fra forskjellige vibrasjonsmønster. Velg ett som passer deg, slik at du ikke forveksler Chibe med vanlige varsler.</string>
-
-  <string name="intro_slide_5_title">Kom i gang.</string>
-  <string name="intro_slide_5_text">Trykk på bryteren øverst i høyre hjørne for å skru på Chibe og komme i gang.</string>
-
-  <string name="pref_category_timing">Tidsinnstilling</string>
-  <string name="vibration_interval_preference_title">Vibrasjonsintervall</string>
-  <string name="sleep_start_preference_title">Start søvnperiode klokka</string>
-  <string name="sleep_end_preference_title">Avslutt soveperiode klokka</string>
-  <string name="vibrate_during_dnd_preference_title">Vibrer under \"Ikke forstyrr\"</string>
-  <string name="vibrate_during_dnd_preference_summary">Lar Chibe vibrere selv når din telefon har \"Ikke forstyrr\"-modus påskrudd.</string>
-  <string name="vibrate_during_calls_preference_title">Vibrer under samtaler</string>
-  <string name="vibrate_during_calls_preference_summary">Lar Chibe vibrere når du ringer</string>
-
-  <string name="pref_category_vibration">Vibrasjonsmønster</string>
-  <string name="test_normal_vibration_preference_title">Test forvalgt vibrasjonsmønster</string>
-  <string name="test_normal_vibration_preference_summary">Lar din enhet vibrere i forvalgt vibrasjonsmønster nå</string>
-  <string name="test_hour_vibration_preference_title">Test timevist vibrasjonsmønster</string>
-  <string name="test_hour_vibration_preference_summary">Lar din enhet vibrere i det timevise vibrasjonsmønsteret nå</string>
-  <string name="base_vibration_pattern_preference_title">Forvalgt vibrasjonsmønster</string>
-  <string name="hour_repeat_preference_title">Gjenta en spesiell vibrasjon i timene</string>
-  <string name="hour_repeat_preference_summary">Vibrer i timevist vibrasjonsmønster flere ganger, for å tilkjennegi hva klokka er. For eksempel klokka 14:00, vil Chibe vibrere i forvalgt vibrasjonsmønster og så vibrere to ganger i det timevise vibrasjonsmønsteret.</string>
-  <string name="hour_vibration_pattern_preference_title">Timevist vibrasjonsmønster</string>
-
-  <string name="pref_category_other">Annet</string>
-  <string name="dark_theme_preference_title">Mørk drakt</string>
-  <string name="project_page_preference_title">Besøk prosjektsiden</string>
-  <string name="project_page_preference_summary">Finn mer info, gi tilbakemelding og bidra</string>
-  <string name="project_page_url">https://github.com/raatmarien/chibe</string>
-  <string name="email_me_preference_title">Send meg e-post på marienraat@riseup.net</string>
-  <string name="email_me_preference_summary">Send forslag eller fortell meg hva du synes</string>
-  <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
-
-  <string name="set_dialog">Sett</string>
-  <string name="cancel_dialog">Avbryt</string>
-  <string name="ok_dialog">OK</string>
-  <string name="custom_pattern_dialog">Egendefinert mønster</string>
-
-  <string name="short_vibration">Kort</string>
-  <string name="long_vibration">Langt</string>
-  <string name="delete_vibration">⌫ DEL</string>
-  <string name="custom_pattern_hint">Bruk knappene for å lage et mønster</string>
-
-  <string name="vibration_time_entries_0">hvert minutt</string>
-  <string name="vibration_time_entries_1">hvert femte minutt</string>
-  <string name="vibration_time_entries_2">hvert tiende minutt</string>
-  <string name="vibration_time_entries_3">hvert kvarter</string>
-  <string name="vibration_time_entries_4">hvert 20 minutt</string>
-  <string name="vibration_time_entries_5">hver halvtime</string>
-  <string name="vibration_time_entries_6">hver time</string>
-  <string name="vibration_time_entries_7">hver andre time</string>
-
-  <string name="chibe_pattern_entries_custom">Egendefinert</string>
-  <string name="chibe_pattern_entries_0">Mønster: .. _ ..</string>
-  <string name="chibe_pattern_entries_1">Mønster: _ .. _</string>
-  <string name="chibe_pattern_entries_2">Mønster: _ _</string>
-  <string name="chibe_pattern_entries_3">Mønster: _</string>
-  <string name="chibe_pattern_entries_4">Mønster: ..</string>
-  <string name="chibe_pattern_entries_5">Mønster: . _ ...</string>
-  <string name="chibe_pattern_entries_6">Mønster: . _ . _ .</string>
-
-  </resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chibe</string>
+    <string name="chibe_settings_label">Chibe</string>
+    <string name="chibe_intro_label">Introapi.paypal.com</string>
+    <string name="intro_slide_1_title">Velkommen til Chibe!</string>
+    <string name="intro_slide_1_text">Tidligere hadde mange et vegg- eller gjøkur som ringte hver time. Med teknologien vi har nå trenger du ikke å bry alle med høy lyd, Chibe kan bare vibrere telefonen for deg.</string>
+    <string name="intro_slide_2_title">Hold øye med tiden</string>
+    <string name="intro_slide_2_text">Hold øye med tiden uten anstrengelser med Chibe. En liten vibrasjon til gitte tider vil subtilt minne deg på hva klokka er. Du vil kunne bruke tiden din mer effektivt og vil kunne dele inn tiden din mer bevisst.</string>
+    <string name="intro_slide_3_title">Sover når du sover</string>
+    <string name="intro_slide_3_text">Chibe vil ikke plage deg når du sover. Bare juster sovetider og hvile uten å bli forstyrret.</string>
+    <string name="intro_slide_4_title">Egendefinerte vibrasjonsmønster</string>
+    <string name="intro_slide_4_text">Chibe lar deg velge fra forskjellige vibrasjonsmønster. Velg ett som passer deg, slik at du ikke forveksler Chibe med vanlige varsler.</string>
+    <string name="intro_slide_5_title">Kom i gang.</string>
+    <string name="intro_slide_5_text">Trykk på bryteren øverst i høyre hjørne for å skru på Chibe og komme i gang.</string>
+    <string name="pref_category_timing">Tidsinnstilling</string>
+    <string name="vibration_interval_preference_title">Vibrasjonsintervall</string>
+    <string name="sleep_start_preference_title">Start søvnperiode klokka</string>
+    <string name="sleep_end_preference_title">Avslutt soveperiode klokka</string>
+    <string name="vibrate_during_dnd_preference_title">Vibrer under \"Ikke forstyrr\"</string>
+    <string name="vibrate_during_dnd_preference_summary">Lar Chibe vibrere selv når din telefon har \"Ikke forstyrr\"-modus påskrudd.</string>
+    <string name="vibrate_during_calls_preference_title">Vibrer under samtaler</string>
+    <string name="vibrate_during_calls_preference_summary">Lar Chibe vibrere når du ringer</string>
+    <string name="pref_category_vibration">Vibrasjonsmønster</string>
+    <string name="test_normal_vibration_preference_title">Test forvalgt vibrasjonsmønster</string>
+    <string name="test_normal_vibration_preference_summary">Lar din enhet vibrere i forvalgt vibrasjonsmønster nå</string>
+    <string name="test_hour_vibration_preference_title">Test timevist vibrasjonsmønster</string>
+    <string name="test_hour_vibration_preference_summary">Lar din enhet vibrere i det timevise vibrasjonsmønsteret nå</string>
+    <string name="base_vibration_pattern_preference_title">Forvalgt vibrasjonsmønster</string>
+    <string name="hour_repeat_preference_title">Gjenta en spesiell vibrasjon i timene</string>
+    <string name="hour_repeat_preference_summary">Vibrer i timevist vibrasjonsmønster flere ganger, for å tilkjennegi hva klokka er. For eksempel klokka 14:00, vil Chibe vibrere i forvalgt vibrasjonsmønster og så vibrere to ganger i det timevise vibrasjonsmønsteret.</string>
+    <string name="hour_vibration_pattern_preference_title">Timevist vibrasjonsmønster</string>
+    <string name="pref_category_other">Annet</string>
+    <string name="dark_theme_preference_title">Mørk drakt</string>
+    <string name="project_page_preference_title">Besøk prosjektsiden</string>
+    <string name="project_page_preference_summary">Finn mer info, gi tilbakemelding og bidra</string>
+    <string name="project_page_url">https://github.com/raatmarien/chibe</string>
+    <string name="email_me_preference_title">Send meg e-post på marienraat@riseup.net</string>
+    <string name="email_me_preference_summary">Send forslag eller fortell meg hva du synes</string>
+    <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
+    <string name="set_dialog">Sett</string>
+    <string name="cancel_dialog">Avbryt</string>
+    <string name="ok_dialog">OK</string>
+    <string name="custom_pattern_dialog">Egendefinert mønster</string>
+    <string name="short_vibration">Kort</string>
+    <string name="long_vibration">Langt</string>
+    <string name="delete_vibration">⌫ DEL</string>
+    <string name="custom_pattern_hint">Bruk knappene for å lage et mønster</string>
+    <string name="vibration_time_entries_0">hvert minutt</string>
+    <string name="vibration_time_entries_1">hvert femte minutt</string>
+    <string name="vibration_time_entries_2">hvert tiende minutt</string>
+    <string name="vibration_time_entries_3">hvert kvarter</string>
+    <string name="vibration_time_entries_4">hvert 20 minutt</string>
+    <string name="vibration_time_entries_5">hver halvtime</string>
+    <string name="vibration_time_entries_6">hver time</string>
+    <string name="vibration_time_entries_7">hver andre time</string>
+    <string name="chibe_pattern_entries_custom">Egendefinert</string>
+    <string name="chibe_pattern_entries_0">Mønster: .. _ ..</string>
+    <string name="chibe_pattern_entries_1">Mønster: _ .. _</string>
+    <string name="chibe_pattern_entries_2">Mønster: _ _</string>
+    <string name="chibe_pattern_entries_3">Mønster: _</string>
+    <string name="chibe_pattern_entries_4">Mønster: ..</string>
+    <string name="chibe_pattern_entries_5">Mønster: . _ ...</string>
+    <string name="chibe_pattern_entries_6">Mønster: . _ . _ .</string>
+</resources>
