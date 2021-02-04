@@ -39,7 +39,7 @@
     <string name="dark_theme_preference_title">Σκοτεινό θέμα</string>
     <string name="set_dialog">Ορισμός</string>
     <string name="cancel_dialog">Ακύρωση</string>
-    <string name="ok_dialog">ΟΚ</string>
+    <string name="ok_dialog">Εντάξει</string>
     <string name="delete_vibration">⌫ DEL</string>
     <string name="custom_pattern_hint">Χρησιμοποιήστε τα κουμπιά για να δημιουργήσετε ένα μοτίβο</string>
     <string name="vibration_time_entries_0">κάθε λεπτό</string>
