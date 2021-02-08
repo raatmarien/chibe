@@ -38,7 +38,7 @@
     <string name="pref_category_other">Άλλα</string>
     <string name="dark_theme_preference_title">Σκοτεινό θέμα</string>
     <string name="set_dialog">Ορισμός</string>
-    <string name="cancel_dialog">Ακύρωση</string>
+    <string name="cancel_dialog">Άκυρο</string>
     <string name="ok_dialog">Εντάξει</string>
     <string name="delete_vibration">⌫ DEL</string>
     <string name="custom_pattern_hint">Χρησιμοποιήστε τα κουμπιά για να δημιουργήσετε ένα μοτίβο</string>
@@ -81,7 +81,7 @@
     <string name="custom_pattern_dialog">Προσωποποιημένο μοτίβο</string>
     <string name="short_vibration">Βραχύ</string>
     <string name="long_vibration">Μακρύ</string>
-    <string name="chibe_pattern_entries_custom">Προσωποποιημένο</string>
+    <string name="chibe_pattern_entries_custom">Προσαρμοσμένο</string>
     <string name="vibrate_during_calls_preference_title">Δόνηση κατά τη διάρκεια κλήσεων</string>
     <string name="vibrate_during_calls_preference_summary">Αφήνει το Chibe να δονείται κατά την πραγματοποίηση μιας κλήσης</string>
 </resources>
