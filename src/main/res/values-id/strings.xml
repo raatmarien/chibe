@@ -6,57 +6,35 @@
     <string name="intro_slide_1_title">Selamat datang di Chibe!</string>
     <string name="intro_slide_1_text">Dulu, banyak rumah mempunyai jam pandul atau jam denting yang berbunyi setiap jam. Tapi dengan teknologi saat ini kamu tidak perlu mengganggu orang lain dengan suara yang keras, Chibe akan menggetarkan hape kamu untuk kamu!</string>
     <string name="intro_slide_2_title">Simpan jalur waktu</string>
-    <string name="intro_slide_2_text">"Secara mudah tetap ketahui
-\n  waktu saat aktifitas apapun dengan Chibe. Getaran kecil diwaktu tertentu
-\n  akan mengingatkan jam berapa ke kamu secara halus. Kamu akan dapat menggunakan waktu
-\n  lebih efisien dan akan dapat membagi waktu kamu lebih peka."</string>
+    <string name="intro_slide_2_text">Pantau waktu aktifitas apapun dengan Chibe. Getaran kecil diwaktu tertentu akan mengingatkan jam yang tersisa. Kamu akan dapat menggunakan waktu lebih efisien dan akan dapat membagi waktu lebih sadar.</string>
     <string name="intro_slide_3_title">Sleeps ketika kamu tidur</string>
-    <string name="intro_slide_3_text">"Chibe tidak akan mengganggu kamu ketika
-\n  sedang tidur. Cukup atur waktu tidur kamu dan istirahat tanpa
-\n  terganggu!"</string>
+    <string name="intro_slide_3_text">Chibe tidak akan mengganggu kamu ketika sedang tidur. Cukup atur waktu tidur kamu dan istirahat tanpa terganggu!</string>
     <string name="intro_slide_4_title">Pola getaran kustom</string>
     <string name="intro_slide_4_text">Chibe memberi kamu pilihan dari pola getaran yang berbeda. Pilih satu yang sesuai dengan kamu, jadi kamu tidak bingung antara Chibe dengan notifikasi normal.</string>
     <string name="intro_slide_5_title">Mari mulai!</string>
-    <string name="intro_slide_5_text">"Ketuk tombol dipojok kanan
-\n  atas untuk mengaktifkan Chibe dan mari mulai!"</string>
+    <string name="intro_slide_5_text">Ketuk tombol dipojok kanan atas untuk mengaktifkan Chibe dan mulai!</string>
     <string name="pref_category_timing">Tempo</string>
     <string name="vibration_interval_preference_title">Jarak getaran</string>
     <string name="sleep_start_preference_title">Mulai tidur pada</string>
     <string name="sleep_end_preference_title">Akhir tidur pada</string>
-    <string name="vibrate_during_dnd_preference_title">"Getarkan saat Jangan
-\n   Ganggu"</string>
-    <string name="vibrate_during_dnd_preference_summary">"Biarkan Chibe
-\n  bergetar bahkan jika hape kamu dalam mode
-\n  Jangan Ganggu."</string>
+    <string name="vibrate_during_dnd_preference_title">Getarkan saat Jangan Ganggu</string>
+    <string name="vibrate_during_dnd_preference_summary">Biarkan Chibe bergetar bahkan jika ponsel dalam mode Jangan Ganggu.</string>
     <string name="pref_category_vibration">Pola getaran</string>
-    <string name="test_normal_vibration_preference_title">"Coba pola
-\n  getaran dasar"</string>
-    <string name="test_normal_vibration_preference_summary">"Biarkan perangkat anda
-\n  bergetar dipola getaran dasar sekarang"</string>
-    <string name="test_hour_vibration_preference_title">"Coba pola
-\n  getaran jam"</string>
-    <string name="test_hour_vibration_preference_summary">"Biarkan perangkat anda
-\n  bergetar dipola getaran jam sekarang"</string>
+    <string name="test_normal_vibration_preference_title">Coba pola getaran dasar</string>
+    <string name="test_normal_vibration_preference_summary">Biarkan perangkat anda bergetar dipola getaran dasar sekarang</string>
+    <string name="test_hour_vibration_preference_title">Coba pola getaran jam</string>
+    <string name="test_hour_vibration_preference_summary">Biarkan perangkat anda bergetar dipola getaran jam sekarang</string>
     <string name="base_vibration_pattern_preference_title">Pola getaran dasar</string>
-    <string name="hour_repeat_preference_title">"Ulangi getaran
-\n  spesial untuk jam"</string>
-    <string name="hour_repeat_preference_summary">"Bergetar dipola
-\n  getaran jam beberapa kali, untuk menampilkan jam berapa sekarang.
-\n  Contoh dijam 14:00, Chibe akan bergetar dipola dasar dan kemudian
-\n  bergetar dua kali dipola jam."</string>
-    <string name="hour_vibration_pattern_preference_title">"Pola
-\n  getaran jam"</string>
+    <string name="hour_repeat_preference_title">Ulangi getaran spesial untuk jam</string>
+    <string name="hour_repeat_preference_summary">Bergetar dipola getaran jam beberapa kali, untuk menampilkan jam berapa sekarang. Contoh dijam 14:00, Chibe akan bergetar dipola dasar dan kemudian bergetar dua kali dipola jam.</string>
+    <string name="hour_vibration_pattern_preference_title">Pola getaran jam</string>
     <string name="pref_category_other">Lainnya</string>
     <string name="dark_theme_preference_title">Tema gelap</string>
-    <string name="project_page_preference_title">"Kunjungi laman
-\n  proyek"</string>
-    <string name="project_page_preference_summary">"Temukan info lainnya, tinggalkan
-\n  umpan balik dan berkontribusi"</string>
+    <string name="project_page_preference_title">Kunjungi laman proyek</string>
+    <string name="project_page_preference_summary">Temukan info lainnya, tinggalkan umpan balik dan berkontribusi</string>
     <string name="project_page_url">https://github.com/raatmarien/chibe</string>
-    <string name="email_me_preference_title">"Kirim surel ke
-\n  marienraat@riseup.net"</string>
-    <string name="email_me_preference_summary">"Berikan sugesti anda atau
-\n  beritahu kami apa yang anda pikirkan"</string>
+    <string name="email_me_preference_title">Kirim surel ke marienraat@riseup.net</string>
+    <string name="email_me_preference_summary">Berikan saran atau beritahu kami apa yang anda pikirkan</string>
     <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
     <string name="set_dialog">Atur</string>
     <string name="cancel_dialog">Batal</string>
