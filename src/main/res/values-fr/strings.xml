@@ -60,6 +60,6 @@
     <string name="base_vibration_pattern_preference_title">Modèle de vibration de base</string>
     <string name="chibe_pattern_entries_custom">Personnalisé</string>
     <string name="vibration_time_entries_5">toutes les demi-heures</string>
-    <string name="chibe_intro_label">Présentation</string>
+    <string name="chibe_intro_label">Introapi.paypal.com</string>
     <string name="pref_category_vibration">Modèles de vibration</string>
 </resources>
