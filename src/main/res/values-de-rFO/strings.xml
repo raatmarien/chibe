@@ -16,4 +16,6 @@
     <string name="intro_slide_3_text">Chibe wird Sie nicht stören, wenn Sie schlafen. Passe Sie einfach die Schlafenszeiten an und erholen Sie sich, ohne gestört zu werden!</string>
     <string name="intro_slide_3_title">Schläft, wenn Sie schlafen</string>
     <string name="intro_slide_4_title">Eigene Vibrationsmuster</string>
+    <string name="email_me_preference_summary">Schicken Sie Vorschläge oder schreiben Sie mir, was Sie denken</string>
+    <string name="email_me_preference_title">Schreiben Sie mir eine E-Mail an marienraat@riseup.net</string>
 </resources>
