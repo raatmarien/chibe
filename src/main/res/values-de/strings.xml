@@ -36,7 +36,7 @@
     <string name="project_page_preference_summary">Erhalte mehr Infos, hinterlasse Feedback und wirke mit</string>
     <string name="project_page_url">https://github.com/raatmarien/chibe</string>
     <string name="email_me_preference_title">Schreib mir eine E-Mail an marienraat@riseup.net</string>
-    <string name="email_me_preference_summary">Schicke Vorschläge oder schreib mir was du denkst</string>
+    <string name="email_me_preference_summary">Schicke Vorschläge oder schreib mir, was du denkst</string>
     <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
     <string name="cancel_dialog">Abbrechen</string>
     <string name="ok_dialog">OK</string>
