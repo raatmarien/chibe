@@ -55,7 +55,7 @@
     <string name="chibe_pattern_entries_4">Modèle : ..</string>
     <string name="sleep_start_preference_title">Le sommeil commence à</string>
     <string name="app_name">Chibe</string>
-    <string name="intro_slide_1_text">Auparavant, beaucoup de maisons avaient une horloge à carillon ou à coucou qui sonnait toutes les heures. Mais avec la technologie actuelle, on n’a pas besoin d’embêter tout le monde avec un gros bruit ; Chibe peut faire vibrer votre téléphone pour vous !</string>
+    <string name="intro_slide_1_text">Auparavant, beaucoup de maisons avaient une horloge à carillon ou à coucou qui sonnait toutes les heures. Mais avec la technologie actuelle, on n’a pas besoin d’embêter tout le monde avec un gros bruit ; Chibe peut faire vibrer votre téléphone pour vous !</string>
     <string name="project_page_url">https://github.com/raatmarien/chibe</string>
     <string name="base_vibration_pattern_preference_title">Modèle de vibration de base</string>
     <string name="chibe_pattern_entries_custom">Personnalisé</string>
