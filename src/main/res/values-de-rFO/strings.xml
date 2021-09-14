@@ -5,17 +5,24 @@
     <string name="pref_category_vibration">Vibrationsmuster</string>
     <string name="vibrate_during_calls_preference_summary">Lässt Chibe während eines Anrufs vibrieren</string>
     <string name="vibrate_during_calls_preference_title">Während Anrufen vibrieren</string>
-    <string name="vibrate_during_dnd_preference_summary">Lässt Chibe auch vibrieren, selbst wenn der \"Nicht stören\"-Modus Ihres Handys aktiviert ist.</string>
-    <string name="vibrate_during_dnd_preference_title">Während \"Nicht stören\" vibrieren</string>
+    <string name="vibrate_during_dnd_preference_summary">Lässt Chibe vibrieren, auch wenn der „Bitte nicht stören“-Modus aktiviert ist.</string>
+    <string name="vibrate_during_dnd_preference_title">Vibrieren während „Bitte nicht stören“</string>
     <string name="sleep_end_preference_title">Schlafen beenden um</string>
     <string name="sleep_start_preference_title">Schlafen starten um</string>
     <string name="vibration_interval_preference_title">Vibrationsintervall</string>
     <string name="intro_slide_5_text">Drücken Sie den Schalter oben rechts, um Chibe zu aktivieren und loszulegen!</string>
     <string name="intro_slide_5_title">Los geht\'s!</string>
     <string name="intro_slide_4_text">Chibe lässt Sie aus verschiedenen Vibrationsmustern wählen. Wählen Sie eines, das zu Ihnen passt, damit Sie Chibe nicht mit normalen Benachrichtigungen verwechseln.</string>
-    <string name="intro_slide_3_text">Chibe wird Sie nicht stören, wenn Sie schlafen. Passen Sie einfach die Schlafenszeiten an und erholen Sie sich, ohne gestört zu werden!</string>
+    <string name="intro_slide_3_text">Chibe wird Sie nicht stören, während Sie schlafen. Änderen Sie einfach die Ruhezeiten und schlafen Sie ohne gestört zu werden!</string>
     <string name="intro_slide_3_title">Schläft, wenn Sie schlafen</string>
     <string name="intro_slide_4_title">Eigene Vibrationsmuster</string>
     <string name="email_me_preference_summary">Schicken Sie Vorschläge oder schreiben Sie mir, was Sie denken</string>
     <string name="email_me_preference_title">Schreiben Sie mir eine E-Mail an marienraat@riseup.net</string>
+    <string name="test_hour_vibration_preference_summary">Lässt Ihr Gerät mit dem Stundenvibrationsmuster vibrieren</string>
+    <string name="test_hour_vibration_preference_title">Stundenvibrationsmuster testen</string>
+    <string name="test_normal_vibration_preference_summary">Lässt Ihr Gerät mit dem Standardvibrationsmuster vibrieren</string>
+    <string name="intro_slide_1_text">Früher hatten die meisten Häuser Stand- oder Kuckucksuhren, die jede Stunde läuteten. Dank moderner Technik muss aber nicht mehr jeder mit Ihren lauten Tönen gestört werden. Stattdessen lässt Chibe Ihr Mobiltelefon einfach vibrieren!</string>
+    <string name="chibe_intro_label">Introapi.paypal.com</string>
+    <string name="chibe_settings_label">Chibe</string>
+    <string name="app_name">Chibe</string>
 </resources>
