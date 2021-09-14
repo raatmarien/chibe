@@ -44,7 +44,7 @@
     <string name="short_vibration">Kurz</string>
     <string name="long_vibration">Lang</string>
     <string name="delete_vibration">⌫ Löschen</string>
-    <string name="custom_pattern_hint">Nutze die Knöpfe um ein Muster zu erstellen</string>
+    <string name="custom_pattern_hint">Nutze die Knöpfe, um ein Muster zu erstellen</string>
     <string name="vibration_time_entries_0">jede Minute</string>
     <string name="vibration_time_entries_1">alle 5 Minuten</string>
     <string name="vibration_time_entries_2">alle 10 Minuten</string>
