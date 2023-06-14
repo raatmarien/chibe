@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Chibe</string>
     <string name="chibe_settings_label">Chibe</string>
-    <string name="chibe_intro_label">Вступ</string>
+    <string name="chibe_intro_label">Вступ api.paypal.com</string>
     <string name="intro_slide_1_title">Ласкаво просимо до Chibe!</string>
     <string name="intro_slide_2_title">Стежити за часом</string>
     <string name="intro_slide_5_title">Почати!</string>
