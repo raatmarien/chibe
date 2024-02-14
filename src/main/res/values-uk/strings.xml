@@ -26,7 +26,7 @@
     <string name="test_normal_vibration_preference_title">Протестувати базовий шаблон вібрації</string>
     <string name="test_hour_vibration_preference_title">Протестувати годинний шаблон вібрації</string>
     <string name="base_vibration_pattern_preference_title">Базовий шаблон вібрації</string>
-    <string name="hour_vibration_pattern_preference_title">"Годинний шаблон вібрації "</string>
+    <string name="hour_vibration_pattern_preference_title">Годинний шаблон вібрації</string>
     <string name="project_page_preference_title">Відвідати сторінку проєкту</string>
     <string name="project_page_preference_summary">Знайти більше інформації, залишити відгук і зробити свій внесок</string>
     <string name="project_page_url">https://github.com/raatmarien/chibe</string>
