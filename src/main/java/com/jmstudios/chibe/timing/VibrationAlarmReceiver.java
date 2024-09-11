@@ -22,12 +22,14 @@ package com.jmstudios.chibe.timing;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.util.Log;
 import android.os.Vibrator;
 import android.app.NotificationManager;
 import android.annotation.TargetApi;
 import android.telephony.TelephonyManager;
 
+import com.jmstudios.chibe.ForegroundService;
 import com.jmstudios.chibe.state.SettingsModel;
 
 public class VibrationAlarmReceiver extends BroadcastReceiver {
@@ -124,6 +126,11 @@ public class VibrationAlarmReceiver extends BroadcastReceiver {
     // hour pattern `ammHourPattern` times.
     public static void vibrate
         (Context context, int ammNormalPattern, int ammHourPattern) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            Intent intent = new Intent (context, ForegroundService.class);
+            context.startForegroundService (intent);
+        }
+
         Vibrator vibrator = (Vibrator) context.
             getSystemService(Context.VIBRATOR_SERVICE);
 
