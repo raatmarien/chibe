@@ -22,6 +22,7 @@
   <uses-permission android:name="android.permission.VIBRATE" />
   <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
   <application
       android:allowBackup="true"
@@ -55,6 +56,10 @@
                 android:name="android.intent.action.QUICKBOOT_POWERON" />
           </intent-filter>
         </receiver>
-    </application>
 
+        <service
+            android:name="com.jmstudios.chibe.ForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+  </application>
 </manifest>
