@@ -45,7 +45,7 @@
     <string name="custom_pattern_dialog">தனிப்பயன் முறை</string>
     <string name="short_vibration">குறுக்கு</string>
     <string name="long_vibration">நீண்ட</string>
-    <string name="delete_vibration">. டெல்.</string>
+    <string name="delete_vibration">⌫ நீக்கு</string>
     <string name="custom_pattern_hint">ஒரு வடிவத்தை உருவாக்க பொத்தான்களைப் பயன்படுத்தவும்</string>
     <string name="vibration_time_entries_0">ஒவ்வொரு நிமிடமும்</string>
     <string name="vibration_time_entries_1">ஒவ்வொரு 5 நிமிடங்களுக்கும்</string>
