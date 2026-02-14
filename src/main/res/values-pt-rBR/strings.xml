@@ -61,4 +61,5 @@
     <string name="intro_slide_2_text">Fique de olho no tempo sem nenhum esforço durante qualquer atividade com Chibe. Uma pequena vibração em tempos configurados te lembrará das horas. Você poderá usar seu tempo de maneira mais eficiente e também o dividir de maneira consciente.</string>
     <string name="vibrate_during_calls_preference_summary">Faz com que o Chibe vibre durante uma ligação</string>
     <string name="test_normal_vibration_preference_summary">Deixa seu dispositivo vibrar no padrão base de vibração</string>
+    <string name="pref_category_timing">Tempo</string>
 </resources>
