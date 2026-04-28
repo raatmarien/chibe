@@ -1,77 +1,65 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Chibe</string>
-  <string name="chibe_settings_label">Chibe</string>
-  <string name="chibe_intro_label">Tazwart</string>
-
-  <string name="intro_slide_1_title">Anṣuf ar Chibe!</string>
-  <string name="intro_slide_4_title">Tineɣrufin n unhaz udmawan</string>
-  <string name="intro_slide_5_title">Bdu tura!</string>
-  <string name="pref_category_timing">Chronométrage</string>
-  <string name="vibration_interval_preference_title">Azilal n usenhez</string>
-  <string name="vibrate_during_calls_preference_title">Nhez deg usiwel</string>
-  <string name="pref_category_vibration">Tineɣrufin n usenhez</string>
-  <string name="base_vibration_pattern_preference_title">Taneɣruft n unhaz n udasil</string>
-  <string name="hour_vibration_pattern_preference_title">Taneɣruft n unhaz deg usrag</string>
-
-  <string name="pref_category_other">Nniḍen</string>
-  <string name="dark_theme_preference_title">Asentel aberkan</string>
-  <string name="project_page_preference_title">Rzu ar usebter n usenfaṛ</string>
-  <string name="project_page_url">https://github.com/raatmarien/chibe</string>
-  <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
-
-  <string name="set_dialog">Initialiser</string>
-  <string name="cancel_dialog">Sefsex</string>
-  <string name="ok_dialog">IH</string>
-  <string name="custom_pattern_dialog">Taneɣruft tudmawant</string>
-
-  <string name="short_vibration">Wezzil</string>
-  <string name="long_vibration">Teɣzi</string>
-  <string name="delete_vibration">⌫ KKES</string>
-  <string name="vibration_time_entries_0">yal asrag</string>
-  <string name="vibration_time_entries_1">yal 5 n tisdatin</string>
-  <string name="vibration_time_entries_2">yal 10 n tisdatin</string>
-  <string name="vibration_time_entries_3">yal 15 n tisdatin</string>
-  <string name="vibration_time_entries_4">yal 20 n tisdatin</string>
-  <string name="vibration_time_entries_5">yal azgen n usrag</string>
-  <string name="vibration_time_entries_6">yal asrag</string>
-  <string name="vibration_time_entries_7">yal sin n isragen</string>
-
-  <string name="chibe_pattern_entries_custom">Yugnen</string>
-  <string name="chibe_pattern_entries_0">Taneɣruft: .. _ ..</string>
-  <string name="chibe_pattern_entries_1">Taneɣruft: _ .. _</string>
-  <string name="chibe_pattern_entries_2">Taneɣruft:_ _</string>
-  <string name="chibe_pattern_entries_3">Taneɣruft:_</string>
-  <string name="chibe_pattern_entries_4">Taneɣruft:..</string>
-  <string name="chibe_pattern_entries_5">Taneɣruft: . _ ...</string>
-  <string name="chibe_pattern_entries_6">Taneɣruft: . _ . _ .</string>
-
-  <string name="intro_slide_1_text">Zik, deg ixammen llan isakayen iṭenṭunen yal asrag. Ass-a, s tetiknulujit, ur nesri ara ad iṭenṭun s imesli yesɛuzzugen. Chibe ad isenhez tiliɣrii kečč!</string>
-
-  <string name="intro_slide_2_title">Ḥrez lǧeṛṛat n wakud</string>
-  <string name="intro_slide_2_text">Ḥrez lǧeṛṛat n wakud s wudem fessusen di yal armud s Chibe. Anhaz meẓẓiyen deg akud i tebɣiḍ ad k-id-immekti di lawan. Ad tizmireḍ ad tesqedceḍ akud-ik akken iwata udiɣ ad tizmireḍ ad ferqeḍ akud-ik akken tebɣiḍ.</string>
-
-  <string name="intro_slide_3_title">Ad yeṭṭes ticki yeṭṭes</string>
-  <string name="sleep_start_preference_title">Ad yebdu taguni di</string>
-  <string name="intro_slide_3_text">Chibe ur k-ittcebbil ara ticki teṭṭṣeḍ. Seggem kan akud n tguni sakin steɛfu war ma tettwacebbleḍ!</string>
-
-  <string name="intro_slide_4_text">Chibe ad k-yeǧǧ ad tferneḍ seg ddeqs n tineɣrufin n usenhez. Fren win i k-ilaqen, akken ur tsexlaḍeḍ ara gar yilɣa nniḍen.</string>
-
-  <string name="intro_slide_5_text">Senneḍ ɣef tqeffalt n ubeddel s afella ayeffus akken ad tremdeḍ Chibe sakin ad tebduḍ!</string>
-
-  <string name="sleep_end_preference_title">Tagara n tguni di</string>
-  <string name="vibrate_during_dnd_preference_title">Nhez deg uskar Ur Ttcebbil Ara.</string>
-  <string name="vibrate_during_dnd_preference_summary">Ad yeǧǧ Chibe ad yenhez ɣas yermed uskar Ur Ttcebbil Ara di tiliɣri-ik.</string>
-  <string name="vibrate_during_calls_preference_summary">Ad yeǧǧ Chibe ad yenhez deg usiwel</string>
-
-  <string name="test_normal_vibration_preference_title">Sekyed taneɣruft n unhaz adasil</string>
-  <string name="test_normal_vibration_preference_summary">Ad yeǧǧ Chibe ad yenhez di tneɣruft n unhaz n udasil tura</string>
-  <string name="test_hour_vibration_preference_title">Sekyed taneɣruft n unhaz n usrag</string>
-  <string name="test_hour_vibration_preference_summary">"Ad yeǧǧ Chibe ad yenhez di tneɣruft n unhaz n usrag  tura"</string>
-  <string name="hour_repeat_preference_title">Ales asenhez udmawan i yisragen</string>
-  <string name="hour_repeat_preference_summary">Ad yenhez di tneɣruft n usenhez n usrag ddeqs n tikal, akken ad d-yesken anwa akud anida yella. Amedya ɣef 14:00, Chibe ad yenhez s tneɣruft tadasilt sakin snat n tikal di tneɣruft n usrag.</string>
-  <string name="project_page_preference_summary">Ugar n telɣut, tikti neɣ attekki</string>
-  <string name="email_me_preference_title">Azen-d imayl ar marienraat@riseup.net</string>
-  <string name="email_me_preference_summary">Mudd-d asumer neɣ €ǧǧ-aɣ ad nẓer ayen tettxemmimeḍ</string>
-  <string name="custom_pattern_hint">Seqdec tiqeffalin akken ad ternuḍ taneɣruft</string>
-
-  </resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chibe</string>
+    <string name="chibe_settings_label">Chibe</string>
+    <string name="chibe_intro_label">Introapi.paypal.com</string>
+    <string name="intro_slide_1_title">Anṣuf ar Chibe!</string>
+    <string name="intro_slide_4_title">Tineɣrufin n unhaz udmawan</string>
+    <string name="intro_slide_5_title">Bdu tura!</string>
+    <string name="pref_category_timing">Chronométrage</string>
+    <string name="vibration_interval_preference_title">Azilal n usenhez</string>
+    <string name="vibrate_during_calls_preference_title">Nhez deg usiwel</string>
+    <string name="pref_category_vibration">Tineɣrufin n usenhez</string>
+    <string name="base_vibration_pattern_preference_title">Taneɣruft n unhaz n udasil</string>
+    <string name="hour_vibration_pattern_preference_title">Taneɣruft n unhaz deg usrag</string>
+    <string name="pref_category_other">Nniḍen</string>
+    <string name="dark_theme_preference_title">Asentel aberkan</string>
+    <string name="project_page_preference_title">Rzu ar usebter n usenfaṛ</string>
+    <string name="project_page_url">https://github.com/raatmarien/chibe</string>
+    <string name="contact_email_adress">mailto:marienraat@riseup.net</string>
+    <string name="set_dialog">Initialiser</string>
+    <string name="cancel_dialog">Sefsex</string>
+    <string name="ok_dialog">IH</string>
+    <string name="custom_pattern_dialog">Taneɣruft tudmawant</string>
+    <string name="short_vibration">Wezzil</string>
+    <string name="long_vibration">Teɣzi</string>
+    <string name="delete_vibration">⌫ KKES</string>
+    <string name="vibration_time_entries_0">yal asrag</string>
+    <string name="vibration_time_entries_1">yal 5 n tisdatin</string>
+    <string name="vibration_time_entries_2">yal 10 n tisdatin</string>
+    <string name="vibration_time_entries_3">yal 15 n tisdatin</string>
+    <string name="vibration_time_entries_4">yal 20 n tisdatin</string>
+    <string name="vibration_time_entries_5">yal azgen n usrag</string>
+    <string name="vibration_time_entries_6">yal asrag</string>
+    <string name="vibration_time_entries_7">yal sin n isragen</string>
+    <string name="chibe_pattern_entries_custom">Yugnen</string>
+    <string name="chibe_pattern_entries_0">Taneɣruft: .. _ ..</string>
+    <string name="chibe_pattern_entries_1">Taneɣruft: _ .. _</string>
+    <string name="chibe_pattern_entries_2">Taneɣruft:_ _</string>
+    <string name="chibe_pattern_entries_3">Taneɣruft:_</string>
+    <string name="chibe_pattern_entries_4">Taneɣruft:..</string>
+    <string name="chibe_pattern_entries_5">Taneɣruft: . _ ...</string>
+    <string name="chibe_pattern_entries_6">Taneɣruft: . _ . _ .</string>
+    <string name="intro_slide_1_text">Zik, deg ixammen llan isakayen iṭenṭunen yal asrag. Ass-a, s tetiknulujit, ur nesri ara ad iṭenṭun s imesli yesɛuzzugen. Chibe ad isenhez tiliɣrii kečč!</string>
+    <string name="intro_slide_2_title">Ḥrez lǧeṛṛat n wakud</string>
+    <string name="intro_slide_2_text">Ḥrez lǧeṛṛat n wakud s wudem fessusen di yal armud s Chibe. Anhaz meẓẓiyen deg akud i tebɣiḍ ad k-id-immekti di lawan. Ad tizmireḍ ad tesqedceḍ akud-ik akken iwata udiɣ ad tizmireḍ ad ferqeḍ akud-ik akken tebɣiḍ.</string>
+    <string name="intro_slide_3_title">Ad yeṭṭes ticki yeṭṭes</string>
+    <string name="sleep_start_preference_title">Ad yebdu taguni di</string>
+    <string name="intro_slide_3_text">Chibe ur k-ittcebbil ara ticki teṭṭṣeḍ. Seggem kan akud n tguni sakin steɛfu war ma tettwacebbleḍ!</string>
+    <string name="intro_slide_4_text">Chibe ad k-yeǧǧ ad tferneḍ seg ddeqs n tineɣrufin n usenhez. Fren win i k-ilaqen, akken ur tsexlaḍeḍ ara gar yilɣa nniḍen.</string>
+    <string name="intro_slide_5_text">Senneḍ ɣef tqeffalt n ubeddel s afella ayeffus akken ad tremdeḍ Chibe sakin ad tebduḍ!</string>
+    <string name="sleep_end_preference_title">Tagara n tguni di</string>
+    <string name="vibrate_during_dnd_preference_title">Nhez deg uskar Ur Ttcebbil Ara.</string>
+    <string name="vibrate_during_dnd_preference_summary">Ad yeǧǧ Chibe ad yenhez ɣas yermed uskar Ur Ttcebbil Ara di tiliɣri-ik.</string>
+    <string name="vibrate_during_calls_preference_summary">Ad yeǧǧ Chibe ad yenhez deg usiwel</string>
+    <string name="test_normal_vibration_preference_title">Sekyed taneɣruft n unhaz adasil</string>
+    <string name="test_normal_vibration_preference_summary">Ad yeǧǧ Chibe ad yenhez di tneɣruft n unhaz n udasil tura</string>
+    <string name="test_hour_vibration_preference_title">Sekyed taneɣruft n unhaz n usrag</string>
+    <string name="test_hour_vibration_preference_summary">"Ad yeǧǧ Chibe ad yenhez di tneɣruft n unhaz n usrag  tura"</string>
+    <string name="hour_repeat_preference_title">Ales asenhez udmawan i yisragen</string>
+    <string name="hour_repeat_preference_summary">Ad yenhez di tneɣruft n usenhez n usrag ddeqs n tikal, akken ad d-yesken anwa akud anida yella. Amedya ɣef 14:00, Chibe ad yenhez s tneɣruft tadasilt sakin snat n tikal di tneɣruft n usrag.</string>
+    <string name="project_page_preference_summary">Ugar n telɣut, tikti neɣ attekki</string>
+    <string name="email_me_preference_title">Azen-d imayl ar marienraat@riseup.net</string>
+    <string name="email_me_preference_summary">Mudd-d asumer neɣ €ǧǧ-aɣ ad nẓer ayen tettxemmimeḍ</string>
+    <string name="custom_pattern_hint">Seqdec tiqeffalin akken ad ternuḍ taneɣruft</string>
+</resources>
